@@ -83,19 +83,19 @@
 <meta name="keywords" content="web安全">
 <meta property="og:type" content="article">
 <meta property="og:title" content="IPSec 传输模式下 ESP 报文的装包与拆包过程">
-<meta property="og:url" content="http://wyxwyx46941930.github.io/2019/01/19/test/index.html">
+<meta property="og:url" content="http://wyxwyx46941930.github.io/2019/01/19/ESP/index.html">
 <meta property="og:site_name" content="人间有味是清欢">
 <meta property="og:description" content="Web Security Homework4">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://wyxwyx46941930.github.io/Hexo/source/img/1.png">
-<meta property="og:image" content="http://wyxwyx46941930.github.io/Hexo/source/img/2.png">
-<meta property="og:image" content="http://wyxwyx46941930.github.io/Hexo/source/img/3.png">
-<meta property="og:image" content="http://wyxwyx46941930.github.io/2019/01/19/test/img/4.png">
-<meta property="og:updated_time" content="2019-01-22T04:10:45.994Z">
+<meta property="og:image" content="http://wyxwyx46941930.github.io/2019/01/19/ESP/1.png">
+<meta property="og:image" content="http://wyxwyx46941930.github.io/2019/01/19/ESP/2.png">
+<meta property="og:image" content="http://wyxwyx46941930.github.io/2019/01/19/ESP/3.png">
+<meta property="og:image" content="http://wyxwyx46941930.github.io/2019/01/19/ESP/Hexo/source/_posts/ESP/4.png">
+<meta property="og:updated_time" content="2019-01-22T14:13:40.393Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="IPSec 传输模式下 ESP 报文的装包与拆包过程">
 <meta name="twitter:description" content="Web Security Homework4">
-<meta name="twitter:image" content="http://wyxwyx46941930.github.io/Hexo/source/img/1.png">
+<meta name="twitter:image" content="http://wyxwyx46941930.github.io/2019/01/19/ESP/1.png">
 
 
 
@@ -125,7 +125,7 @@
 
 
 
-  <link rel="canonical" href="http://wyxwyx46941930.github.io/2019/01/19/test/">
+  <link rel="canonical" href="http://wyxwyx46941930.github.io/2019/01/19/ESP/">
 
 
 
@@ -259,7 +259,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://wyxwyx46941930.github.io/2019/01/19/test/">
+    <link itemprop="mainEntityOfPage" href="http://wyxwyx46941930.github.io/2019/01/19/ESP/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Wangyx">
@@ -359,7 +359,7 @@
 <li><p><strong>认证头（AH）</strong>，为IP数据报提供无连接数据完整性、消息认证以及防重放攻击保护；</p>
 <ul>
 <li><p>认证头分组图示：</p>
-<p><img src="\Hexo\source\img\1.png" alt="1"></p>
+<p><img src="/2019/01/19/ESP/1.png" alt="1"></p>
 </li>
 <li><p>字段含义：</p>
 <ul>
@@ -390,7 +390,7 @@
 <p>该协议能够在数据的传输过程中对数据进行完整性度量， 来源认证以及加密， 也可以防止回放攻击。</p>
 <h4 id="2-2-ESP-的组成"><a href="#2-2-ESP-的组成" class="headerlink" title="2.2 ESP 的组成"></a>2.2 ESP 的组成</h4><ul>
 <li><p>ESP 分组图示：</p>
-<p><img src="\Hexo\source\img\2.png" alt="2"></p>
+<p><img src="/2019/01/19/ESP/2.png" alt="2"></p>
 </li>
 <li><p>字段含义：</p>
 <ul>
@@ -420,16 +420,20 @@
 <h4 id="2-3-ESP-的工作机理"><a href="#2-3-ESP-的工作机理" class="headerlink" title="2.3 ESP 的工作机理"></a>2.3 ESP 的工作机理</h4><p>IPsec ESP 通过加密需要保护的数据以及在 <code>IPsec ESP</code> 的数据部分放置这些加密的数据来提供机密性和完整性。 </p>
 <p>ESP 加密采用的是对称密钥加密算法， 能够提供无连接的数据完整性验证、 数据来源验证和抗重放攻击服务。根据用户安全要求， 这个机制既可以用于加密一个传输层的段(如:TCP、 UDP、 ICMP、 IGMP)， 也可以用于加密一整个的 IP数据报。 封装受保护数据是非常必要的， 这样就可以为整个原始数据报提供机密性。 ESP 提供机密性、 数据起源验证、 无连接的完整性、 抗重播服务和有限业务流机密性。 </p>
 <hr>
-<h3 id="3-传输模式下装包与拆包过程"><a href="#3-传输模式下装包与拆包过程" class="headerlink" title="3. 传输模式下装包与拆包过程"></a>3. 传输模式下装包与拆包过程</h3><h4 id="3-1-传输模式下-ESP-报文结构"><a href="#3-1-传输模式下-ESP-报文结构" class="headerlink" title="3.1 传输模式下 ESP 报文结构"></a>3.1 传输模式下 ESP 报文结构</h4><p><img src="\Hexo\source\img\3.png" alt="3"></p>
+<h3 id="3-传输模式下装包与拆包过程"><a href="#3-传输模式下装包与拆包过程" class="headerlink" title="3. 传输模式下装包与拆包过程"></a>3. 传输模式下装包与拆包过程</h3><h4 id="3-1-传输模式下-ESP-报文结构"><a href="#3-1-传输模式下-ESP-报文结构" class="headerlink" title="3.1 传输模式下 ESP 报文结构"></a>3.1 传输模式下 ESP 报文结构</h4><p><img src="/2019/01/19/ESP/3.png" alt="3"></p>
 <h4 id="3-2-装包过程"><a href="#3-2-装包过程" class="headerlink" title="3.2 装包过程"></a>3.2 装包过程</h4><ol>
 <li>在原IP报文末尾添加尾部（<code>ESP</code> trailer）信息。尾部包含三部分。由于所选的加密算法可能是块加密，按摩当最后一块长度不够时，需要进行填充（padding），附上填充长度（padding lenght）方便解包时顺利找出用来填充的那一段数据。<code>Next header</code>用来表明被加密的数据报文类型。</li>
 </ol>
-<p><img src="/2019/01/19/test/img\4.png" alt="4"></p>
-<ol>
-<li>将原数据报文和刚添加的 <code>ESP</code> 尾部信息作为一个整体进行加密， 具体的加密算法由<code>密钥</code>和 <code>SA</code> 给出。</li>
-<li>在第 2 步得到的加密数据前添加 <code>ESP Header</code>。 <code>ESP Header</code> 由 <code>SPI</code> 和 序号(Sequence number)两部分组成。 加密数据与 <code>ESP</code>头合称为<code>”enchilada”</code>。</li>
-<li>附加<code>完整性度量结果</code>(ICV, Integrity check value)。 对第三步得到的<code>”enchilada”</code>做摘要， 得到一个完整性度量值， 并附在 <code>ESP</code> 报文的尾部。</li>
-<li>将原 <code>IP</code> 头放回到第 4 步后形成的报文的头部前， 组织成一个新的 <code>IP</code> 报文。 </li>
+<p><img src="/2019/01/19/ESP/Hexo\source\_posts\ESP\4.png" alt="4"></p>
+<ol start="2">
+<li><p>将原数据报文和刚添加的 <code>ESP</code> 尾部信息作为一个整体进行加密， 具体的加密算法由<code>密钥</code>和 <code>SA</code> 给出。</p>
+</li>
+<li><p>在第 2 步得到的加密数据前添加 <code>ESP Header</code>。 <code>ESP Header</code> 由 <code>SPI</code> 和 序号(Sequence number)两部分组成。 加密数据与 <code>ESP</code>头合称为<code>”enchilada”</code>。</p>
+</li>
+<li><p>附加<code>完整性度量结果</code>(ICV, Integrity check value)。 对第三步得到的<code>”enchilada”</code>做摘要， 得到一个完整性度量值， 并附在 <code>ESP</code> 报文的尾部。</p>
+</li>
+<li><p>将原 <code>IP</code> 头放回到第 4 步后形成的报文的头部前， 组织成一个新的 <code>IP</code> 报文。 </p>
+</li>
 </ol>
 <hr>
 <h4 id="3-3-拆包过程"><a href="#3-3-拆包过程" class="headerlink" title="3.3 拆包过程"></a>3.3 拆包过程</h4><p>接收端在收到一个 <code>ESP</code> 包之后，若不对这个包进行处理，就无法得知它究竟处于通道模式，还是传送模式。根据对这个包进行处理的<code>SA</code>，便可知道它到底处在什么模式下。所以，我们的拆包过程可如下操作：</p>
@@ -471,17 +475,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/01/19/hello-world/" rel="next" title="X.509证书的读取操作与分析（Python版）">
-                <i class="fa fa-chevron-left"></i> X.509证书的读取操作与分析（Python版）
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/01/22/testst/" rel="prev" title="MD5 算法">
+              <a href="/2019/01/22/MD5算法/" rel="prev" title="MD5 算法">
                 MD5 算法 <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -562,7 +562,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
