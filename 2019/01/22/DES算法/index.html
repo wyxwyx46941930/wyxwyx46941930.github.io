@@ -83,17 +83,17 @@
 <meta name="keywords" content="web安全">
 <meta property="og:type" content="article">
 <meta property="og:title" content="DES 算法">
-<meta property="og:url" content="http://wyxwyx46941930.github.io/2019/01/22/testss/index.html">
+<meta property="og:url" content="http://wyxwyx46941930.github.io/2019/01/22/DES算法/index.html">
 <meta property="og:site_name" content="人间有味是清欢">
 <meta property="og:description" content="Web Security Homework1">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://img-blog.csdn.net/20181025110833528?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d5eHd5eDQ2OTQxMDkzMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
-<meta property="og:image" content="https://img-blog.csdn.net/20181025110814893?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d5eHd5eDQ2OTQxMDkzMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
-<meta property="og:updated_time" content="2019-01-21T16:18:25.613Z">
+<meta property="og:image" content="http://wyxwyx46941930.github.io/2019/01/22/DES算法/1.png">
+<meta property="og:image" content="http://wyxwyx46941930.github.io/2019/01/22/DES算法/2.png">
+<meta property="og:updated_time" content="2019-01-22T14:01:58.752Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DES 算法">
 <meta name="twitter:description" content="Web Security Homework1">
-<meta name="twitter:image" content="https://img-blog.csdn.net/20181025110833528?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d5eHd5eDQ2OTQxMDkzMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
+<meta name="twitter:image" content="http://wyxwyx46941930.github.io/2019/01/22/DES算法/1.png">
 
 
 
@@ -123,7 +123,7 @@
 
 
 
-  <link rel="canonical" href="http://wyxwyx46941930.github.io/2019/01/22/testss/">
+  <link rel="canonical" href="http://wyxwyx46941930.github.io/2019/01/22/DES算法/">
 
 
 
@@ -257,7 +257,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://wyxwyx46941930.github.io/2019/01/22/testss/">
+    <link itemprop="mainEntityOfPage" href="http://wyxwyx46941930.github.io/2019/01/22/DES算法/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Wangyx">
@@ -348,7 +348,7 @@
       
         <p>Web Security Homework1</p>
 <a id="more"></a>
-<h2 id="1-算法原理概述"><a href="#1-算法原理概述" class="headerlink" title="1. 算法原理概述"></a>1. 算法原理概述</h2><h3 id="1-1-算法原理图"><a href="#1-1-算法原理图" class="headerlink" title="1.1 算法原理图"></a>1.1 算法原理图</h3><p><img src="https://img-blog.csdn.net/20181025110833528?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d5eHd5eDQ2OTQxMDkzMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="在这里插入图片描述"></p>
+<h2 id="1-算法原理概述"><a href="#1-算法原理概述" class="headerlink" title="1. 算法原理概述"></a>1. 算法原理概述</h2><h3 id="1-1-算法原理图"><a href="#1-1-算法原理图" class="headerlink" title="1.1 算法原理图"></a>1.1 算法原理图</h3><p><img src="/2019/01/22/DES算法/1.png" alt="1"></p>
 <h3 id="1-2-自然语言描述"><a href="#1-2-自然语言描述" class="headerlink" title="1.2 自然语言描述"></a>1.2 自然语言描述</h3><h4 id="1-2-1-加密过程"><a href="#1-2-1-加密过程" class="headerlink" title="1.2.1 加密过程"></a>1.2.1 加密过程</h4><p>输入16位16进制明文M <code>-&gt;</code> 将M分为L(32位)R(32位) <code>-&gt;</code> </p>
 <p>创建16个48位长的子秘钥 <code>-&gt;</code> 创建S盒 <code>-&gt;</code> </p>
 <p>创建加密函数 <code>-&gt;</code> 使用加密函数加密明文M得到新序列L’R’ <code>-&gt;</code> </p>
@@ -526,7 +526,7 @@
 <h2 id="4-数据结构"><a href="#4-数据结构" class="headerlink" title="4. 数据结构"></a>4. 数据结构</h2><h3 id="4-1-输入的明文与密文序列"><a href="#4-1-输入的明文与密文序列" class="headerlink" title="4.1 输入的明文与密文序列"></a>4.1 输入的明文与密文序列</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//创建待加密明文序列</span></span><br><span class="line"><span class="keyword">char</span> HexMsg[<span class="number">17</span>] ; </span><br><span class="line"><span class="built_in">memset</span>(HexMsg,<span class="number">0</span>,<span class="keyword">sizeof</span>(<span class="keyword">char</span>)*<span class="number">17</span>);</span><br><span class="line"><span class="comment">//创建密文序列</span></span><br><span class="line"><span class="keyword">char</span> HexKey[<span class="number">17</span>] ;</span><br><span class="line"><span class="built_in">memset</span>(HexKey,<span class="number">0</span>,<span class="keyword">sizeof</span>(<span class="keyword">char</span>)*<span class="number">17</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//测试输入序列</span></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"Input the pending sequence"</span> &lt;&lt; <span class="built_in">endl</span> ;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"Sequence:"</span>;</span><br><span class="line"><span class="built_in">string</span> Testinput ;</span><br><span class="line"><span class="comment">//输入铭文序列</span></span><br><span class="line"><span class="built_in">cin</span> &gt;&gt; Testinput ;</span><br><span class="line">Testinput = Test(Testinput);</span><br></pre></td></tr></table></figure>
 <h3 id="4-2-IP置换表与IP逆置换表"><a href="#4-2-IP置换表与IP逆置换表" class="headerlink" title="4.2 IP置换表与IP逆置换表"></a>4.2 IP置换表与IP逆置换表</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//IP置换表</span></span><br><span class="line"><span class="keyword">int</span> IP[<span class="number">64</span>]=&#123;  </span><br><span class="line">	<span class="comment">//L部分</span></span><br><span class="line">	<span class="number">58</span>,<span class="number">50</span>,<span class="number">42</span>,<span class="number">34</span>,<span class="number">26</span>,<span class="number">18</span>,<span class="number">10</span>, <span class="number">2</span>,</span><br><span class="line">	<span class="number">60</span>,<span class="number">52</span>,<span class="number">44</span>,<span class="number">36</span>,<span class="number">28</span>,<span class="number">20</span>,<span class="number">12</span>, <span class="number">4</span>,</span><br><span class="line">	<span class="number">62</span>,<span class="number">54</span>,<span class="number">46</span>,<span class="number">38</span>,<span class="number">30</span>,<span class="number">22</span>,<span class="number">14</span>, <span class="number">6</span>,</span><br><span class="line">	<span class="number">64</span>,<span class="number">56</span>,<span class="number">48</span>,<span class="number">40</span>,<span class="number">32</span>,<span class="number">24</span>,<span class="number">16</span>, <span class="number">8</span>,</span><br><span class="line">	<span class="comment">//R部分</span></span><br><span class="line">	<span class="number">57</span>,<span class="number">49</span>,<span class="number">41</span>,<span class="number">33</span>,<span class="number">25</span>,<span class="number">17</span>, <span class="number">9</span>, <span class="number">1</span>,</span><br><span class="line">	<span class="number">59</span>,<span class="number">51</span>,<span class="number">43</span>,<span class="number">35</span>,<span class="number">27</span>,<span class="number">19</span>,<span class="number">11</span>, <span class="number">3</span>,</span><br><span class="line">	<span class="number">61</span>,<span class="number">53</span>,<span class="number">45</span>,<span class="number">37</span>,<span class="number">29</span>,<span class="number">21</span>,<span class="number">13</span>, <span class="number">5</span>,</span><br><span class="line">	<span class="number">63</span>,<span class="number">55</span>,<span class="number">47</span>,<span class="number">39</span>,<span class="number">31</span>,<span class="number">23</span>,<span class="number">15</span>, <span class="number">7</span> </span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//IP逆置换表</span></span><br><span class="line"><span class="keyword">int</span> ReverseIP[<span class="number">64</span>]=&#123;              </span><br><span class="line">	<span class="number">40</span>, <span class="number">8</span>,<span class="number">48</span>,<span class="number">16</span>,<span class="number">56</span>,<span class="number">24</span>,<span class="number">64</span>,<span class="number">32</span>,</span><br><span class="line">	<span class="number">39</span>, <span class="number">7</span>,<span class="number">47</span>,<span class="number">15</span>,<span class="number">55</span>,<span class="number">23</span>,<span class="number">63</span>,<span class="number">31</span>,</span><br><span class="line">	<span class="number">38</span>, <span class="number">6</span>,<span class="number">46</span>,<span class="number">14</span>,<span class="number">54</span>,<span class="number">22</span>,<span class="number">62</span>,<span class="number">30</span>,</span><br><span class="line">	<span class="number">37</span>, <span class="number">5</span>,<span class="number">45</span>,<span class="number">13</span>,<span class="number">53</span>,<span class="number">21</span>,<span class="number">61</span>,<span class="number">29</span>,</span><br><span class="line">	<span class="number">36</span>, <span class="number">4</span>,<span class="number">44</span>,<span class="number">12</span>,<span class="number">52</span>,<span class="number">20</span>,<span class="number">60</span>,<span class="number">28</span>,</span><br><span class="line">	<span class="number">35</span>, <span class="number">3</span>,<span class="number">43</span>,<span class="number">11</span>,<span class="number">51</span>,<span class="number">19</span>,<span class="number">59</span>,<span class="number">27</span>,</span><br><span class="line">	<span class="number">34</span>, <span class="number">2</span>,<span class="number">42</span>,<span class="number">10</span>,<span class="number">50</span>,<span class="number">18</span>,<span class="number">58</span>,<span class="number">26</span>,</span><br><span class="line">	<span class="number">33</span>, <span class="number">1</span>,<span class="number">41</span>, <span class="number">9</span>,<span class="number">49</span>,<span class="number">17</span>,<span class="number">57</span>,<span class="number">25</span>	</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <h3 id="4-3-S盒"><a href="#4-3-S盒" class="headerlink" title="4.3 S盒"></a>4.3 S盒</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> SBox[<span class="number">8</span>][<span class="number">4</span>][<span class="number">16</span>]=&#123;</span><br><span class="line">	<span class="comment">//S1</span></span><br><span class="line">	<span class="number">14</span>, <span class="number">4</span>,<span class="number">13</span>, <span class="number">1</span>, <span class="number">2</span>,<span class="number">15</span>,<span class="number">11</span>, <span class="number">8</span>, <span class="number">3</span>,<span class="number">10</span>, <span class="number">6</span>,<span class="number">12</span>, <span class="number">5</span>, <span class="number">9</span>, <span class="number">0</span>, <span class="number">7</span>,</span><br><span class="line">	 <span class="number">0</span>,<span class="number">15</span>, <span class="number">7</span>, <span class="number">4</span>,<span class="number">14</span>, <span class="number">2</span>,<span class="number">13</span>, <span class="number">1</span>,<span class="number">10</span>, <span class="number">6</span>,<span class="number">12</span>,<span class="number">11</span>, <span class="number">9</span>, <span class="number">5</span>, <span class="number">3</span>, <span class="number">8</span>,</span><br><span class="line">	 <span class="number">4</span>, <span class="number">1</span>,<span class="number">14</span>, <span class="number">8</span>,<span class="number">13</span>, <span class="number">6</span>, <span class="number">2</span>,<span class="number">11</span>,<span class="number">15</span>,<span class="number">12</span>, <span class="number">9</span>, <span class="number">7</span>, <span class="number">3</span>,<span class="number">10</span>, <span class="number">5</span>, <span class="number">0</span>,</span><br><span class="line">	<span class="number">15</span>,<span class="number">12</span>, <span class="number">8</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">1</span>, <span class="number">7</span>, <span class="number">5</span>,<span class="number">11</span>, <span class="number">3</span>,<span class="number">14</span>,<span class="number">10</span>, <span class="number">0</span>, <span class="number">6</span>,<span class="number">13</span>,</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
-<h2 id="5-运行结果"><a href="#5-运行结果" class="headerlink" title="5. 运行结果"></a>5. 运行结果</h2><p><img src="https://img-blog.csdn.net/20181025110814893?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d5eHd5eDQ2OTQxMDkzMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="在这里插入图片描述"></p>
+<h2 id="5-运行结果"><a href="#5-运行结果" class="headerlink" title="5. 运行结果"></a>5. 运行结果</h2><p><img src="/2019/01/22/DES算法/2.png" alt="2"></p>
 <p>注：</p>
 <ul>
 <li>Pengding sequence：明文序列</li>
@@ -570,8 +570,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/01/22/testst/" rel="next" title="MD5 算法">
-                <i class="fa fa-chevron-left"></i> MD5 算法
+              <a href="/2019/01/22/testss/" rel="next" title="DES 算法">
+                <i class="fa fa-chevron-left"></i> DES 算法
               </a>
             
           </div>
@@ -579,10 +579,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/01/22/DES算法/" rel="prev" title="DES 算法">
-                DES 算法 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
