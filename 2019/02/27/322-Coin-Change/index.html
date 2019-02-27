@@ -83,20 +83,18 @@
 
 
 
-<meta name="description" content="每日一题  2019 - 02 - 24">
+<meta name="description" content="每日一题 2019 - 02 - 27">
 <meta name="keywords" content="leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="863. All Nodes Distance K in Binary Tree">
-<meta property="og:url" content="http://wyxwyx46941930.github.io/2019/02/25/863-All-Nodes-Distance-K-in-Binary-Tree/index.html">
+<meta property="og:title" content="322. Coin Change">
+<meta property="og:url" content="http://wyxwyx46941930.github.io/2019/02/27/322-Coin-Change/index.html">
 <meta property="og:site_name" content="人间有味是清欢">
-<meta property="og:description" content="每日一题  2019 - 02 - 24">
+<meta property="og:description" content="每日一题 2019 - 02 - 27">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://wyxwyx46941930.github.io/2019/02/25/863-All-Nodes-Distance-K-in-Binary-Tree/1.png">
-<meta property="og:updated_time" content="2019-02-24T16:37:58.964Z">
+<meta property="og:updated_time" content="2019-02-27T16:50:09.162Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="863. All Nodes Distance K in Binary Tree">
-<meta name="twitter:description" content="每日一题  2019 - 02 - 24">
-<meta name="twitter:image" content="http://wyxwyx46941930.github.io/2019/02/25/863-All-Nodes-Distance-K-in-Binary-Tree/1.png">
+<meta name="twitter:title" content="322. Coin Change">
+<meta name="twitter:description" content="每日一题 2019 - 02 - 27">
 
 
 
@@ -126,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://wyxwyx46941930.github.io/2019/02/25/863-All-Nodes-Distance-K-in-Binary-Tree/">
+  <link rel="canonical" href="http://wyxwyx46941930.github.io/2019/02/27/322-Coin-Change/">
 
 
 
 
 
-  <title>863. All Nodes Distance K in Binary Tree | 人间有味是清欢</title>
+  <title>322. Coin Change | 人间有味是清欢</title>
   
 
 
@@ -260,7 +258,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://wyxwyx46941930.github.io/2019/02/25/863-All-Nodes-Distance-K-in-Binary-Tree/">
+    <link itemprop="mainEntityOfPage" href="http://wyxwyx46941930.github.io/2019/02/27/322-Coin-Change/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Wangyx">
@@ -277,7 +275,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">863. All Nodes Distance K in Binary Tree</h1>
+          <h1 class="post-title" itemprop="name headline">322. Coin Change</h1>
         
 
         <div class="post-meta">
@@ -289,8 +287,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-25T00:02:32+08:00">
-                2019-02-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-27T23:47:26+08:00">
+                2019-02-27
               </time>
             
 
@@ -299,6 +297,28 @@
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/leetcode/" itemprop="url" rel="index">
+                    <span itemprop="name">leetcode</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -327,30 +347,20 @@
       
 
       
-        <h3 id="每日一题-2019-02-24"><a href="#每日一题-2019-02-24" class="headerlink" title="每日一题  2019 - 02 - 24"></a>每日一题  2019 - 02 - 24</h3><a id="more"></a>
+        <h3 id="每日一题-2019-02-27"><a href="#每日一题-2019-02-27" class="headerlink" title="每日一题 2019 - 02 - 27"></a>每日一题 2019 - 02 - 27</h3><a id="more"></a>
 <hr>
-<h3 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h3><p>We are given a binary tree (with root node <code>root</code>), a <code>target</code> node, and an integer value <code>K</code>.</p>
-<p>Return a list of the values of all nodes that have a distance <code>K</code> from the <code>target</code> node.  The answer can be returned in any order.</p>
+<h3 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h3><p>You are given coins of different denominations and a total amount of money <em>amount</em>. Write a function to compute the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return <code>-1</code>.</p>
 <p><strong>Example 1:</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Input: root = [3,5,1,6,2,0,8,null,null,7,4], target = 5, K = 2</span><br><span class="line"></span><br><span class="line">Output: [7,4,1]</span><br><span class="line"></span><br><span class="line">Explanation: </span><br><span class="line">The nodes that are a distance 2 from the target node (with value 5)</span><br><span class="line">have values 7, 4, and 1.</span><br><span class="line"></span><br><span class="line">Note that the inputs <span class="string">"root"</span> and <span class="string">"target"</span> are actually TreeNodes.</span><br><span class="line">The descriptions of the inputs above are just serializations of these objects.</span><br></pre></td></tr></table></figure>
-<p> <img src="/2019/02/25/863-All-Nodes-Distance-K-in-Binary-Tree/1.png" alt="1"></p>
-<p><strong>Note:</strong></p>
-<ol>
-<li>The given tree is non-empty.</li>
-<li>Each node in the tree has unique values <code>0 &lt;= node.val &lt;= 500</code>.</li>
-<li>The <code>target</code> node is a node in the tree.</li>
-<li><code>0 &lt;= K &lt;= 1000</code>.</li>
-</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: coins = [1, 2, 5], amount = 11</span><br><span class="line">Output: 3 </span><br><span class="line">Explanation: 11 = 5 + 5 + 1</span><br></pre></td></tr></table></figure>
+<p><strong>Example 2:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: coins = [2], amount = 3</span><br><span class="line">Output: -1</span><br></pre></td></tr></table></figure>
+<p><strong>Note</strong>:<br>You may assume that you have an infinite number of each kind of coin.</p>
 <hr>
-<h3 id="解法："><a href="#解法：" class="headerlink" title="解法："></a>解法：</h3><p>参考网上大佬的做法，如下：</p>
-<ul>
-<li>我们需要做若干次深度优先遍历。</li>
-<li>第一次需要定位 <code>target</code> 的具体位置，并按顺序记录其到根结点的路径。路径中的每个点，用一个二元组表示，分别为点的指针，和一个布尔值。其中布尔值为 <code>true</code> 代表 <code>target</code> 是在当前结点的左侧，否则在右侧。路径不包括 <code>target</code> 本身。</li>
-<li>然后，我们顺着路径，从底向上。如果路径上当前的点已经和 <code>target</code> 距离为 K，则保存当前结点，然后退出循环。否则，如果布尔值为 <code>true</code>，则从右侧开始深度优先遍历找距离 <code>target</code> 为 K 的结点，否则从左侧开始找。</li>
-<li>最后，从 <code>target</code> 开始深度优先遍历找答案。</li>
-</ul>
+<h3 id="解法："><a href="#解法：" class="headerlink" title="解法："></a>解法：</h3><p>这个题为动态规划的题，得到的递推公式为：</p>
+<p><code>dp[i] = min(dp[i], dp[i - coins[j]] + 1);</code></p>
+<p>当零钱为i元需要的最少硬币数等于第i元减去硬币中所有出现的可能的小于i元的硬币的出现次数加1，这里的j从0循环到coins.size()-1。</p>
 <hr>
-<h3 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">find</span><span class="params">(TreeNode *rt, <span class="keyword">int</span> cur, <span class="keyword">int</span> K, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; ans)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (rt == <span class="literal">nullptr</span> || cur &gt; K)</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        <span class="keyword">if</span> (cur == K) &#123;</span><br><span class="line">            ans.push_back(rt -&gt; val);</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        find(rt -&gt; left, cur + <span class="number">1</span>, K, ans);</span><br><span class="line">        find(rt -&gt; right, cur + <span class="number">1</span>, K, ans);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">findTarget</span><span class="params">(TreeNode *rt, TreeNode *target, <span class="built_in">vector</span>&lt;pair&lt;TreeNode*, <span class="keyword">bool</span>&gt;&gt;&amp; path)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (rt == <span class="literal">nullptr</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">if</span> (rt == target)</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (findTarget(rt -&gt; left, target, path)) &#123;</span><br><span class="line">            path.emplace_back(make_pair(rt, <span class="literal">true</span>));</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (findTarget(rt -&gt; right, target, path)) &#123;</span><br><span class="line">            path.emplace_back(make_pair(rt, <span class="literal">false</span>));</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; distanceK(TreeNode* root, TreeNode* target, <span class="keyword">int</span> K) &#123;</span><br><span class="line">        <span class="built_in">vector</span>&lt;pair&lt;TreeNode*, <span class="keyword">bool</span>&gt;&gt; path;</span><br><span class="line">        findTarget(root, target, path);</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; ans;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; path.size(); i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (i + <span class="number">1</span> == K) &#123;</span><br><span class="line">                ans.push_back(path[i].first -&gt; val);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (path[i].second == <span class="literal">true</span>)</span><br><span class="line">                find(path[i].first -&gt; right, i + <span class="number">2</span>, K, ans);</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                find(path[i].first -&gt; left, i + <span class="number">2</span>, K, ans);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        find(target, <span class="number">0</span>, K, ans);</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">coinChange</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; coins, <span class="keyword">int</span> amount)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> *dp = <span class="keyword">new</span> <span class="keyword">int</span>[amount + <span class="number">1</span>,amount+<span class="number">1</span>];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=amount;i++)&#123;</span><br><span class="line">            dp[i]=(amount+<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">	dp[<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> res = <span class="number">-1</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= amount; i++) &#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; coins.size(); j++) &#123;</span><br><span class="line">			<span class="keyword">if</span> (i -coins[j]&gt;=<span class="number">0</span>) &#123;</span><br><span class="line">				dp[i] = min(dp[i], dp[i - coins[j]] + <span class="number">1</span>);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">        res = (dp[amount] == (amount + <span class="number">1</span>))? <span class="number">-1</span> : dp[amount];  </span><br><span class="line">	<span class="keyword">delete</span>[] dp;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -381,8 +391,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/23/769-Max-Chunks-To-Make-Sorted/" rel="next" title="769. Max Chunks To Make Sorted">
-                <i class="fa fa-chevron-left"></i> 769. Max Chunks To Make Sorted
+              <a href="/2019/02/26/540-Single-Element-in-a-Sorted-Array/" rel="next" title="540. Single Element in a Sorted Array">
+                <i class="fa fa-chevron-left"></i> 540. Single Element in a Sorted Array
               </a>
             
           </div>
@@ -390,10 +400,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/02/25/461-Hamming-Distance/" rel="prev" title="461. Hamming Distance">
-                461. Hamming Distance <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -527,7 +533,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#每日一题-2019-02-24"><span class="nav-number">1.</span> <span class="nav-text">每日一题  2019 - 02 - 24</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题目："><span class="nav-number">2.</span> <span class="nav-text">题目：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解法："><span class="nav-number">3.</span> <span class="nav-text">解法：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码："><span class="nav-number">4.</span> <span class="nav-text">代码：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#每日一题-2019-02-27"><span class="nav-number">1.</span> <span class="nav-text">每日一题 2019 - 02 - 27</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题目："><span class="nav-number">2.</span> <span class="nav-text">题目：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解法："><span class="nav-number">3.</span> <span class="nav-text">解法：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码："><span class="nav-number">4.</span> <span class="nav-text">代码：</span></a></li></ol></div>
             
 
           </div>
