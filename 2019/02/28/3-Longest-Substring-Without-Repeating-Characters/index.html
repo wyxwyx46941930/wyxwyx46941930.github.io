@@ -72,7 +72,7 @@
 
 
 
-  <meta name="keywords" content="web安全,">
+  <meta name="keywords" content="leetcode,">
 
 
 
@@ -83,23 +83,18 @@
 
 
 
-<meta name="description" content="Web Security Homework4">
-<meta name="keywords" content="web安全">
+<meta name="description" content="每日一题 2019 - 02 - 28">
+<meta name="keywords" content="leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="IPSec 传输模式下 ESP 报文的装包与拆包过程">
-<meta property="og:url" content="http://wyxwyx46941930.github.io/2019/01/19/ESP/index.html">
+<meta property="og:title" content="3. Longest Substring Without Repeating Characters">
+<meta property="og:url" content="http://wyxwyx46941930.github.io/2019/02/28/3-Longest-Substring-Without-Repeating-Characters/index.html">
 <meta property="og:site_name" content="人间有味是清欢">
-<meta property="og:description" content="Web Security Homework4">
+<meta property="og:description" content="每日一题 2019 - 02 - 28">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://wyxwyx46941930.github.io/2019/01/19/ESP/1.png">
-<meta property="og:image" content="http://wyxwyx46941930.github.io/2019/01/19/ESP/2.png">
-<meta property="og:image" content="http://wyxwyx46941930.github.io/2019/01/19/ESP/3.png">
-<meta property="og:image" content="http://wyxwyx46941930.github.io/2019/01/19/ESP/Hexo/source/_posts/ESP/4.png">
-<meta property="og:updated_time" content="2019-01-22T14:13:40.393Z">
+<meta property="og:updated_time" content="2019-02-28T15:48:26.042Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="IPSec 传输模式下 ESP 报文的装包与拆包过程">
-<meta name="twitter:description" content="Web Security Homework4">
-<meta name="twitter:image" content="http://wyxwyx46941930.github.io/2019/01/19/ESP/1.png">
+<meta name="twitter:title" content="3. Longest Substring Without Repeating Characters">
+<meta name="twitter:description" content="每日一题 2019 - 02 - 28">
 
 
 
@@ -129,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://wyxwyx46941930.github.io/2019/01/19/ESP/">
+  <link rel="canonical" href="http://wyxwyx46941930.github.io/2019/02/28/3-Longest-Substring-Without-Repeating-Characters/">
 
 
 
 
 
-  <title>IPSec 传输模式下 ESP 报文的装包与拆包过程 | 人间有味是清欢</title>
+  <title>3. Longest Substring Without Repeating Characters | 人间有味是清欢</title>
   
 
 
@@ -263,7 +258,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://wyxwyx46941930.github.io/2019/01/19/ESP/">
+    <link itemprop="mainEntityOfPage" href="http://wyxwyx46941930.github.io/2019/02/28/3-Longest-Substring-Without-Repeating-Characters/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Wangyx">
@@ -280,7 +275,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">IPSec 传输模式下 ESP 报文的装包与拆包过程</h1>
+          <h1 class="post-title" itemprop="name headline">3. Longest Substring Without Repeating Characters</h1>
         
 
         <div class="post-meta">
@@ -292,8 +287,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-19T19:04:14+08:00">
-                2019-01-19
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-28T23:17:39+08:00">
+                2019-02-28
               </time>
             
 
@@ -315,8 +310,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/web安全/" itemprop="url" rel="index">
-                    <span itemprop="name">web安全</span>
+                  <a href="/categories/leetcode/" itemprop="url" rel="index">
+                    <span itemprop="name">leetcode</span>
                   </a>
                 </span>
 
@@ -352,103 +347,19 @@
       
 
       
-        <p>Web Security Homework4</p>
+        <p>每日一题 2019 - 02 - 28</p>
 <a id="more"></a>
-<p>基础概念部分源自<code>维基百科</code></p>
-<h3 id="1-IPSec传输模式"><a href="#1-IPSec传输模式" class="headerlink" title="1. IPSec传输模式"></a>1. IPSec传输模式</h3><h4 id="1-1-IPSec-简介"><a href="#1-1-IPSec-简介" class="headerlink" title="1.1 IPSec 简介"></a>1.1 IPSec 简介</h4><p>IPSec 全称为：<strong>互联网安全协议</strong>（ Internet Protocol Security，缩写为IPsec），是一个<strong>协议包</strong>，通过对IP协议的分组进行加密和认证来保护IP协议的网络传输协议族（一些相互关联的协议的集合）。</p>
-<p>IPSec 定义了在网络层使用的安全服务， 其功能包括数据加密、 对网络单元的访问控制、 数据源地址验证、 数据完整性检查和防止重放攻击。 </p>
-<p>IPSec 是安全联网的长期方向。 它通过端对端的安全性来提供主动的保护以防止专用网络与 Internet 的攻击。 在通信中， 只有发送方和接收方才是唯一必须了解 IPSec 保护的计算机。 在 <code>Windows XP 和 Windows Server 2003</code>家族中，IPSec 提供了一种能力， 以保护工作组、 局域网计算机、 域客户端和服务器、 分支机构（物理上为远程机构） 、 <code>Extranet</code> 以及漫游客户端之间的通信。 </p>
-<h4 id="1-2-IPSec-的组成"><a href="#1-2-IPSec-的组成" class="headerlink" title="1.2 IPSec 的组成"></a>1.2 IPSec 的组成</h4><p>IPsec主要由以下部分组成：</p>
-<ul>
-<li><p><strong>认证头（AH）</strong>，为IP数据报提供无连接数据完整性、消息认证以及防重放攻击保护；</p>
-<ul>
-<li><p>认证头分组图示：</p>
-<p><img src="/2019/01/19/ESP/1.png" alt="1"></p>
-</li>
-<li><p>字段含义：</p>
-<ul>
-<li>下一个头：标识被传送数据所属的协议。</li>
-<li>载荷长度：认证头包的大小。</li>
-<li>保留：为将来的应用保留（目前都置为0）。</li>
-<li>安全参数索引：与IP地址一同用来标识安全参数。</li>
-<li>串行号：单调递增的数值，用来防止重放攻击。</li>
-<li>认证数据：包含了认证当前包所必须的数据。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><strong>封装安全载荷（ESP）</strong>，提供机密性、数据源认证、无连接完整性、防重放和有限的传输流（traffic-flow）机密性；</p>
-</li>
-<li><p><strong>安全关联（SA）</strong>，提供算法和数据包，提供AH、ESP操作所需的参数。</p>
-</li>
-</ul>
-<h4 id="1-3-IPsec-的设计意图"><a href="#1-3-IPsec-的设计意图" class="headerlink" title="1.3 IPsec 的设计意图"></a>1.3 IPsec 的设计意图</h4><p>IPsec被设计用来提供：</p>
-<ul>
-<li>入口对入口通信安全，在此机制下，分组通信的安全性由单个节点提供给多台机器（甚至可以是整个局域网）；</li>
-<li>端到端分组通信安全，由作为端点的计算机完成安全操作。</li>
-</ul>
-<p>上述的任一模式都可以用来<strong>构建虚拟专用网(</strong>VPN).</p>
-<h4 id="1-4-IPsec-与其他互联网协议的对比"><a href="#1-4-IPsec-与其他互联网协议的对比" class="headerlink" title="1.4 IPsec 与其他互联网协议的对比"></a>1.4 IPsec 与其他互联网协议的对比</h4><p>IPsec协议工作在OSI模型的第三层，使其在单独使用时适于保护基于<code>TCP</code>或<code>UDP</code>的协议（如安全套接子层（<code>SSL</code>）就不能保护<code>UDP</code>层的通信流）。这就意味着，与传输层或更高层的协议相比，<code>IPsec</code>协议必须处理可靠性和分片的问题，这同时也增加了它的复杂性和处理开销。相对而言，<code>SSL/TLS</code>依靠更高层的<code>TCP</code>（OSI的第四层）来管理可靠性和分片。 </p>
+<h3 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h3><p>Given a string, find the length of the <strong>longest substring</strong> without repeating characters.</p>
+<p><strong>Example 1:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: <span class="string">"abcabcbb"</span></span><br><span class="line">Output: 3 </span><br><span class="line">Explanation: The answer is <span class="string">"abc"</span>, with the length of 3.</span><br></pre></td></tr></table></figure>
+<p><strong>Example 2:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: <span class="string">"bbbbb"</span></span><br><span class="line">Output: 1</span><br><span class="line">Explanation: The answer is <span class="string">"b"</span>, with the length of 1.</span><br></pre></td></tr></table></figure>
+<p><strong>Example 3:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Input: <span class="string">"pwwkew"</span></span><br><span class="line">Output: 3</span><br><span class="line">Explanation: The answer is <span class="string">"wke"</span>, with the length of 3. </span><br><span class="line">             Note that the answer must be a substring, <span class="string">"pwke"</span> is a subsequence and not a substring.</span><br></pre></td></tr></table></figure>
 <hr>
-<h3 id="2-ESP"><a href="#2-ESP" class="headerlink" title="2. ESP"></a>2. ESP</h3><h4 id="2-1-ESP-简介"><a href="#2-1-ESP-简介" class="headerlink" title="2.1 ESP 简介"></a>2.1 ESP 简介</h4><p>ESP 又称 IPsec 封装安全负载(IPsec ESP)是 IPsec 体系结构中的一种主要协议， 其主要设计来在 <code>IPv4</code> 和 <code>IPv6</code> 中提供安全服务的混合应用。 </p>
-<p>该协议能够在数据的传输过程中对数据进行完整性度量， 来源认证以及加密， 也可以防止回放攻击。</p>
-<h4 id="2-2-ESP-的组成"><a href="#2-2-ESP-的组成" class="headerlink" title="2.2 ESP 的组成"></a>2.2 ESP 的组成</h4><ul>
-<li><p>ESP 分组图示：</p>
-<p><img src="/2019/01/19/ESP/2.png" alt="2"></p>
-</li>
-<li><p>字段含义：</p>
-<ul>
-<li>ESP 头部：<ul>
-<li>安全参数索引：与IP地址一同用来标识安全参数</li>
-<li>序列号：单调递增的数值，用来防止重放攻击。</li>
-</ul>
-</li>
-<li>ESP 尾部：<ul>
-<li>载荷数据：实际要传输的数据。</li>
-<li>填充：某些块加密算法用此将数据填充至块的长度。</li>
-<li>填充长度：以位为单位的填充数据的长度。</li>
-<li>下一个头：标识被传送数据所属的协议。</li>
-</ul>
-</li>
-<li>ESP 验证尾部<ul>
-<li>认证数据：包含了认证当前包所必须的数据。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>对数据的完整性验证需要计算<code>SPI</code>、序列号、载荷数据以及<code>ESP</code>尾部。</p>
-</li>
-<li><p>对数据的保密性验证需要计算载荷数据以及ESP尾部。</p>
-</li>
-</ul>
-<h4 id="2-3-ESP-的工作机理"><a href="#2-3-ESP-的工作机理" class="headerlink" title="2.3 ESP 的工作机理"></a>2.3 ESP 的工作机理</h4><p>IPsec ESP 通过加密需要保护的数据以及在 <code>IPsec ESP</code> 的数据部分放置这些加密的数据来提供机密性和完整性。 </p>
-<p>ESP 加密采用的是对称密钥加密算法， 能够提供无连接的数据完整性验证、 数据来源验证和抗重放攻击服务。根据用户安全要求， 这个机制既可以用于加密一个传输层的段(如:TCP、 UDP、 ICMP、 IGMP)， 也可以用于加密一整个的 IP数据报。 封装受保护数据是非常必要的， 这样就可以为整个原始数据报提供机密性。 ESP 提供机密性、 数据起源验证、 无连接的完整性、 抗重播服务和有限业务流机密性。 </p>
+<h3 id="解法："><a href="#解法：" class="headerlink" title="解法："></a>解法：</h3><p>这个题让我们找出<strong>某字符串中不重复的最长序列</strong>，思路很简单：使用哈希的方法，建立一个数组把每个字符出现的次数投影到对应数组中，对于次数超过1次的序列进行抛弃，二重循环即可解决问题。</p>
 <hr>
-<h3 id="3-传输模式下装包与拆包过程"><a href="#3-传输模式下装包与拆包过程" class="headerlink" title="3. 传输模式下装包与拆包过程"></a>3. 传输模式下装包与拆包过程</h3><h4 id="3-1-传输模式下-ESP-报文结构"><a href="#3-1-传输模式下-ESP-报文结构" class="headerlink" title="3.1 传输模式下 ESP 报文结构"></a>3.1 传输模式下 ESP 报文结构</h4><p><img src="/2019/01/19/ESP/3.png" alt="3"></p>
-<h4 id="3-2-装包过程"><a href="#3-2-装包过程" class="headerlink" title="3.2 装包过程"></a>3.2 装包过程</h4><ol>
-<li>在原IP报文末尾添加尾部（<code>ESP</code> trailer）信息。尾部包含三部分。由于所选的加密算法可能是块加密，按摩当最后一块长度不够时，需要进行填充（padding），附上填充长度（padding lenght）方便解包时顺利找出用来填充的那一段数据。<code>Next header</code>用来表明被加密的数据报文类型。</li>
-</ol>
-<p><img src="/2019/01/19/ESP/Hexo\source\_posts\ESP\4.png" alt="4"></p>
-<ol start="2">
-<li><p>将原数据报文和刚添加的 <code>ESP</code> 尾部信息作为一个整体进行加密， 具体的加密算法由<code>密钥</code>和 <code>SA</code> 给出。</p>
-</li>
-<li><p>在第 2 步得到的加密数据前添加 <code>ESP Header</code>。 <code>ESP Header</code> 由 <code>SPI</code> 和 序号(Sequence number)两部分组成。 加密数据与 <code>ESP</code>头合称为<code>”enchilada”</code>。</p>
-</li>
-<li><p>附加<code>完整性度量结果</code>(ICV, Integrity check value)。 对第三步得到的<code>”enchilada”</code>做摘要， 得到一个完整性度量值， 并附在 <code>ESP</code> 报文的尾部。</p>
-</li>
-<li><p>将原 <code>IP</code> 头放回到第 4 步后形成的报文的头部前， 组织成一个新的 <code>IP</code> 报文。 </p>
-</li>
-</ol>
-<hr>
-<h4 id="3-3-拆包过程"><a href="#3-3-拆包过程" class="headerlink" title="3.3 拆包过程"></a>3.3 拆包过程</h4><p>接收端在收到一个 <code>ESP</code> 包之后，若不对这个包进行处理，就无法得知它究竟处于通道模式，还是传送模式。根据对这个包进行处理的<code>SA</code>，便可知道它到底处在什么模式下。所以，我们的拆包过程可如下操作：</p>
-<ol>
-<li>接收方收到报文之后，发现协议类型是 50， 知道这是一个 <code>IPSec</code> 包。 首先查看 <code>ESP</code> 头， 通过里面的 <code>SPI</code> 决定数据报文所对应的 <code>SA</code>。</li>
-<li>计算<code>”enchilada”</code>部分的摘要， 与附在末尾的 <code>ICV</code>做对比， 如果一样， 说明数据完整； 否则断定收到的报文已经不是原来的报文了。</li>
-<li>检查 <code>Seq</code> 里的顺序号， 保证数据是”新鲜”的， 不是回放攻击。</li>
-<li>根据 <code>SA</code> 所提供的加密算法和密钥， 解密被加密过的数据 <code>”enchilada”</code>。 得到原 <code>IP</code> 报文的数据部分和 <code>ESP</code> 尾部(trailer)。</li>
-<li>根据 <code>ESP</code> 尾部的填充长度信息， 可以找出填充字段的长度， 删去后就得到原来的 <code>IP</code> 报文。</li>
-<li>根据获取的原 <code>IP</code> 包目标地址进行转发。 </li>
-</ol>
+<h3 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">lengthOfLongestSubstring</span><span class="params">(<span class="built_in">string</span> s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n = s.size();</span><br><span class="line">        <span class="built_in">string</span> test = <span class="string">""</span>;</span><br><span class="line">        <span class="built_in">string</span> temp = <span class="string">""</span>;</span><br><span class="line">        <span class="keyword">int</span> arr[<span class="number">500</span>] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line">        <span class="keyword">if</span>( s.size() == <span class="number">0</span> )</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span> ;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span> ; j &lt; n ; j ++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i = j ; i &lt; n ; i ++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span>(arr[s[i]-<span class="string">' '</span>] == <span class="number">0</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    test += s[i] ;</span><br><span class="line">                    arr[s[i]-<span class="string">' '</span>] ++;</span><br><span class="line">                    <span class="keyword">if</span>(test.size() &gt; temp.size())</span><br><span class="line">                    &#123;</span><br><span class="line">                        temp = test ;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">if</span>(test.size() &gt; temp.size())</span><br><span class="line">                    &#123;</span><br><span class="line">                        temp = test ;</span><br><span class="line">                    &#125;</span><br><span class="line">                    test = <span class="string">""</span> ;</span><br><span class="line">                    <span class="keyword">for</span>(<span class="keyword">int</span> k = <span class="number">0</span> ; k &lt; <span class="number">500</span> ; k ++ )</span><br><span class="line">                    &#123;</span><br><span class="line">                        arr[k] = <span class="number">0</span> ;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">break</span> ;</span><br><span class="line">                &#125;   </span><br><span class="line">            &#125;   </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> temp.size() ;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -466,7 +377,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/web安全/" rel="tag"># web安全</a>
+            <a href="/tags/leetcode/" rel="tag"># leetcode</a>
           
         </div>
       
@@ -479,15 +390,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019/02/28/系统分析HW1/" rel="next" title="系统分析HW1">
+                <i class="fa fa-chevron-left"></i> 系统分析HW1
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/01/22/MD5算法/" rel="prev" title="MD5 算法">
-                MD5 算法 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -621,7 +532,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-IPSec传输模式"><span class="nav-number">1.</span> <span class="nav-text">1. IPSec传输模式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-IPSec-简介"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 IPSec 简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-IPSec-的组成"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 IPSec 的组成</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-3-IPsec-的设计意图"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 IPsec 的设计意图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-4-IPsec-与其他互联网协议的对比"><span class="nav-number">1.4.</span> <span class="nav-text">1.4 IPsec 与其他互联网协议的对比</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-ESP"><span class="nav-number">2.</span> <span class="nav-text">2. ESP</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-ESP-简介"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 ESP 简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-ESP-的组成"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 ESP 的组成</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-ESP-的工作机理"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 ESP 的工作机理</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-传输模式下装包与拆包过程"><span class="nav-number">3.</span> <span class="nav-text">3. 传输模式下装包与拆包过程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-传输模式下-ESP-报文结构"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 传输模式下 ESP 报文结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-装包过程"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 装包过程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-拆包过程"><span class="nav-number">3.3.</span> <span class="nav-text">3.3 拆包过程</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目："><span class="nav-number">1.</span> <span class="nav-text">题目：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解法："><span class="nav-number">2.</span> <span class="nav-text">解法：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码："><span class="nav-number">3.</span> <span class="nav-text">代码：</span></a></li></ol></div>
             
 
           </div>
