@@ -91,7 +91,7 @@
 <meta property="og:site_name" content="人间有味是清欢">
 <meta property="og:description" content="每日一题 2019 - 03 - 02">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-02T13:30:50.413Z">
+<meta property="og:updated_time" content="2019-03-02T13:34:38.909Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="5. Longest Palindromic Substring">
 <meta name="twitter:description" content="每日一题 2019 - 03 - 02">
@@ -361,6 +361,8 @@
 <li>在扩充字符串长度时候，要保证一次最多增加两个字符</li>
 </ul>
 <p>有了上面的思路，我们就可以从头开始遍历寻找最长回文序列，DP[size][size]定义为动态规划的记录点，也即DP[i][j]代表从长度为<code>i</code>到<code>j</code>的串是回文串。</p>
+<p>另解：</p>
+<p><a href="https://www.cnblogs.com/z360/p/6375514.html" target="_blank" rel="noopener">Manacher算法</a></p>
 <hr>
 <h3 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="built_in">string</span> <span class="title">longestPalindrome</span><span class="params">(<span class="built_in">string</span> s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> dp[s.size()][s.size()] = &#123;<span class="number">0</span>&#125;, left = <span class="number">0</span>, right = <span class="number">0</span>, len = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; s.size(); ++i) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; i; ++j) &#123;</span><br><span class="line">                dp[j][i] = (s[i] == s[j] &amp;&amp; (i - j &lt; <span class="number">2</span> || dp[j + <span class="number">1</span>][i - <span class="number">1</span>]));</span><br><span class="line">                <span class="keyword">if</span> (dp[j][i] &amp;&amp; len &lt; i - j + <span class="number">1</span>) &#123;</span><br><span class="line">                    len = i - j + <span class="number">1</span>;</span><br><span class="line">                    left = j;</span><br><span class="line">                    right = i;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            dp[i][i] = <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> s.substr(left, right - left + <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
