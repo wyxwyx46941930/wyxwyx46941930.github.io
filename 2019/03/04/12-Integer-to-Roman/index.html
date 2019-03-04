@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="每日一题 2019 - 01 - 23">
+<meta name="description" content="每日一题 2019 - 02 - 27">
 <meta name="keywords" content="leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="331. Verify Preorder Serialization of a Binary Tree">
-<meta property="og:url" content="http://wyxwyx46941930.github.io/2019/01/23/331-Verify-Preorder-Serialization-of-a-Binary-Tree/index.html">
+<meta property="og:title" content="12. Integer to Roman">
+<meta property="og:url" content="http://wyxwyx46941930.github.io/2019/03/04/12-Integer-to-Roman/index.html">
 <meta property="og:site_name" content="人间有味是清欢">
-<meta property="og:description" content="每日一题 2019 - 01 - 23">
+<meta property="og:description" content="每日一题 2019 - 02 - 27">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-28T15:19:41.341Z">
+<meta property="og:updated_time" content="2019-03-04T16:07:20.467Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="331. Verify Preorder Serialization of a Binary Tree">
-<meta name="twitter:description" content="每日一题 2019 - 01 - 23">
+<meta name="twitter:title" content="12. Integer to Roman">
+<meta name="twitter:description" content="每日一题 2019 - 02 - 27">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://wyxwyx46941930.github.io/2019/01/23/331-Verify-Preorder-Serialization-of-a-Binary-Tree/">
+  <link rel="canonical" href="http://wyxwyx46941930.github.io/2019/03/04/12-Integer-to-Roman/">
 
 
 
 
 
-  <title>331. Verify Preorder Serialization of a Binary Tree | 人间有味是清欢</title>
+  <title>12. Integer to Roman | 人间有味是清欢</title>
   
 
 
@@ -258,7 +258,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://wyxwyx46941930.github.io/2019/01/23/331-Verify-Preorder-Serialization-of-a-Binary-Tree/">
+    <link itemprop="mainEntityOfPage" href="http://wyxwyx46941930.github.io/2019/03/04/12-Integer-to-Roman/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Wangyx">
@@ -275,7 +275,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">331. Verify Preorder Serialization of a Binary Tree</h1>
+          <h1 class="post-title" itemprop="name headline">12. Integer to Roman</h1>
         
 
         <div class="post-meta">
@@ -287,8 +287,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-23T23:48:10+08:00">
-                2019-01-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-04T23:57:36+08:00">
+                2019-03-04
               </time>
             
 
@@ -347,33 +347,38 @@
       
 
       
-        <p>每日一题 2019 - 01 - 23</p>
+        <p>每日一题 2019 - 02 - 27</p>
 <a id="more"></a>
-<h3 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h3><p>One way to serialize a binary tree is to use pre-order traversal. When we encounter a non-null node, we record the node’s value. If it is a null node, we record using a sentinel value such as <code>#</code>.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">     _9_</span><br><span class="line">    /   \</span><br><span class="line">   3     2</span><br><span class="line">  / \   / \</span><br><span class="line"> 4   1  <span class="comment">#  6</span></span><br><span class="line">/ \ / \   / \</span><br><span class="line"><span class="comment"># # # #   # #</span></span><br></pre></td></tr></table></figure>
-<p>For example, the above binary tree can be serialized to the string <code>&quot;9,3,4,#,#,1,#,#,2,#,6,#,#&quot;</code>, where <code>#</code> represents a null node.</p>
-<p>Given a string of comma separated values, verify whether it is a correct preorder traversal serialization of a binary tree. Find an algorithm without reconstructing the tree.</p>
-<p>Each comma separated value in the string must be either an integer or a character <code>&#39;#&#39;</code> representing <code>null</code> pointer.</p>
-<p>You may assume that the input format is always valid, for example it could never contain two consecutive commas such as <code>&quot;1,,3&quot;</code>.</p>
+<hr>
+<h3 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h3><p>Roman numerals are represented by seven different symbols: <code>I</code>, <code>V</code>, <code>X</code>, <code>L</code>, <code>C</code>, <code>D</code> and <code>M</code>.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Symbol       Value</span><br><span class="line">I             1</span><br><span class="line">V             5</span><br><span class="line">X             10</span><br><span class="line">L             50</span><br><span class="line">C             100</span><br><span class="line">D             500</span><br><span class="line">M             1000</span><br></pre></td></tr></table></figure>
+<p>For example, two is written as <code>II</code> in Roman numeral, just two one’s added together. Twelve is written as, <code>XII</code>, which is simply <code>X</code> + <code>II</code>. The number twenty seven is written as <code>XXVII</code>, which is <code>XX</code> + <code>V</code> + <code>II</code>.</p>
+<p>Roman numerals are usually written largest to smallest from left to right. However, the numeral for four is not <code>IIII</code>. Instead, the number four is written as <code>IV</code>. Because the one is before the five we subtract it making four. The same principle applies to the number nine, which is written as <code>IX</code>. There are six instances where subtraction is used:</p>
+<ul>
+<li><code>I</code> can be placed before <code>V</code> (5) and <code>X</code> (10) to make 4 and 9. </li>
+<li><code>X</code> can be placed before <code>L</code> (50) and <code>C</code> (100) to make 40 and 90. </li>
+<li><code>C</code> can be placed before <code>D</code> (500) and <code>M</code> (1000) to make 400 and 900.</li>
+</ul>
+<p>Given an integer, convert it to a roman numeral. Input is guaranteed to be within the range from 1 to 3999.</p>
 <p><strong>Example 1:</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: <span class="string">"9,3,4,#,#,1,#,#,2,#,6,#,#"</span></span><br><span class="line">Output: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: 3</span><br><span class="line">Output: <span class="string">"III"</span></span><br></pre></td></tr></table></figure>
 <p><strong>Example 2:</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: <span class="string">"1,#"</span></span><br><span class="line">Output: <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: 4</span><br><span class="line">Output: <span class="string">"IV"</span></span><br></pre></td></tr></table></figure>
 <p><strong>Example 3:</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: <span class="string">"9,#,#,1"</span></span><br><span class="line">Output: <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: 9</span><br><span class="line">Output: <span class="string">"IX"</span></span><br></pre></td></tr></table></figure>
+<p><strong>Example 4:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: 58</span><br><span class="line">Output: <span class="string">"LVIII"</span></span><br><span class="line">Explanation: L = 50, V = 5, III = 3.</span><br></pre></td></tr></table></figure>
+<p><strong>Example 5:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: 1994</span><br><span class="line">Output: <span class="string">"MCMXCIV"</span></span><br><span class="line">Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.</span><br></pre></td></tr></table></figure>
 <hr>
-<h3 id="解法："><a href="#解法：" class="headerlink" title="解法："></a>解法：</h3><p>这个题让我们判断给定的序列是不是二叉树的先序遍历序列，这里我们需要注意给定的序列的特点：</p>
+<h3 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h3><p>这个题让我们将阿拉伯数字转成罗马数字，其实就跟以前做过的一个把阿拉伯数字转成中文写法是一样的，就是找出具体的对应关系，并且叠加在一起就好了，比如：</p>
 <ul>
-<li>任意一个非空结点一定有两个子结点，这两个子结点可以为空，也即<code>#</code></li>
-<li>一颗空树的序列为 <code>#</code>，满足题意要求</li>
+<li>千位，1000为<code>M</code>，2000为<code>MM</code>，3000为<code>MMM</code></li>
+<li>百位，100-900对应<code>C</code>,<code>CC</code>,<code>CCC</code>,<code>CD</code>,<code>D</code>,<code>DC</code>,<code>DCC</code>,<code>DCCC</code>,<code>CM</code></li>
 </ul>
-<p>同时我们还需要注意题中所给的二叉树的一个特点就是：</p>
-<ul>
-<li><strong>空结点的个数 = 非空结点的个数 + 1</strong></li>
-</ul>
-<p>所以如果我们在遍历序列的过程中发现<code>#</code>的个数大于当前已经遍历过的非空节点的个数 + 1，那么证明这颗树是不存在的，有了这个思路我们就可以完成这个题的解答。</p>
+<p>等；找到对应关系我们就可以成功解决这个题。</p>
 <hr>
-<h3 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">isValidSerialization</span><span class="params">(<span class="built_in">string</span> preorder)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n = preorder.size();</span><br><span class="line">        <span class="keyword">if</span>(n == <span class="number">0</span>) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; v;</span><br><span class="line">        <span class="keyword">int</span> pos = <span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(preorder[i] == <span class="string">','</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                v.push_back(preorder.substr(pos+<span class="number">1</span>, i-pos<span class="number">-1</span>));</span><br><span class="line">                pos = i;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(preorder[n<span class="number">-1</span>] != <span class="string">'#'</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        v.push_back(<span class="string">"#"</span>);</span><br><span class="line">        <span class="keyword">int</span> cnt = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; v.size(); i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(cnt &lt;= <span class="number">0</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            <span class="keyword">if</span>(v[i] == <span class="string">"#"</span>) cnt -= <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">else</span> cnt += <span class="number">1</span>;</span><br><span class="line">        &#125;    </span><br><span class="line">        <span class="keyword">return</span> cnt == <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="built_in">string</span> <span class="title">intToRoman</span><span class="params">(<span class="keyword">int</span> num)</span> </span>&#123;</span><br><span class="line">        <span class="built_in">string</span> m[<span class="number">4</span>]=&#123;<span class="string">""</span>,<span class="string">"M"</span>,<span class="string">"MM"</span>,<span class="string">"MMM"</span>&#125;;</span><br><span class="line">        <span class="built_in">string</span> c[<span class="number">10</span>]=&#123;<span class="string">""</span>,<span class="string">"C"</span>,<span class="string">"CC"</span>,<span class="string">"CCC"</span>,<span class="string">"CD"</span>,<span class="string">"D"</span>,<span class="string">"DC"</span>,<span class="string">"DCC"</span>,<span class="string">"DCCC"</span>,<span class="string">"CM"</span>&#125;;</span><br><span class="line">        <span class="built_in">string</span> x[<span class="number">10</span>]=&#123;<span class="string">""</span>,<span class="string">"X"</span>,<span class="string">"XX"</span>,<span class="string">"XXX"</span>,<span class="string">"XL"</span>,<span class="string">"L"</span>,<span class="string">"LX"</span>,<span class="string">"LXX"</span>,<span class="string">"LXXX"</span>,<span class="string">"XC"</span>&#125;;</span><br><span class="line">        <span class="built_in">string</span> i[<span class="number">10</span>]=&#123;<span class="string">""</span>,<span class="string">"I"</span>,<span class="string">"II"</span>,<span class="string">"III"</span>,<span class="string">"IV"</span>,<span class="string">"V"</span>,<span class="string">"VI"</span>,<span class="string">"VII"</span>,<span class="string">"VIII"</span>,<span class="string">"IX"</span>&#125;;</span><br><span class="line">        <span class="keyword">return</span> m[num/<span class="number">1000</span>]+c[num%<span class="number">1000</span>/<span class="number">100</span>]+x[num%<span class="number">100</span>/<span class="number">10</span>]+i[num%<span class="number">10</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -404,8 +409,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/01/23/713-Subarray-Product-Less-Than-K/" rel="next" title="713. Subarray Product Less Than K">
-                <i class="fa fa-chevron-left"></i> 713. Subarray Product Less Than K
+              <a href="/2019/03/03/11-Container-With-Most-Water/" rel="next" title="11. Container With Most Water">
+                <i class="fa fa-chevron-left"></i> 11. Container With Most Water
               </a>
             
           </div>
@@ -413,10 +418,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/01/24/969-Pancake-Sorting/" rel="prev" title="969. Pancake Sorting">
-                969. Pancake Sorting <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -550,7 +551,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目："><span class="nav-number">1.</span> <span class="nav-text">题目：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解法："><span class="nav-number">2.</span> <span class="nav-text">解法：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码："><span class="nav-number">3.</span> <span class="nav-text">代码：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目："><span class="nav-number">1.</span> <span class="nav-text">题目：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#思路："><span class="nav-number">2.</span> <span class="nav-text">思路：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码："><span class="nav-number">3.</span> <span class="nav-text">代码：</span></a></li></ol></div>
             
 
           </div>
