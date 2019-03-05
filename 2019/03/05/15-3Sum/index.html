@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="每日一题 2019 - 03 - 02">
+<meta name="description" content="每日一题 2019 - 03 - 05">
 <meta name="keywords" content="leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="5. Longest Palindromic Substring">
-<meta property="og:url" content="http://wyxwyx46941930.github.io/2019/03/02/5-Longest-Palindromic-Substring/index.html">
+<meta property="og:title" content="15. 3Sum">
+<meta property="og:url" content="http://wyxwyx46941930.github.io/2019/03/05/15-3Sum/index.html">
 <meta property="og:site_name" content="人间有味是清欢">
-<meta property="og:description" content="每日一题 2019 - 03 - 02">
+<meta property="og:description" content="每日一题 2019 - 03 - 05">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-02T13:34:38.909Z">
+<meta property="og:updated_time" content="2019-03-05T16:20:41.199Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="5. Longest Palindromic Substring">
-<meta name="twitter:description" content="每日一题 2019 - 03 - 02">
+<meta name="twitter:title" content="15. 3Sum">
+<meta name="twitter:description" content="每日一题 2019 - 03 - 05">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://wyxwyx46941930.github.io/2019/03/02/5-Longest-Palindromic-Substring/">
+  <link rel="canonical" href="http://wyxwyx46941930.github.io/2019/03/05/15-3Sum/">
 
 
 
 
 
-  <title>5. Longest Palindromic Substring | 人间有味是清欢</title>
+  <title>15. 3Sum | 人间有味是清欢</title>
   
 
 
@@ -258,7 +258,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://wyxwyx46941930.github.io/2019/03/02/5-Longest-Palindromic-Substring/">
+    <link itemprop="mainEntityOfPage" href="http://wyxwyx46941930.github.io/2019/03/05/15-3Sum/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Wangyx">
@@ -275,7 +275,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">5. Longest Palindromic Substring</h1>
+          <h1 class="post-title" itemprop="name headline">15. 3Sum</h1>
         
 
         <div class="post-meta">
@@ -287,8 +287,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-02T21:02:35+08:00">
-                2019-03-02
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-05T23:26:44+08:00">
+                2019-03-05
               </time>
             
 
@@ -347,24 +347,24 @@
       
 
       
-        <p>每日一题 2019 - 03 - 02</p>
+        <p>每日一题 2019 - 03 - 05</p>
 <a id="more"></a>
-<h3 id="题目"><a href="#题目" class="headerlink" title="题目:"></a>题目:</h3><p>Given a string <strong>s</strong>, find the longest palindromic substring in <strong>s</strong>. You may assume that the maximum length of <strong>s</strong> is 1000.</p>
-<p><strong>Example 1:</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: <span class="string">"babad"</span></span><br><span class="line">Output: <span class="string">"bab"</span></span><br><span class="line">Note: <span class="string">"aba"</span> is also a valid answer.</span><br></pre></td></tr></table></figure>
-<p><strong>Example 2:</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: <span class="string">"cbbd"</span></span><br><span class="line">Output: <span class="string">"bb"</span></span><br></pre></td></tr></table></figure>
+<h3 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h3><p>Given an array <code>nums</code> of <em>n</em> integers, are there elements <em>a</em>, <em>b</em>, <em>c</em> in <code>nums</code> such that <em>a</em> + <em>b</em> + <em>c</em> = 0? Find all unique triplets in the array which gives the sum of zero.</p>
+<p><strong>Note:</strong></p>
+<p>The solution set must not contain duplicate triplets.</p>
+<p><strong>Example:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Given array nums = [-1, 0, 1, 2, -1, -4],</span><br><span class="line"></span><br><span class="line">A solution <span class="built_in">set</span> is:</span><br><span class="line">[</span><br><span class="line">  [-1, 0, 1],</span><br><span class="line">  [-1, -1, 2]</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
 <hr>
-<h3 id="解法："><a href="#解法：" class="headerlink" title="解法："></a>解法：</h3><p>这个题让我们求出给定串中的最长回文串序列，思路大概如下：</p>
+<h3 id="解法："><a href="#解法：" class="headerlink" title="解法："></a>解法：</h3><p>这个题题意很简单就是让我们找到<code>vector</code>中任意三个数字的和为<code>0</code>的序列，直观的思路就是三重循环解决问题，但是会超时，所以可以换一种思路。</p>
+<p>将时间复杂度从$$O(n^3)$$降到$$O(n^2)$$，我们需要减少一层循环的次数，那么我们可以设置两个指针：<code>left = i + 1</code>,<code>right = size - 1</code>，一个从当前坐标的右边一位往后遍历，一个从数组的最后一位往前遍历，如果：</p>
 <ul>
-<li>如果一个串是回文串，那么这个串开头与结尾各去掉一个字符之后仍是回文串</li>
-<li>在扩充字符串长度时候，要保证一次最多增加两个字符</li>
+<li>$$nums[i] + nums[left] + nums[right] &lt; 0$$，那么$$left ++$$</li>
+<li>$$nums[i] + nums[left] + nums[right] &gt; 0$$，那么$$right ++$$</li>
+<li>$$nums[i] + nums[left] + nums[right] = 0$$，那么要求的序列</li>
 </ul>
-<p>有了上面的思路，我们就可以从头开始遍历寻找最长回文序列，DP[size][size]定义为动态规划的记录点，也即DP[i][j]代表从长度为<code>i</code>到<code>j</code>的串是回文串。</p>
-<p>另解：</p>
-<p><a href="https://www.cnblogs.com/z360/p/6375514.html" target="_blank" rel="noopener">Manacher算法</a></p>
+<p>这里有一个小技巧，可以先对<code>nums</code>先进行排序，那么就一定可以保证求出来的序列一定是从大到小的。</p>
 <hr>
-<h3 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="built_in">string</span> <span class="title">longestPalindrome</span><span class="params">(<span class="built_in">string</span> s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> dp[s.size()][s.size()] = &#123;<span class="number">0</span>&#125;, left = <span class="number">0</span>, right = <span class="number">0</span>, len = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; s.size(); ++i) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; i; ++j) &#123;</span><br><span class="line">                dp[j][i] = (s[i] == s[j] &amp;&amp; (i - j &lt; <span class="number">2</span> || dp[j + <span class="number">1</span>][i - <span class="number">1</span>]));</span><br><span class="line">                <span class="keyword">if</span> (dp[j][i] &amp;&amp; len &lt; i - j + <span class="number">1</span>) &#123;</span><br><span class="line">                    len = i - j + <span class="number">1</span>;</span><br><span class="line">                    left = j;</span><br><span class="line">                    right = i;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            dp[i][i] = <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> s.substr(left, right - left + <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; threeSum(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums) &#123;</span><br><span class="line">        <span class="keyword">int</span> size = nums.size();</span><br><span class="line">        sort(nums.begin(),nums.end());</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; test ;</span><br><span class="line">        <span class="keyword">if</span>(size &lt;=<span class="number">2</span> )</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> test ;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span> ; i &lt; size - <span class="number">2</span> ; i ++ )</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">int</span> left = i + <span class="number">1</span> ; </span><br><span class="line">            <span class="keyword">int</span> right = size - <span class="number">1</span> ;</span><br><span class="line">            <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; temp ;</span><br><span class="line">            <span class="keyword">while</span> (left &lt; right)&#123;    </span><br><span class="line">                <span class="keyword">if</span>(nums[i] + nums[left] + nums[right] &lt; <span class="number">0</span> )</span><br><span class="line">                &#123;</span><br><span class="line">                    left ++ ;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span>(nums[i] + nums[left] + nums[right] &gt; <span class="number">0</span> )</span><br><span class="line">                &#123;</span><br><span class="line">                    right -- ;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                &#123;</span><br><span class="line">                    temp.push_back(nums[i]);</span><br><span class="line">                    temp.push_back(nums[left]);</span><br><span class="line">                    temp.push_back(nums[right]);</span><br><span class="line">                    test.push_back(temp);</span><br><span class="line">                    temp.clear();</span><br><span class="line">                    <span class="comment">//前一个条件保证去重 后一个条件保证数组不越界</span></span><br><span class="line">                    <span class="keyword">while</span>(nums[left] == nums[left+<span class="number">1</span>] &amp;&amp; ( left &lt; size - <span class="number">2</span> ) )</span><br><span class="line">                    &#123;</span><br><span class="line">                        left ++ ;</span><br><span class="line">                    &#125;</span><br><span class="line">                    left ++ ;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//前一个条件保证去重 后一个条件保证数组不越界</span></span><br><span class="line">            <span class="keyword">while</span>(nums[i] == nums[i+<span class="number">1</span>] &amp;&amp; ( i &lt; size - <span class="number">2</span> ))</span><br><span class="line">            &#123;</span><br><span class="line">               i ++ ;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> test ;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -395,8 +395,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/28/3-Longest-Substring-Without-Repeating-Characters/" rel="next" title="3. Longest Substring Without Repeating Characters">
-                <i class="fa fa-chevron-left"></i> 3. Longest Substring Without Repeating Characters
+              <a href="/2019/03/04/12-Integer-to-Roman/" rel="next" title="12. Integer to Roman">
+                <i class="fa fa-chevron-left"></i> 12. Integer to Roman
               </a>
             
           </div>
@@ -404,10 +404,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/03/11-Container-With-Most-Water/" rel="prev" title="11. Container With Most Water">
-                11. Container With Most Water <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -541,7 +537,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目"><span class="nav-number">1.</span> <span class="nav-text">题目:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解法："><span class="nav-number">2.</span> <span class="nav-text">解法：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码："><span class="nav-number">3.</span> <span class="nav-text">代码：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目："><span class="nav-number">1.</span> <span class="nav-text">题目：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解法："><span class="nav-number">2.</span> <span class="nav-text">解法：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码："><span class="nav-number">3.</span> <span class="nav-text">代码：</span></a></li></ol></div>
             
 
           </div>
