@@ -83,20 +83,18 @@
 
 
 
-<meta name="description" content="每日一题 2019 - 03 - 07">
+<meta name="description" content="每日一题 2019 - 03 - 09">
 <meta name="keywords" content="leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="17. Letter Combinations of a Phone Number">
-<meta property="og:url" content="http://wyxwyx46941930.github.io/2019/03/07/17-Letter-Combinations-of-a-Phone-Number/index.html">
+<meta property="og:title" content="18. 4Sum">
+<meta property="og:url" content="http://wyxwyx46941930.github.io/2019/03/09/18-4Sum/index.html">
 <meta property="og:site_name" content="人间有味是清欢">
-<meta property="og:description" content="每日一题 2019 - 03 - 07">
+<meta property="og:description" content="每日一题 2019 - 03 - 09">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://wyxwyx46941930.github.io/2019/03/07/17-Letter-Combinations-of-a-Phone-Number/1.png">
-<meta property="og:updated_time" content="2019-03-07T03:07:16.066Z">
+<meta property="og:updated_time" content="2019-03-09T15:35:17.962Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="17. Letter Combinations of a Phone Number">
-<meta name="twitter:description" content="每日一题 2019 - 03 - 07">
-<meta name="twitter:image" content="http://wyxwyx46941930.github.io/2019/03/07/17-Letter-Combinations-of-a-Phone-Number/1.png">
+<meta name="twitter:title" content="18. 4Sum">
+<meta name="twitter:description" content="每日一题 2019 - 03 - 09">
 
 
 
@@ -126,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://wyxwyx46941930.github.io/2019/03/07/17-Letter-Combinations-of-a-Phone-Number/">
+  <link rel="canonical" href="http://wyxwyx46941930.github.io/2019/03/09/18-4Sum/">
 
 
 
 
 
-  <title>17. Letter Combinations of a Phone Number | 人间有味是清欢</title>
+  <title>18. 4Sum | 人间有味是清欢</title>
   
 
 
@@ -260,7 +258,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://wyxwyx46941930.github.io/2019/03/07/17-Letter-Combinations-of-a-Phone-Number/">
+    <link itemprop="mainEntityOfPage" href="http://wyxwyx46941930.github.io/2019/03/09/18-4Sum/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Wangyx">
@@ -277,7 +275,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">17. Letter Combinations of a Phone Number</h1>
+          <h1 class="post-title" itemprop="name headline">18. 4Sum</h1>
         
 
         <div class="post-meta">
@@ -289,8 +287,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-07T10:29:14+08:00">
-                2019-03-07
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-09T23:13:07+08:00">
+                2019-03-09
               </time>
             
 
@@ -349,25 +347,18 @@
       
 
       
-        <p>每日一题 2019 - 03 - 07</p>
+        <p>每日一题 2019 - 03 - 09</p>
 <a id="more"></a>
 <hr>
-<h3 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h3><p>Given a string containing digits from <code>2-9</code> inclusive, return all possible letter combinations that the number could represent.</p>
-<p>A mapping of digit to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters.</p>
-<p><img src="/2019/03/07/17-Letter-Combinations-of-a-Phone-Number/1.png" alt="1"></p>
-<p><strong>Example:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: &quot;23&quot;</span><br><span class="line">Output: [&quot;ad&quot;, &quot;ae&quot;, &quot;af&quot;, &quot;bd&quot;, &quot;be&quot;, &quot;bf&quot;, &quot;cd&quot;, &quot;ce&quot;, &quot;cf&quot;].</span><br></pre></td></tr></table></figure>
+<h3 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h3><p>Given an array <code>nums</code> of <em>n</em> integers and an integer <code>target</code>, are there elements <em>a</em>, <em>b</em>, <em>c</em>, and <em>d</em> in <code>nums</code> such that <em>a</em> + <em>b</em> + <em>c</em> + <em>d</em>= <code>target</code>? Find all unique quadruplets in the array which gives the sum of <code>target</code>.</p>
 <p><strong>Note:</strong></p>
-<p>Although the above answer is in lexicographical order, your answer could be in any order you want.</p>
+<p>The solution set must not contain duplicate quadruplets.</p>
+<p><strong>Example:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Given array nums = [1, 0, -1, 0, -2, 2], and target = 0.</span><br><span class="line"></span><br><span class="line">A solution <span class="built_in">set</span> is:</span><br><span class="line">[</span><br><span class="line">  [-1,  0, 0, 1],</span><br><span class="line">  [-2, -1, 1, 2],</span><br><span class="line">  [-2,  0, 0, 2]</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
 <hr>
-<h3 id="解法："><a href="#解法：" class="headerlink" title="解法："></a>解法：</h3><p>这个题让我们找到<strong>给定电话号码上的所有不重复的排列组合</strong>，具体可以用三重循环的方法做，这三重循环的作用分别是：</p>
-<ul>
-<li>第一层遍历给定的<code>string digits</code>，因为我们要找到所有的待遍历电话数字</li>
-<li>第二层遍历待返回<code>vector&lt;string&gt;</code>，保证<code>digits</code>中的所有数据都能被遍历到，同时在遍历时候由于不能返回过程字符，所以要删除过程中遍历过的量</li>
-<li>第三层遍历<code>digts</code>中对应的每一个字母</li>
-</ul>
+<h3 id="解法："><a href="#解法：" class="headerlink" title="解法："></a>解法：</h3><p>这个题让我们找出给定数组中某四个数字的和等于目标值的序列，基本想法跟<a href="https://leetcode.com/problems/3sum/" target="_blank" rel="noopener">leetcode 15.3Sum</a>一致，唯一需要注意的一点就是这个题需要用到三重循环，所失时间复杂度变成$$O(n^3)$$，同时需要注意外层指针要在末尾前3个位置停止更新，谨防越界。</p>
 <hr>
-<h3 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; letterCombinations(<span class="built_in">string</span> digits) &#123;</span><br><span class="line">            <span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; res;</span><br><span class="line">            <span class="keyword">if</span> (digits.empty()) <span class="keyword">return</span> res;</span><br><span class="line">            <span class="built_in">string</span> dict[] = &#123;<span class="string">"abc"</span>, <span class="string">"def"</span>, <span class="string">"ghi"</span>, <span class="string">"jkl"</span>, <span class="string">"mno"</span>, <span class="string">"pqrs"</span>, <span class="string">"tuv"</span>, <span class="string">"wxyz"</span>&#125;;</span><br><span class="line">            res.push_back(<span class="string">""</span>);</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; digits.size(); ++i) &#123;</span><br><span class="line">                <span class="keyword">int</span> n = res.size();</span><br><span class="line">                <span class="built_in">string</span> str = dict[digits[i] - <span class="string">'2'</span>];</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; n; ++j) &#123;</span><br><span class="line">                    <span class="built_in">string</span> tmp = res.front();</span><br><span class="line">                    res.erase(res.begin());</span><br><span class="line">                    <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; str.size(); ++k) &#123;</span><br><span class="line">                        res.push_back(tmp + str[k]);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> res;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; fourSum(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums, <span class="keyword">int</span> target) &#123;</span><br><span class="line">        <span class="keyword">int</span> size = nums.size();</span><br><span class="line">        sort(nums.begin(),nums.end());</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; test ;</span><br><span class="line">        <span class="keyword">if</span>(size &lt;=<span class="number">2</span> )</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> test ;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span> ; j &lt; size - <span class="number">3</span>  ; j ++ )</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">int</span> target_temp = target - nums[j] ;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i = j + <span class="number">1</span> ; i &lt; size - <span class="number">2</span> ; i ++ )</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">int</span> left = i + <span class="number">1</span> ; </span><br><span class="line">                <span class="keyword">int</span> right = size - <span class="number">1</span> ;</span><br><span class="line">                <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; temp ;</span><br><span class="line">                <span class="keyword">while</span> (left &lt; right)&#123;    </span><br><span class="line">                    <span class="keyword">if</span>(nums[i] + nums[left] + nums[right] &lt; target_temp )</span><br><span class="line">                    &#123;</span><br><span class="line">                        left ++ ;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">else</span> <span class="keyword">if</span>(nums[i] + nums[left] + nums[right] &gt; target_temp )</span><br><span class="line">                    &#123;</span><br><span class="line">                        right -- ;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">else</span></span><br><span class="line">                    &#123;</span><br><span class="line">                        temp.push_back(nums[j]);</span><br><span class="line">                        temp.push_back(nums[i]);</span><br><span class="line">                        temp.push_back(nums[left]);</span><br><span class="line">                        temp.push_back(nums[right]);</span><br><span class="line">                        test.push_back(temp);</span><br><span class="line">                        temp.clear();</span><br><span class="line">                        <span class="keyword">while</span>(nums[left] == nums[left+<span class="number">1</span>] &amp;&amp; ( left &lt; size - <span class="number">2</span> ) )</span><br><span class="line">                        &#123;</span><br><span class="line">                            left ++ ;</span><br><span class="line">                        &#125;</span><br><span class="line">                        left ++ ;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">while</span>(nums[i] == nums[i+<span class="number">1</span>] &amp;&amp; ( i &lt; size - <span class="number">2</span> ))</span><br><span class="line">                &#123;</span><br><span class="line">                   i ++ ;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">while</span>(nums[j] == nums[j+<span class="number">1</span>] &amp;&amp; j &lt; size <span class="number">-3</span> )</span><br><span class="line">            &#123;</span><br><span class="line">                j ++ ;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> test ;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -398,8 +389,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/06/16-3Sum-Closest/" rel="next" title="16. 3Sum Closest">
-                <i class="fa fa-chevron-left"></i> 16. 3Sum Closest
+              <a href="/2019/03/07/17-Letter-Combinations-of-a-Phone-Number/" rel="next" title="17. Letter Combinations of a Phone Number">
+                <i class="fa fa-chevron-left"></i> 17. Letter Combinations of a Phone Number
               </a>
             
           </div>
@@ -407,10 +398,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/09/18-4Sum/" rel="prev" title="18. 4Sum">
-                18. 4Sum <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
