@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="每日一题 2019 - 03 - 09">
+<meta name="description" content="每日一题 2019 - 03 - 10">
 <meta name="keywords" content="leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="18. 4Sum">
-<meta property="og:url" content="http://wyxwyx46941930.github.io/2019/03/09/18-4Sum/index.html">
+<meta property="og:title" content="19. Remove Nth Node From End of List">
+<meta property="og:url" content="http://wyxwyx46941930.github.io/2019/03/11/19-Remove-Nth-Node-From-End-of-List/index.html">
 <meta property="og:site_name" content="人间有味是清欢">
-<meta property="og:description" content="每日一题 2019 - 03 - 09">
+<meta property="og:description" content="每日一题 2019 - 03 - 10">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-09T15:38:56.427Z">
+<meta property="og:updated_time" content="2019-03-10T17:01:35.259Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="18. 4Sum">
-<meta name="twitter:description" content="每日一题 2019 - 03 - 09">
+<meta name="twitter:title" content="19. Remove Nth Node From End of List">
+<meta name="twitter:description" content="每日一题 2019 - 03 - 10">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://wyxwyx46941930.github.io/2019/03/09/18-4Sum/">
+  <link rel="canonical" href="http://wyxwyx46941930.github.io/2019/03/11/19-Remove-Nth-Node-From-End-of-List/">
 
 
 
 
 
-  <title>18. 4Sum | 人间有味是清欢</title>
+  <title>19. Remove Nth Node From End of List | 人间有味是清欢</title>
   
 
 
@@ -258,7 +258,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://wyxwyx46941930.github.io/2019/03/09/18-4Sum/">
+    <link itemprop="mainEntityOfPage" href="http://wyxwyx46941930.github.io/2019/03/11/19-Remove-Nth-Node-From-End-of-List/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Wangyx">
@@ -275,7 +275,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">18. 4Sum</h1>
+          <h1 class="post-title" itemprop="name headline">19. Remove Nth Node From End of List</h1>
         
 
         <div class="post-meta">
@@ -287,8 +287,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-09T23:13:07+08:00">
-                2019-03-09
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-11T00:58:06+08:00">
+                2019-03-11
               </time>
             
 
@@ -347,18 +347,24 @@
       
 
       
-        <p>每日一题 2019 - 03 - 09</p>
+        <p>每日一题 2019 - 03 - 10</p>
 <a id="more"></a>
-<hr>
-<h3 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h3><p>Given an array <code>nums</code> of <em>n</em> integers and an integer <code>target</code>, are there elements <em>a</em>, <em>b</em>, <em>c</em>, and <em>d</em> in <code>nums</code> such that <em>a</em> + <em>b</em> + <em>c</em> + <em>d</em>= <code>target</code>? Find all unique quadruplets in the array which gives the sum of <code>target</code>.</p>
-<p><strong>Note:</strong></p>
-<p>The solution set must not contain duplicate quadruplets.</p>
+<h3 id="题目"><a href="#题目" class="headerlink" title="题目:"></a>题目:</h3><p>Given a linked list, remove the <em>n</em>-th node from the end of list and return its head.</p>
 <p><strong>Example:</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Given array nums = [1, 0, -1, 0, -2, 2], and target = 0.</span><br><span class="line"></span><br><span class="line">A solution <span class="built_in">set</span> is:</span><br><span class="line">[</span><br><span class="line">  [-1,  0, 0, 1],</span><br><span class="line">  [-2, -1, 1, 2],</span><br><span class="line">  [-2,  0, 0, 2]</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Given linked list: 1-&gt;2-&gt;3-&gt;4-&gt;5, and n = 2.</span><br><span class="line"></span><br><span class="line">After removing the second node from the end, the linked list becomes 1-&gt;2-&gt;3-&gt;5.</span><br></pre></td></tr></table></figure>
+<p><strong>Note:</strong></p>
+<p>Given <em>n</em> will always be valid.</p>
+<p><strong>Follow up:</strong></p>
+<p>Could you do this in one pass?</p>
 <hr>
-<h3 id="解法："><a href="#解法：" class="headerlink" title="解法："></a>解法：</h3><p>这个题让我们找出给定数组中某四个数字的和等于目标值的序列，基本想法跟<a href="https://leetcode.com/problems/3sum/" target="_blank" rel="noopener">leetcode 15.3Sum</a>一致，唯一需要注意的一点就是这个题需要用到三重循环，所用时间复杂度变成O(n^3)，同时需要注意外层指针要在末尾前3个位置停止更新，谨防越界。</p>
+<h3 id="解法："><a href="#解法：" class="headerlink" title="解法："></a>解法：</h3><p>这题目的很简单就是让我们删掉链表的倒数第N个元素，直观的思路就是：</p>
+<ul>
+<li>先遍历一遍整个链表找出元素个数</li>
+<li>遍历过程中找到对应位置的元素删除</li>
+</ul>
+<p>可以换个思路，我们使用两个指针<code>cur、pre</code>，其中<code>cur</code>比<code>pre</code>先行n步，当<code>cur</code>到达末尾时，<code>pre</code>所指的下一个元素即是要删除的元素，这样就可以保证我们的复杂度最低，时间复杂度也有所下降。</p>
 <hr>
-<h3 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; fourSum(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums, <span class="keyword">int</span> target) &#123;</span><br><span class="line">        <span class="keyword">int</span> size = nums.size();</span><br><span class="line">        sort(nums.begin(),nums.end());</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; test ;</span><br><span class="line">        <span class="keyword">if</span>(size &lt;=<span class="number">2</span> )</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> test ;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span> ; j &lt; size - <span class="number">3</span>  ; j ++ )</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">int</span> target_temp = target - nums[j] ;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i = j + <span class="number">1</span> ; i &lt; size - <span class="number">2</span> ; i ++ )</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">int</span> left = i + <span class="number">1</span> ; </span><br><span class="line">                <span class="keyword">int</span> right = size - <span class="number">1</span> ;</span><br><span class="line">                <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; temp ;</span><br><span class="line">                <span class="keyword">while</span> (left &lt; right)&#123;    </span><br><span class="line">                    <span class="keyword">if</span>(nums[i] + nums[left] + nums[right] &lt; target_temp )</span><br><span class="line">                    &#123;</span><br><span class="line">                        left ++ ;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">else</span> <span class="keyword">if</span>(nums[i] + nums[left] + nums[right] &gt; target_temp )</span><br><span class="line">                    &#123;</span><br><span class="line">                        right -- ;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">else</span></span><br><span class="line">                    &#123;</span><br><span class="line">                        temp.push_back(nums[j]);</span><br><span class="line">                        temp.push_back(nums[i]);</span><br><span class="line">                        temp.push_back(nums[left]);</span><br><span class="line">                        temp.push_back(nums[right]);</span><br><span class="line">                        test.push_back(temp);</span><br><span class="line">                        temp.clear();</span><br><span class="line">                        <span class="keyword">while</span>(nums[left] == nums[left+<span class="number">1</span>] &amp;&amp; ( left &lt; size - <span class="number">2</span> ) )</span><br><span class="line">                        &#123;</span><br><span class="line">                            left ++ ;</span><br><span class="line">                        &#125;</span><br><span class="line">                        left ++ ;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">while</span>(nums[i] == nums[i+<span class="number">1</span>] &amp;&amp; ( i &lt; size - <span class="number">2</span> ))</span><br><span class="line">                &#123;</span><br><span class="line">                   i ++ ;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">while</span>(nums[j] == nums[j+<span class="number">1</span>] &amp;&amp; j &lt; size <span class="number">-3</span> )</span><br><span class="line">            &#123;</span><br><span class="line">                j ++ ;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> test ;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">removeNthFromEnd</span><span class="params">(ListNode* head, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        ListNode *cur = head, *pre = head;</span><br><span class="line">        <span class="keyword">while</span>(n--) cur = cur-&gt;next;</span><br><span class="line">        <span class="keyword">if</span>(cur == <span class="literal">NULL</span>) <span class="keyword">return</span> head-&gt;next;</span><br><span class="line">        <span class="keyword">while</span>(cur-&gt;next) &#123;</span><br><span class="line">            pre = pre-&gt;next;</span><br><span class="line">            cur = cur-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        pre-&gt;next = pre-&gt;next-&gt;next;</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -389,8 +395,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/07/17-Letter-Combinations-of-a-Phone-Number/" rel="next" title="17. Letter Combinations of a Phone Number">
-                <i class="fa fa-chevron-left"></i> 17. Letter Combinations of a Phone Number
+              <a href="/2019/03/09/18-4Sum/" rel="next" title="18. 4Sum">
+                <i class="fa fa-chevron-left"></i> 18. 4Sum
               </a>
             
           </div>
@@ -398,10 +404,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/11/19-Remove-Nth-Node-From-End-of-List/" rel="prev" title="19. Remove Nth Node From End of List">
-                19. Remove Nth Node From End of List <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -535,7 +537,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目："><span class="nav-number">1.</span> <span class="nav-text">题目：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解法："><span class="nav-number">2.</span> <span class="nav-text">解法：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码："><span class="nav-number">3.</span> <span class="nav-text">代码：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目"><span class="nav-number">1.</span> <span class="nav-text">题目:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解法："><span class="nav-number">2.</span> <span class="nav-text">解法：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码："><span class="nav-number">3.</span> <span class="nav-text">代码：</span></a></li></ol></div>
             
 
           </div>
