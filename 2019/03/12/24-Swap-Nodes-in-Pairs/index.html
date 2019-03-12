@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="每日一题 2019 - 01 - 23">
+<meta name="description" content="每日一题 2019 - 03 - 12">
 <meta name="keywords" content="leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="713. Subarray Product Less Than K">
-<meta property="og:url" content="http://wyxwyx46941930.github.io/2019/01/23/713-Subarray-Product-Less-Than-K/index.html">
+<meta property="og:title" content="24. Swap Nodes in Pairs">
+<meta property="og:url" content="http://wyxwyx46941930.github.io/2019/03/12/24-Swap-Nodes-in-Pairs/index.html">
 <meta property="og:site_name" content="人间有味是清欢">
-<meta property="og:description" content="每日一题 2019 - 01 - 23">
+<meta property="og:description" content="每日一题 2019 - 03 - 12">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-28T15:20:12.777Z">
+<meta property="og:updated_time" content="2019-03-12T15:52:06.363Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="713. Subarray Product Less Than K">
-<meta name="twitter:description" content="每日一题 2019 - 01 - 23">
+<meta name="twitter:title" content="24. Swap Nodes in Pairs">
+<meta name="twitter:description" content="每日一题 2019 - 03 - 12">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://wyxwyx46941930.github.io/2019/01/23/713-Subarray-Product-Less-Than-K/">
+  <link rel="canonical" href="http://wyxwyx46941930.github.io/2019/03/12/24-Swap-Nodes-in-Pairs/">
 
 
 
 
 
-  <title>713. Subarray Product Less Than K | 人间有味是清欢</title>
+  <title>24. Swap Nodes in Pairs | 人间有味是清欢</title>
   
 
 
@@ -258,7 +258,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://wyxwyx46941930.github.io/2019/01/23/713-Subarray-Product-Less-Than-K/">
+    <link itemprop="mainEntityOfPage" href="http://wyxwyx46941930.github.io/2019/03/12/24-Swap-Nodes-in-Pairs/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Wangyx">
@@ -275,7 +275,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">713. Subarray Product Less Than K</h1>
+          <h1 class="post-title" itemprop="name headline">24. Swap Nodes in Pairs</h1>
         
 
         <div class="post-meta">
@@ -287,8 +287,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-23T00:28:21+08:00">
-                2019-01-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-12T23:48:40+08:00">
+                2019-03-12
               </time>
             
 
@@ -347,28 +347,21 @@
       
 
       
-        <p>每日一题 2019 - 01 - 23</p>
+        <p>每日一题 2019 - 03 - 12</p>
 <a id="more"></a>
-<h3 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h3><p>Your are given an array of positive integers <code>nums</code>.</p>
-<p>Count and print the number of (contiguous) subarrays where the product of all the elements in the subarray is less than <code>k</code>.</p>
-<p><strong>Example 1:</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Input: nums = [10, 5, 2, 6], k = 100</span><br><span class="line">Output: 8</span><br><span class="line">Explanation: The 8 subarrays that have product less than 100 are: [10], [5], [2], [6], [10, 5], [5, 2], [2, 6], [5, 2, 6].</span><br><span class="line">Note that [10, 5, 2] is not included as the product of 100 is not strictly less than k.</span><br></pre></td></tr></table></figure>
-<p><strong>Note:</strong></p>
-<p><code>0 &lt; nums.length &lt;= 50000</code>.</p>
-<p><code>0 &lt; nums[i] &lt; 1000</code>.</p>
-<p><code>0 &lt;= k &lt; 10^6</code>.</p>
 <hr>
-<h3 id="解法："><a href="#解法：" class="headerlink" title="解法："></a>解法：</h3><p>这个题是让我们找到<code>连续的子序列，且子序列的乘积小于给定的数字K</code></p>
-<p>所以思路就是：我们可以维护一个窗口，通过窗口的滑动来进行判断，比如题中给定的<code>10,5,2,6</code>这个序列</p>
+<h3 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h3><p>Given a linked list, swap every two adjacent nodes and return its head.</p>
+<p>You may <strong>not</strong> modify the values in the list’s nodes, only nodes itself may be changed.</p>
+<p><strong>Example:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Given 1-&gt;2-&gt;3-&gt;4, you should <span class="built_in">return</span> the list as 2-&gt;1-&gt;4-&gt;3.</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="解法："><a href="#解法：" class="headerlink" title="解法："></a>解法：</h3><p>这个题让我们<code>交换链表中相邻的两个位置的元素</code>（注：这里交换过的元素不再进行交换），所以思路其实很简单，就是设置两个指针，一前一后进行变换，但在变换的过程中注意：</p>
 <ul>
-<li>首先窗口大小为 1 ，此时窗口内内容为 <code>10</code>，窗口内元素乘积为 <code>10</code>，所以满足情况</li>
-<li>增大窗口长度为 2，此时窗口内内容为<code>10,5</code>，窗口内元素乘积为 <code>50</code>，所以满足情况</li>
-<li>继续增大窗口长度为 3，此时窗口内内容为<code>10,5,2</code>,窗口内元素乘积为<code>100</code>，此时就不满足情况，所以此时我们需要将窗口缩短，也即将窗口左边界减一，所以此时窗口长度为 2 ，窗口内内容为<code>5,2</code>,此时又满足情况</li>
-<li>继续操作，直到遍历完全所有给定数组所有内容</li>
+<li>交换完成之后，要让两个指针同时往后移两个元素</li>
+<li>交换之前要判断当前指针的下一个指向是不是为空，防止访问无效内存空间</li>
 </ul>
-<p>还要注意一点，就是我们上面求出的序列，并不能满足我们的题意要求，因为我们的题目要求求出所有子序列，那么我们可以这么想，比如<code>10,5</code>这个序列，<code>10</code>,<code>5</code>,<code>10,5</code>,但是<code>10</code>我们已经在第一步中记录过，所以只需要记录后两个记录，所以我们可以使用<code>right - left + 1</code>，也即<code>窗口左边界-窗口右边界</code>的方法，记录满足题意的情况。</p>
 <hr>
-<h3 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">numSubarrayProductLessThanK</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> total = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> left = <span class="number">0</span> ;</span><br><span class="line">        <span class="keyword">int</span> number = <span class="number">0</span> ;</span><br><span class="line">        <span class="keyword">if</span>(k &lt;= <span class="number">1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> right = <span class="number">0</span> ; right &lt; nums.size() ; right ++  )</span><br><span class="line">        &#123;</span><br><span class="line">            total *= nums[right];</span><br><span class="line">            <span class="keyword">while</span>(total &gt;= k )</span><br><span class="line">            &#123;</span><br><span class="line">                total /= nums[left] ;</span><br><span class="line">                left ++ ;</span><br><span class="line">            &#125;</span><br><span class="line">            number += ( right - left + <span class="number">1</span> ) ;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> number ;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode *next;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) : val(x), next(NULL) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">swapPairs</span><span class="params">(ListNode* head)</span> </span>&#123;</span><br><span class="line">        ListNode * temp = head;</span><br><span class="line">        <span class="keyword">if</span>( head == <span class="literal">NULL</span> || head -&gt; next == <span class="literal">NULL</span> )</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> head ;</span><br><span class="line">        &#125;</span><br><span class="line">        ListNode * temt = head ; </span><br><span class="line">        temp = temp -&gt; next ;</span><br><span class="line">        <span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">int</span> test = temp -&gt; val ;</span><br><span class="line">            temp -&gt; val = temt -&gt; val;</span><br><span class="line">            temt -&gt; val = test ;</span><br><span class="line">            <span class="keyword">if</span>(temp -&gt;  next != <span class="literal">NULL</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                temt = temp ;</span><br><span class="line">                temp = temp -&gt; next ;</span><br><span class="line">                <span class="keyword">if</span>(temp -&gt; next != <span class="literal">NULL</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    temt = temp ;</span><br><span class="line">                    temp = temp -&gt; next ;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">break</span> ;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">break</span> ;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> head ;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -399,8 +392,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/01/22/X-509/" rel="next" title="X.509证书的读取操作与分析（Python版）">
-                <i class="fa fa-chevron-left"></i> X.509证书的读取操作与分析（Python版）
+              <a href="/2019/03/11/22-Generate-Parentheses/" rel="next" title="22. Generate Parentheses">
+                <i class="fa fa-chevron-left"></i> 22. Generate Parentheses
               </a>
             
           </div>
@@ -408,10 +401,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/01/23/331-Verify-Preorder-Serialization-of-a-Binary-Tree/" rel="prev" title="331. Verify Preorder Serialization of a Binary Tree">
-                331. Verify Preorder Serialization of a Binary Tree <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
