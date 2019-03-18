@@ -72,7 +72,7 @@
 
 
 
-  <meta name="keywords" content="leetcode,">
+  <meta name="keywords" content="系统分析设计,">
 
 
 
@@ -83,18 +83,21 @@
 
 
 
-<meta name="description" content="每日一题 2019 - 02 - 25">
-<meta name="keywords" content="leetcode">
+<meta name="description" content="系统分析HW2学号：16340226 姓名：王迎旭 方向：16级软件工程嵌入式 日期：2019 - 03 - 04">
+<meta name="keywords" content="系统分析设计">
 <meta property="og:type" content="article">
-<meta property="og:title" content="461. Hamming Distance">
-<meta property="og:url" content="http://wyxwyx46941930.github.io/2019/02/25/461-Hamming-Distance/index.html">
+<meta property="og:title" content="系统分析HW2">
+<meta property="og:url" content="http://wyxwyx46941930.github.io/2019/03/18/系统分析HW2/index.html">
 <meta property="og:site_name" content="人间有味是清欢">
-<meta property="og:description" content="每日一题 2019 - 02 - 25">
+<meta property="og:description" content="系统分析HW2学号：16340226 姓名：王迎旭 方向：16级软件工程嵌入式 日期：2019 - 03 - 04">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-28T15:19:50.136Z">
+<meta property="og:image" content="http://wyxwyx46941930.github.io/2019/03/18/系统分析HW2/系分.png">
+<meta property="og:image" content="http://wyxwyx46941930.github.io/2019/03/18/系统分析HW2/uml.png">
+<meta property="og:updated_time" content="2019-03-18T03:01:52.305Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="461. Hamming Distance">
-<meta name="twitter:description" content="每日一题 2019 - 02 - 25">
+<meta name="twitter:title" content="系统分析HW2">
+<meta name="twitter:description" content="系统分析HW2学号：16340226 姓名：王迎旭 方向：16级软件工程嵌入式 日期：2019 - 03 - 04">
+<meta name="twitter:image" content="http://wyxwyx46941930.github.io/2019/03/18/系统分析HW2/系分.png">
 
 
 
@@ -124,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://wyxwyx46941930.github.io/2019/02/25/461-Hamming-Distance/">
+  <link rel="canonical" href="http://wyxwyx46941930.github.io/2019/03/18/系统分析HW2/">
 
 
 
 
 
-  <title>461. Hamming Distance | 人间有味是清欢</title>
+  <title>系统分析HW2 | 人间有味是清欢</title>
   
 
 
@@ -258,7 +261,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://wyxwyx46941930.github.io/2019/02/25/461-Hamming-Distance/">
+    <link itemprop="mainEntityOfPage" href="http://wyxwyx46941930.github.io/2019/03/18/系统分析HW2/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Wangyx">
@@ -275,7 +278,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">461. Hamming Distance</h1>
+          <h1 class="post-title" itemprop="name headline">系统分析HW2</h1>
         
 
         <div class="post-meta">
@@ -287,8 +290,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-25T18:02:56+08:00">
-                2019-02-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-18T10:59:31+08:00">
+                2019-03-18
               </time>
             
 
@@ -310,8 +313,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/leetcode/" itemprop="url" rel="index">
-                    <span itemprop="name">leetcode</span>
+                  <a href="/categories/系统分析设计/" itemprop="url" rel="index">
+                    <span itemprop="name">系统分析设计</span>
                   </a>
                 </span>
 
@@ -347,18 +350,74 @@
       
 
       
-        <p>每日一题 2019 - 02 - 25</p>
+        <h3 id="系统分析HW2"><a href="#系统分析HW2" class="headerlink" title="系统分析HW2"></a>系统分析HW2</h3><p>学号：16340226</p>
+<p>姓名：王迎旭</p>
+<p>方向：16级软件工程嵌入式</p>
+<p>日期：2019 - 03 - 04</p>
 <a id="more"></a>
 <hr>
-<h3 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h3><p>The <a href="https://en.wikipedia.org/wiki/Hamming_distance" target="_blank" rel="noopener">Hamming distance</a> between two integers is the number of positions at which the corresponding bits are different.</p>
-<p>Given two integers <code>x</code> and <code>y</code>, calculate the Hamming distance.</p>
-<p><strong>Note:</strong><br>0 ≤ <code>x</code>, <code>y</code> &lt; 231.</p>
-<p><strong>Example:</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Input: x = 1, y = 4</span><br><span class="line"></span><br><span class="line">Output: 2</span><br><span class="line"></span><br><span class="line">Explanation:</span><br><span class="line">1   (0 0 0 1)</span><br><span class="line">4   (0 1 0 0)</span><br><span class="line">       ↑   ↑</span><br><span class="line"></span><br><span class="line">The above arrows point to positions <span class="built_in">where</span> the corresponding bits are different.</span><br></pre></td></tr></table></figure>
+<h3 id="一、简答题："><a href="#一、简答题：" class="headerlink" title="一、简答题："></a>一、简答题：</h3><h4 id="1-1-用简短的语言给出对分析、设计的理解。"><a href="#1-1-用简短的语言给出对分析、设计的理解。" class="headerlink" title="1.1 用简短的语言给出对分析、设计的理解。"></a>1.1 用简短的语言给出对分析、设计的理解。</h4><p>答：</p>
+<ul>
+<li><strong>分析</strong>就是对用户给出的软件功能等方面的需求进行系统的研究，识别出主号问题，确定待开发软件的功能、性能、接口、数据、界面等具体的细节要求。</li>
+<li><strong>设计</strong>就是基于需求分析中得到的需求，构造出目标系统的逻辑模型，最终得到一个可供编码过程参考的设计模型文档。</li>
+</ul>
+<p>分析与设计整体来说就是对客户提出的需求进行系统的研究，并在研究过程中对其进行精简和整理，分析过后得到可行的有价值的需求版本，然后再对其进行具体的功能与界面的设计，从而提出软件制品的可行方案。</p>
 <hr>
-<h3 id="解法："><a href="#解法：" class="headerlink" title="解法："></a>解法：</h3><p>这个题挺水的，让我们找出任意两个数字的二进制中不同的位置的数目，最简单的方法就是求两个数字的异或，得到的结果为1的位置的个数就是要求的答案。</p>
+<h4 id="1-2-用一句话描述面向对象的分析与设计的优势。"><a href="#1-2-用一句话描述面向对象的分析与设计的优势。" class="headerlink" title="1.2 用一句话描述面向对象的分析与设计的优势。"></a>1.2 用一句话描述面向对象的分析与设计的优势。</h4><p>答：</p>
+<p>面向对象的分析与设计能够通过分析现实世界中存在的问题，并构建相对应的问题模型，保持了他们的结构、关系和行为模式，具有易理解和易维护的特性。</p>
 <hr>
-<h3 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">hammingDistance</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> sum = x^y;</span><br><span class="line">        <span class="keyword">int</span> count;</span><br><span class="line">        <span class="keyword">for</span>(count = <span class="number">0</span>; sum &gt; <span class="number">0</span>; count++)&#123;</span><br><span class="line">            sum &amp;= (sum - <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> count;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h4 id="1-3-简述-UML（统一建模语言）的作用。考试考哪些图？"><a href="#1-3-简述-UML（统一建模语言）的作用。考试考哪些图？" class="headerlink" title="1.3 简述 UML（统一建模语言）的作用。考试考哪些图？"></a>1.3 简述 UML（统一建模语言）的作用。考试考哪些图？</h4><p>解答：</p>
+<p>1)  <strong>UML</strong>（Unified Modeling Language）用于说明、可视化、构建和编写一个正在开发的、面向对象的、软件密集系统的制品。 它可以将面向对象分析（OOA）和面向对象设计（OOD）使用统一定义的符号表示出来，并将对象自身的属性、对象与对象之间的关联关系可视化，提升项目结构的可读性。</p>
+<p>2)  考试要考的图形总共可分为 4 类： </p>
+<ul>
+<li>用例图：用户角度：功能、执行者</li>
+<li>静态图：系统静态结构<ul>
+<li>类图：概念及关系</li>
+<li>对象图：某种状态或时间段内，系统中活跃的对象及其关系</li>
+<li>包图：描述系统的分解结构</li>
+</ul>
+</li>
+<li>行为图：系统的动态行为<ul>
+<li>交互图：描述对象间的消息传递<ul>
+<li>顺序图：强调对象间消息发送的时序</li>
+<li>合作图：强调对象间的动态协作关系</li>
+</ul>
+</li>
+<li>状态图：对象的动态行为。状态-事件-状态迁移-响应动作</li>
+<li>活动图：描述系统为完成某功能而执行的操作序列</li>
+</ul>
+</li>
+<li>实现图：描述系统的组成和分布状况<ul>
+<li>构件图：组成部件及其关系</li>
+<li>部署图：物理体系结构及与软件单元的对应关系</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="1-4-从软件本质的角度，解释软件范围（需求）控制的可行性"><a href="#1-4-从软件本质的角度，解释软件范围（需求）控制的可行性" class="headerlink" title="1.4 从软件本质的角度，解释软件范围（需求）控制的可行性"></a>1.4 从软件本质的角度，解释软件范围（需求）控制的可行性</h4><p>软件具有复杂性、一致性、可变性、不可视性。软件开发本身具有可变性，而任何微小的需求变化都可能对软件的设计开发造成很大的影响，会影响软甲开发的难度，提高复杂性，如果不对软件的需求做出控制，会无意义地增加开发难度，对软件制品的质量产生负面效果，所以控制软件需求是必须的。</p>
+<p>在需求分析与设计的过程中，我们可以围绕软件开发的复杂性，对现有的需求进行评估，同时围绕软件开发的成本进行调控，并对其可变和不可视的环境变化，也就是意外改动进行一致性的冗余设计，由此可以使得软件生产的预算、工期、意外变化等在一定程度都在我们的掌控之中</p>
+<hr>
+<h3 id="二、项目管理实践"><a href="#二、项目管理实践" class="headerlink" title="二、项目管理实践"></a>二、项目管理实践</h3><h4 id="2-1-看板使用练习（提交看板执行结果贴图，建议使用-Git-project）"><a href="#2-1-看板使用练习（提交看板执行结果贴图，建议使用-Git-project）" class="headerlink" title="2.1 看板使用练习（提交看板执行结果贴图，建议使用 Git project）"></a>2.1 看板使用练习（提交看板执行结果贴图，建议使用 Git project）</h4><p>看板（kanban）是敏捷开发的重要手段，主要用于项目的进度管理。所有需要完成的任务，都做成卡片，贴在一块白板上面，这就是看板。</p>
+<p>按照不同的阶段，看板分成若干列。</p>
+<ul>
+<li>Todo （待开发）</li>
+<li>Doing （开发中）</li>
+<li>Done （已完成）</li>
+</ul>
+<p>可以根据实际情况，分出更多的列。</p>
+<ul>
+<li>Todo （待安排）</li>
+<li>Plan （计划）</li>
+<li>Develop （开发）</li>
+<li>Test （测试）</li>
+<li>Deploy （部署）</li>
+<li>Done （已完成）</li>
+</ul>
+<p><code>github project</code> 中的看板中，同样可以把 Issue 从一列拖到另一列，表示从一个阶段进入另一个阶段。</p>
+<p><img src="/2019/03/18/系统分析HW2/系分.png" alt="系分"></p>
+<h4 id="2-2-UML绘图工具练习（提交贴图，必须使用-UMLet）"><a href="#2-2-UML绘图工具练习（提交贴图，必须使用-UMLet）" class="headerlink" title="2.2 UML绘图工具练习（提交贴图，必须使用 UMLet）"></a>2.2 UML绘图工具练习（提交贴图，必须使用 UMLet）</h4><p>绘图选择: <code>p71</code> 的 <code>MonoPlay</code> 应用玩家类</p>
+<p>图示：</p>
+<p><img src="/2019/03/18/系统分析HW2/uml.png" alt="uml"></p>
 
       
     </div>
@@ -376,7 +435,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/leetcode/" rel="tag"># leetcode</a>
+            <a href="/tags/系统分析设计/" rel="tag"># 系统分析设计</a>
           
         </div>
       
@@ -389,8 +448,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/25/863-All-Nodes-Distance-K-in-Binary-Tree/" rel="next" title="863. All Nodes Distance K in Binary Tree">
-                <i class="fa fa-chevron-left"></i> 863. All Nodes Distance K in Binary Tree
+              <a href="/2019/03/14/31-Next-Permutation/" rel="next" title="31. Next Permutation">
+                <i class="fa fa-chevron-left"></i> 31. Next Permutation
               </a>
             
           </div>
@@ -398,10 +457,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/02/26/540-Single-Element-in-a-Sorted-Array/" rel="prev" title="540. Single Element in a Sorted Array">
-                540. Single Element in a Sorted Array <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -535,7 +590,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目："><span class="nav-number">1.</span> <span class="nav-text">题目：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解法："><span class="nav-number">2.</span> <span class="nav-text">解法：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码："><span class="nav-number">3.</span> <span class="nav-text">代码：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#系统分析HW2"><span class="nav-number">1.</span> <span class="nav-text">系统分析HW2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一、简答题："><span class="nav-number">2.</span> <span class="nav-text">一、简答题：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-用简短的语言给出对分析、设计的理解。"><span class="nav-number">2.1.</span> <span class="nav-text">1.1 用简短的语言给出对分析、设计的理解。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-用一句话描述面向对象的分析与设计的优势。"><span class="nav-number">2.2.</span> <span class="nav-text">1.2 用一句话描述面向对象的分析与设计的优势。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-3-简述-UML（统一建模语言）的作用。考试考哪些图？"><span class="nav-number">2.3.</span> <span class="nav-text">1.3 简述 UML（统一建模语言）的作用。考试考哪些图？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-4-从软件本质的角度，解释软件范围（需求）控制的可行性"><span class="nav-number">2.4.</span> <span class="nav-text">1.4 从软件本质的角度，解释软件范围（需求）控制的可行性</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、项目管理实践"><span class="nav-number">3.</span> <span class="nav-text">二、项目管理实践</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-看板使用练习（提交看板执行结果贴图，建议使用-Git-project）"><span class="nav-number">3.1.</span> <span class="nav-text">2.1 看板使用练习（提交看板执行结果贴图，建议使用 Git project）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-UML绘图工具练习（提交贴图，必须使用-UMLet）"><span class="nav-number">3.2.</span> <span class="nav-text">2.2 UML绘图工具练习（提交贴图，必须使用 UMLet）</span></a></li></ol></li></ol></div>
             
 
           </div>
