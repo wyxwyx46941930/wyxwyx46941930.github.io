@@ -91,7 +91,7 @@
 <meta property="og:site_name" content="人间有味是清欢">
 <meta property="og:description" content="每日一题 2019 - 03 - 24">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-24T15:43:15.232Z">
+<meta property="og:updated_time" content="2019-03-24T15:48:21.180Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="33. Search in Rotated Sorted Array">
 <meta name="twitter:description" content="每日一题 2019 - 03 - 24">
@@ -364,12 +364,12 @@
 <ul>
 <li>如果中间元素小于末尾元素，那证明从中间到最后元素是正常升序，在这种情况下<ul>
 <li>如果中间元素小于目标元素且最右边元素大于目标元素，那证明我们要找的元素位于这个序列之间</li>
-<li>否则的话，我们需要将 <code>right</code> 指针左移一位</li>
+<li>否则的话，我们需要将 <code>right</code> 指针移到<code>mid</code>左边一位</li>
 </ul>
 </li>
 <li>如果中间元素大于末尾元素，那证明从中间到最后元素存在反折现象，在这种情况下<ul>
 <li>如果中间元素大于目标元素且最左边元素小于目标元素，那证明我们要找的元素位于这个序列之间</li>
-<li>否则的话，我们需要将 <code>left</code> 指针右移一位</li>
+<li>否则的话，我们需要将 <code>left</code> 指针移到<code>mid</code>右边一位</li>
 </ul>
 </li>
 </ul>
