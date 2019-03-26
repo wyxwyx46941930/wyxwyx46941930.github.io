@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="每日一题  2019 - 02 - 23">
+<meta name="description" content="每日一题 2019 - 03 - 26">
 <meta name="keywords" content="leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="769. Max Chunks To Make Sorted">
-<meta property="og:url" content="http://wyxwyx46941930.github.io/2019/02/23/769-Max-Chunks-To-Make-Sorted/index.html">
+<meta property="og:title" content="39. Combination Sum">
+<meta property="og:url" content="http://wyxwyx46941930.github.io/2019/03/26/39-Combination-Sum/index.html">
 <meta property="og:site_name" content="人间有味是清欢">
-<meta property="og:description" content="每日一题  2019 - 02 - 23">
+<meta property="og:description" content="每日一题 2019 - 03 - 26">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-28T15:20:19.016Z">
+<meta property="og:updated_time" content="2019-03-26T02:40:55.525Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="769. Max Chunks To Make Sorted">
-<meta name="twitter:description" content="每日一题  2019 - 02 - 23">
+<meta name="twitter:title" content="39. Combination Sum">
+<meta name="twitter:description" content="每日一题 2019 - 03 - 26">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://wyxwyx46941930.github.io/2019/02/23/769-Max-Chunks-To-Make-Sorted/">
+  <link rel="canonical" href="http://wyxwyx46941930.github.io/2019/03/26/39-Combination-Sum/">
 
 
 
 
 
-  <title>769. Max Chunks To Make Sorted | 人间有味是清欢</title>
+  <title>39. Combination Sum | 人间有味是清欢</title>
   
 
 
@@ -258,7 +258,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://wyxwyx46941930.github.io/2019/02/23/769-Max-Chunks-To-Make-Sorted/">
+    <link itemprop="mainEntityOfPage" href="http://wyxwyx46941930.github.io/2019/03/26/39-Combination-Sum/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Wangyx">
@@ -275,7 +275,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">769. Max Chunks To Make Sorted</h1>
+          <h1 class="post-title" itemprop="name headline">39. Combination Sum</h1>
         
 
         <div class="post-meta">
@@ -287,8 +287,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-23T23:28:14+08:00">
-                2019-02-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-26T09:41:27+08:00">
+                2019-03-26
               </time>
             
 
@@ -297,6 +297,28 @@
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/leetcode/" itemprop="url" rel="index">
+                    <span itemprop="name">leetcode</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -325,29 +347,25 @@
       
 
       
-        <p>每日一题  2019 - 02 - 23</p>
+        <p>每日一题 2019 - 03 - 26</p>
 <a id="more"></a>
-<hr>
-<h3 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h3><p>Given an array <code>arr</code> that is a permutation of <code>[0, 1, ..., arr.length - 1]</code>, we split the array into some number of “chunks” (partitions), and individually sort each chunk.  After concatenating them, the result equals the sorted array.</p>
-<p>What is the most number of chunks we could have made?</p>
-<p><strong>Example 1:</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Input: arr = [4,3,2,1,0]</span><br><span class="line">Output: 1</span><br><span class="line">Explanation:</span><br><span class="line">Splitting into two or more chunks will not <span class="built_in">return</span> the required result.</span><br><span class="line">For example, splitting into [4, 3], [2, 1, 0] will result <span class="keyword">in</span> [3, 4, 0, 1, 2], <span class="built_in">which</span> isn<span class="string">'t sorted.</span></span><br></pre></td></tr></table></figure>
-<p><strong>Example 2:</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Input: arr = [1,0,2,3,4]</span><br><span class="line">Output: 4</span><br><span class="line">Explanation:</span><br><span class="line">We can split into two chunks, such as [1, 0], [2, 3, 4].</span><br><span class="line">However, splitting into [1, 0], [2], [3], [4] is the highest number of chunks possible.</span><br></pre></td></tr></table></figure>
+<h3 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h3><p>Given a <strong>set</strong> of candidate numbers (<code>candidates</code>) <strong>(without duplicates)</strong> and a target number (<code>target</code>), find all unique combinations in <code>candidates</code> where the candidate numbers sums to <code>target</code>.</p>
+<p>The <strong>same</strong> repeated number may be chosen from <code>candidates</code> unlimited number of times.</p>
 <p><strong>Note:</strong></p>
 <ul>
-<li><code>arr</code> will have length in range <code>[1, 10]</code>.</li>
-<li><code>arr[i]</code> will be a permutation of <code>[0, 1, ..., arr.length - 1]</code>.</li>
+<li>All numbers (including <code>target</code>) will be positive integers.</li>
+<li>The solution set must not contain duplicate combinations.</li>
 </ul>
+<p><strong>Example 1:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Input: candidates = [2,3,6,7], target = 7,</span><br><span class="line">A solution <span class="built_in">set</span> is:</span><br><span class="line">[</span><br><span class="line">  [7],</span><br><span class="line">  [2,2,3]</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<p><strong>Example 2:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Input: candidates = [2,3,5], target = 8,</span><br><span class="line">A solution <span class="built_in">set</span> is:</span><br><span class="line">[</span><br><span class="line">  [2,2,2,2],</span><br><span class="line">  [2,3,3],</span><br><span class="line">  [3,5]</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
 <hr>
-<h3 id="解法："><a href="#解法：" class="headerlink" title="解法："></a>解法：</h3><p>这个题让我们把一个给定的序列拆分成最大数目的块，然后将这些块内部进行排序，随后拼接起来，构成一个按照升序排列的序列。</p>
-<p>题中给定的数组序列是连续的且从0开始的，那么我们可以这么思考，给定最大数字<code>maxn</code></p>
-<ul>
-<li>如果<code>当前的(maxn = max(arr[i],maxn) ) == i</code>，那么证明这个位置<code>i</code>就可以是单独的一个块，因为不管怎么排序，这个位置依然是处于正确位置上的，那么就让结果 + 1</li>
-<li>如果<code>当前最大的(maxn = max(arr[i],maxn) ) != i</code>，那么证明这个位置<code>i</code>已经发生乱序，此时就不可以就需要继续往后遍历，把下一个位置的数据跟位置<code>i</code>的数据合成一组，继续判断是否满足单独成为一组的条件，如果不成立，那么继续往下一个位置走，并把下一个位置的数据加入到之前的两个数中；如果满足单独成为一组的条件，那么结果 + 1  </li>
-</ul>
+<h3 id="解法："><a href="#解法：" class="headerlink" title="解法："></a>解法：</h3><p>这个题让我们在给定的数组里面找到与 <code>target</code> 值相等的数字和的序列，简单来说就是递归回溯的思想，从数组里面一个数字出发，深层次遍历所有的分支，也即：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(sum == target) &#123;</span><br><span class="line">    res.push_back(ans); </span><br><span class="line">    <span class="keyword">return</span>; </span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span>(sum &gt; target)</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line"><span class="keyword">else</span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = start; i &lt; nums_len; i++)&#123;</span><br><span class="line">        ans.push_back(candidates[i]);</span><br><span class="line">        dfs(i, sum + candidates[i], target, candidates);</span><br><span class="line">        ans.pop_back();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这个题的解题关键是把回溯的条件要设置清楚，以及要把迭代过程中的暂存 <code>vector</code> 弹出</p>
 <hr>
-<h3 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">maxChunksToSorted</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; arr)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>, maxn = <span class="number">0</span>; i &lt; arr.size(); i++) &#123;</span><br><span class="line">            maxn = max(arr[i], maxn);</span><br><span class="line">            <span class="keyword">if</span> (maxn == i) ans++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt;res;</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;ans;</span><br><span class="line">    <span class="keyword">int</span> nums_len;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &gt; combinationSum(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &amp;candidates, <span class="keyword">int</span> target) &#123;</span><br><span class="line">        <span class="keyword">if</span>(candidates.empty()) <span class="keyword">return</span> res;</span><br><span class="line">        nums_len = candidates.size();</span><br><span class="line">        dfs(<span class="number">0</span>, <span class="number">0</span>, target, candidates);</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> start, <span class="keyword">int</span> sum, <span class="keyword">int</span> target,<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; candidates)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(sum == target) &#123;</span><br><span class="line">            res.push_back(ans); <span class="keyword">return</span>; &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(sum &gt; target)</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i = start; i &lt; nums_len; i++)&#123;</span><br><span class="line">                ans.push_back(candidates[i]);</span><br><span class="line">                dfs(i, sum + candidates[i], target, candidates);</span><br><span class="line">                ans.pop_back();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -378,8 +396,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/04/516-Longest-Palindromic-Subsequence/" rel="next" title="516. Longest Palindromic Subsequence">
-                <i class="fa fa-chevron-left"></i> 516. Longest Palindromic Subsequence
+              <a href="/2019/03/25/34-Find-First-and-Last-Position-of-Element-in-Sorted-Array/" rel="next" title="34. Find First and Last Position of Element in Sorted Array">
+                <i class="fa fa-chevron-left"></i> 34. Find First and Last Position of Element in Sorted Array
               </a>
             
           </div>
@@ -387,10 +405,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/02/25/863-All-Nodes-Distance-K-in-Binary-Tree/" rel="prev" title="863. All Nodes Distance K in Binary Tree">
-                863. All Nodes Distance K in Binary Tree <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
