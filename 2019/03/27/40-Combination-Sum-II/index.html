@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="每日一题 2019 - 03 - 10">
+<meta name="description" content="每日一题 2019 - 03 - 27">
 <meta name="keywords" content="leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="19. Remove Nth Node From End of List">
-<meta property="og:url" content="http://wyxwyx46941930.github.io/2019/03/11/19-Remove-Nth-Node-From-End-of-List/index.html">
+<meta property="og:title" content="40. Combination Sum II">
+<meta property="og:url" content="http://wyxwyx46941930.github.io/2019/03/27/40-Combination-Sum-II/index.html">
 <meta property="og:site_name" content="人间有味是清欢">
-<meta property="og:description" content="每日一题 2019 - 03 - 10">
+<meta property="og:description" content="每日一题 2019 - 03 - 27">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-10T17:01:35.259Z">
+<meta property="og:updated_time" content="2019-03-27T02:27:50.226Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="19. Remove Nth Node From End of List">
-<meta name="twitter:description" content="每日一题 2019 - 03 - 10">
+<meta name="twitter:title" content="40. Combination Sum II">
+<meta name="twitter:description" content="每日一题 2019 - 03 - 27">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://wyxwyx46941930.github.io/2019/03/11/19-Remove-Nth-Node-From-End-of-List/">
+  <link rel="canonical" href="http://wyxwyx46941930.github.io/2019/03/27/40-Combination-Sum-II/">
 
 
 
 
 
-  <title>19. Remove Nth Node From End of List | 人间有味是清欢</title>
+  <title>40. Combination Sum II | 人间有味是清欢</title>
   
 
 
@@ -258,7 +258,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://wyxwyx46941930.github.io/2019/03/11/19-Remove-Nth-Node-From-End-of-List/">
+    <link itemprop="mainEntityOfPage" href="http://wyxwyx46941930.github.io/2019/03/27/40-Combination-Sum-II/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Wangyx">
@@ -275,7 +275,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">19. Remove Nth Node From End of List</h1>
+          <h1 class="post-title" itemprop="name headline">40. Combination Sum II</h1>
         
 
         <div class="post-meta">
@@ -287,8 +287,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-11T00:58:06+08:00">
-                2019-03-11
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-27T10:17:10+08:00">
+                2019-03-27
               </time>
             
 
@@ -347,24 +347,23 @@
       
 
       
-        <p>每日一题 2019 - 03 - 10</p>
+        <p>每日一题 2019 - 03 - 27</p>
 <a id="more"></a>
-<h3 id="题目"><a href="#题目" class="headerlink" title="题目:"></a>题目:</h3><p>Given a linked list, remove the <em>n</em>-th node from the end of list and return its head.</p>
-<p><strong>Example:</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Given linked list: 1-&gt;2-&gt;3-&gt;4-&gt;5, and n = 2.</span><br><span class="line"></span><br><span class="line">After removing the second node from the end, the linked list becomes 1-&gt;2-&gt;3-&gt;5.</span><br></pre></td></tr></table></figure>
+<h3 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h3><p>Given a collection of candidate numbers (<code>candidates</code>) and a target number (<code>target</code>), find all unique combinations in <code>candidates</code> where the candidate numbers sums to <code>target</code>.</p>
+<p>Each number in <code>candidates</code> may only be used <strong>once</strong> in the combination.</p>
 <p><strong>Note:</strong></p>
-<p>Given <em>n</em> will always be valid.</p>
-<p><strong>Follow up:</strong></p>
-<p>Could you do this in one pass?</p>
-<hr>
-<h3 id="解法："><a href="#解法：" class="headerlink" title="解法："></a>解法：</h3><p>这题目的很简单就是让我们删掉链表的倒数第N个元素，直观的思路就是：</p>
 <ul>
-<li>先遍历一遍整个链表找出元素个数</li>
-<li>遍历过程中找到对应位置的元素删除</li>
+<li>All numbers (including <code>target</code>) will be positive integers.</li>
+<li>The solution set must not contain duplicate combinations.</li>
 </ul>
-<p>可以换个思路，我们使用两个指针<code>cur、pre</code>，其中<code>cur</code>比<code>pre</code>先行n步，当<code>cur</code>到达末尾时，<code>pre</code>所指的下一个元素即是要删除的元素，这样就可以保证我们的复杂度最低，时间复杂度也有所下降。</p>
+<p><strong>Example 1:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Input: candidates = [10,1,2,7,6,1,5], target = 8,</span><br><span class="line">A solution <span class="built_in">set</span> is:</span><br><span class="line">[</span><br><span class="line">  [1, 7],</span><br><span class="line">  [1, 2, 5],</span><br><span class="line">  [2, 6],</span><br><span class="line">  [1, 1, 6]</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<p><strong>Example 2:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Input: candidates = [2,5,2,1,2], target = 5,</span><br><span class="line">A solution <span class="built_in">set</span> is:</span><br><span class="line">[</span><br><span class="line">  [1,2,2],</span><br><span class="line">  [5]</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
 <hr>
-<h3 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">removeNthFromEnd</span><span class="params">(ListNode* head, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        ListNode *cur = head, *pre = head;</span><br><span class="line">        <span class="keyword">while</span>(n--) cur = cur-&gt;next;</span><br><span class="line">        <span class="keyword">if</span>(cur == <span class="literal">NULL</span>) <span class="keyword">return</span> head-&gt;next;</span><br><span class="line">        <span class="keyword">while</span>(cur-&gt;next) &#123;</span><br><span class="line">            pre = pre-&gt;next;</span><br><span class="line">            cur = cur-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        pre-&gt;next = pre-&gt;next-&gt;next;</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="解法："><a href="#解法：" class="headerlink" title="解法："></a>解法：</h3><p>这个题让我们在给定数组里面找到不重复的序列的和等于给定的值，跟昨天的<code>sum I</code>不同的地方在于这个题元素不可重复，那个题是可重复的，所以思路还是回溯，不过为了保证输出元素的有序性，可以先把 <code>candidates</code> 中得元素先 <code>sort</code> 一下，还有一个需要注意的地方就是可能<code>res</code>中存放的元素有重复的，所以就在<code>push</code>到<code>res</code>进去之前，先遍历一遍<code>res</code>看是否存在重复的序列，或者使用<code>set</code></p>
+<hr>
+<h3 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt;res;</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;ans;</span><br><span class="line">    <span class="keyword">int</span> nums_len;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &gt; combinationSum2(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &amp;candidates, <span class="keyword">int</span> target) &#123;</span><br><span class="line">        sort(candidates.begin(),candidates.end());</span><br><span class="line">        <span class="keyword">if</span>(candidates.empty()) <span class="keyword">return</span> res;</span><br><span class="line">        nums_len = candidates.size();</span><br><span class="line">        dfs(<span class="number">0</span>, <span class="number">0</span>, target, candidates);</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> start, <span class="keyword">int</span> sum, <span class="keyword">int</span> target,<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; candidates)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(sum == target) &#123;</span><br><span class="line">            <span class="keyword">if</span>(res.end() != find(res.begin(),res.end(),ans))</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">return</span> ;</span><br><span class="line">            &#125;</span><br><span class="line">            res.push_back(ans); <span class="keyword">return</span>; &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(sum &gt; target)</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i = start; i &lt; nums_len ; i++)&#123;</span><br><span class="line">                ans.push_back(candidates[i]);</span><br><span class="line">                dfs(i + <span class="number">1</span>, sum + candidates[i], target, candidates);</span><br><span class="line">                ans.pop_back();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -395,8 +394,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/09/18-4Sum/" rel="next" title="18. 4Sum">
-                <i class="fa fa-chevron-left"></i> 18. 4Sum
+              <a href="/2019/03/26/39-Combination-Sum/" rel="next" title="39. Combination Sum">
+                <i class="fa fa-chevron-left"></i> 39. Combination Sum
               </a>
             
           </div>
@@ -404,10 +403,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/11/22-Generate-Parentheses/" rel="prev" title="22. Generate Parentheses">
-                22. Generate Parentheses <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -541,7 +536,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目"><span class="nav-number">1.</span> <span class="nav-text">题目:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解法："><span class="nav-number">2.</span> <span class="nav-text">解法：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码："><span class="nav-number">3.</span> <span class="nav-text">代码：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目："><span class="nav-number">1.</span> <span class="nav-text">题目：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解法："><span class="nav-number">2.</span> <span class="nav-text">解法：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码："><span class="nav-number">3.</span> <span class="nav-text">代码：</span></a></li></ol></div>
             
 
           </div>
