@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="每日一题 2019 - 02 - 25">
+<meta name="description" content="每日一题 2019 - 03 - 28">
 <meta name="keywords" content="leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="461. Hamming Distance">
-<meta property="og:url" content="http://wyxwyx46941930.github.io/2019/02/25/461-Hamming-Distance/index.html">
+<meta property="og:title" content="47. Permutations II">
+<meta property="og:url" content="http://wyxwyx46941930.github.io/2019/03/29/47-Permutations-II/index.html">
 <meta property="og:site_name" content="人间有味是清欢">
-<meta property="og:description" content="每日一题 2019 - 02 - 25">
+<meta property="og:description" content="每日一题 2019 - 03 - 28">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-28T15:19:50.136Z">
+<meta property="og:updated_time" content="2019-03-28T17:32:31.836Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="461. Hamming Distance">
-<meta name="twitter:description" content="每日一题 2019 - 02 - 25">
+<meta name="twitter:title" content="47. Permutations II">
+<meta name="twitter:description" content="每日一题 2019 - 03 - 28">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://wyxwyx46941930.github.io/2019/02/25/461-Hamming-Distance/">
+  <link rel="canonical" href="http://wyxwyx46941930.github.io/2019/03/29/47-Permutations-II/">
 
 
 
 
 
-  <title>461. Hamming Distance | 人间有味是清欢</title>
+  <title>47. Permutations II | 人间有味是清欢</title>
   
 
 
@@ -258,7 +258,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://wyxwyx46941930.github.io/2019/02/25/461-Hamming-Distance/">
+    <link itemprop="mainEntityOfPage" href="http://wyxwyx46941930.github.io/2019/03/29/47-Permutations-II/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Wangyx">
@@ -275,7 +275,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">461. Hamming Distance</h1>
+          <h1 class="post-title" itemprop="name headline">47. Permutations II</h1>
         
 
         <div class="post-meta">
@@ -287,8 +287,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-25T18:02:56+08:00">
-                2019-02-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-29T00:49:05+08:00">
+                2019-03-29
               </time>
             
 
@@ -347,18 +347,26 @@
       
 
       
-        <p>每日一题 2019 - 02 - 25</p>
+        <p>每日一题 2019 - 03 - 28</p>
 <a id="more"></a>
-<hr>
-<h3 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h3><p>The <a href="https://en.wikipedia.org/wiki/Hamming_distance" target="_blank" rel="noopener">Hamming distance</a> between two integers is the number of positions at which the corresponding bits are different.</p>
-<p>Given two integers <code>x</code> and <code>y</code>, calculate the Hamming distance.</p>
-<p><strong>Note:</strong><br>0 ≤ <code>x</code>, <code>y</code> &lt; 231.</p>
+<h3 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h3><p>Given a collection of numbers that might contain duplicates, return all possible unique permutations.</p>
 <p><strong>Example:</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Input: x = 1, y = 4</span><br><span class="line"></span><br><span class="line">Output: 2</span><br><span class="line"></span><br><span class="line">Explanation:</span><br><span class="line">1   (0 0 0 1)</span><br><span class="line">4   (0 1 0 0)</span><br><span class="line">       ↑   ↑</span><br><span class="line"></span><br><span class="line">The above arrows point to positions <span class="built_in">where</span> the corresponding bits are different.</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Input: [1,1,2]</span><br><span class="line">Output:</span><br><span class="line">[</span><br><span class="line">  [1,1,2],</span><br><span class="line">  [1,2,1],</span><br><span class="line">  [2,1,1]</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
 <hr>
-<h3 id="解法："><a href="#解法：" class="headerlink" title="解法："></a>解法：</h3><p>这个题挺水的，让我们找出任意两个数字的二进制中不同的位置的数目，最简单的方法就是求两个数字的异或，得到的结果为1的位置的个数就是要求的答案。</p>
+<h3 id="解答："><a href="#解答：" class="headerlink" title="解答："></a>解答：</h3><p>这个题让我们对给定的序列进行全排列，不过这个序列里可能会有重复的元素，所以解题思路有两种：</p>
+<ul>
+<li>思路一：<ul>
+<li>在往 <code>ans</code> 中已经进行<code>push_back</code>时候 <code>find</code> 一下 <code>ans</code> 中是否已经有当前的 <code>temp</code> 待存序列</li>
+</ul>
+</li>
+<li>思路二：<ul>
+<li>在每次进行<code>permute</code>时候，从全排列起始的位置到当前待排位置的前一位进行查重，如果有重复的就证明存在重复序列，就不能进行排列</li>
+</ul>
+</li>
+</ul>
 <hr>
-<h3 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">hammingDistance</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> sum = x^y;</span><br><span class="line">        <span class="keyword">int</span> count;</span><br><span class="line">        <span class="keyword">for</span>(count = <span class="number">0</span>; sum &gt; <span class="number">0</span>; count++)&#123;</span><br><span class="line">            sum &amp;= (sum - <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> count;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 思路一 代码</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">test_permute</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp;nums, <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt;&amp; ans, <span class="keyword">int</span> begin, <span class="keyword">int</span> end)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(begin == end)&#123;<span class="comment">//完成一次完整的排列，就把此时的nums压入到ans中</span></span><br><span class="line">            <span class="keyword">if</span>(ans.end() == find(ans.begin(),ans.end(),nums))</span><br><span class="line">                ans.push_back(nums);</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i = begin; i &lt;= end; i++)&#123;</span><br><span class="line">                swap(nums[begin],nums[i]);</span><br><span class="line">                test_permute(nums,ans,begin+<span class="number">1</span>,end);</span><br><span class="line">                swap(nums[begin],nums[i]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; permuteUnique(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums) &#123;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; ans;</span><br><span class="line">        <span class="keyword">int</span> len = nums.size()<span class="number">-1</span>;</span><br><span class="line">        test_permute(nums, ans, <span class="number">0</span>, len);</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 思路二 代码</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">check</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &amp;num, <span class="keyword">int</span> start, <span class="keyword">int</span> end, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = start; i &lt;=end; ++i) &#123;</span><br><span class="line">            <span class="keyword">if</span> (num[i] == num[target])</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">test_permute</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp;nums, <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt;&amp; ans, <span class="keyword">int</span> begin, <span class="keyword">int</span> end)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(begin == end)&#123;<span class="comment">//完成一次完整的排列，就把此时的nums压入到ans中</span></span><br><span class="line">            ans.push_back(nums);</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i = begin; i &lt;= end ; i++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(check(nums,begin,i<span class="number">-1</span>,i))&#123;</span><br><span class="line">                    swap(nums[begin],nums[i]);</span><br><span class="line">                    test_permute(nums,ans,begin+<span class="number">1</span>,end);</span><br><span class="line">                    swap(nums[begin],nums[i]);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; permuteUnique(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums) &#123;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; ans;</span><br><span class="line">        <span class="keyword">int</span> len = nums.size()<span class="number">-1</span>;</span><br><span class="line">        test_permute(nums, ans, <span class="number">0</span>, len);</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -389,8 +397,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/25/863-All-Nodes-Distance-K-in-Binary-Tree/" rel="next" title="863. All Nodes Distance K in Binary Tree">
-                <i class="fa fa-chevron-left"></i> 863. All Nodes Distance K in Binary Tree
+              <a href="/2019/03/28/46-Permutations/" rel="next" title="46. Permutations">
+                <i class="fa fa-chevron-left"></i> 46. Permutations
               </a>
             
           </div>
@@ -398,10 +406,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/02/26/540-Single-Element-in-a-Sorted-Array/" rel="prev" title="540. Single Element in a Sorted Array">
-                540. Single Element in a Sorted Array <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -535,7 +539,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目："><span class="nav-number">1.</span> <span class="nav-text">题目：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解法："><span class="nav-number">2.</span> <span class="nav-text">解法：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码："><span class="nav-number">3.</span> <span class="nav-text">代码：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目："><span class="nav-number">1.</span> <span class="nav-text">题目：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解答："><span class="nav-number">2.</span> <span class="nav-text">解答：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码："><span class="nav-number">3.</span> <span class="nav-text">代码：</span></a></li></ol></div>
             
 
           </div>
