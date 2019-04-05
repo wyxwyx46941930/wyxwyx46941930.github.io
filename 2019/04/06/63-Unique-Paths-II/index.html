@@ -83,18 +83,20 @@
 
 
 
-<meta name="description" content="每日一题 2019 - 03 - 30">
+<meta name="description" content="每日一题 2019 - 04 - 06">
 <meta name="keywords" content="leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="48. Rotate Image">
-<meta property="og:url" content="http://wyxwyx46941930.github.io/2019/03/30/48-Rotate-Image/index.html">
+<meta property="og:title" content="63. Unique Paths II">
+<meta property="og:url" content="http://wyxwyx46941930.github.io/2019/04/06/63-Unique-Paths-II/index.html">
 <meta property="og:site_name" content="人间有味是清欢">
-<meta property="og:description" content="每日一题 2019 - 03 - 30">
+<meta property="og:description" content="每日一题 2019 - 04 - 06">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-29T17:31:19.143Z">
+<meta property="og:image" content="https://assets.leetcode.com/uploads/2018/10/22/robot_maze.png">
+<meta property="og:updated_time" content="2019-04-05T17:40:39.842Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="48. Rotate Image">
-<meta name="twitter:description" content="每日一题 2019 - 03 - 30">
+<meta name="twitter:title" content="63. Unique Paths II">
+<meta name="twitter:description" content="每日一题 2019 - 04 - 06">
+<meta name="twitter:image" content="https://assets.leetcode.com/uploads/2018/10/22/robot_maze.png">
 
 
 
@@ -124,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="http://wyxwyx46941930.github.io/2019/03/30/48-Rotate-Image/">
+  <link rel="canonical" href="http://wyxwyx46941930.github.io/2019/04/06/63-Unique-Paths-II/">
 
 
 
 
 
-  <title>48. Rotate Image | 人间有味是清欢</title>
+  <title>63. Unique Paths II | 人间有味是清欢</title>
   
 
 
@@ -258,7 +260,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://wyxwyx46941930.github.io/2019/03/30/48-Rotate-Image/">
+    <link itemprop="mainEntityOfPage" href="http://wyxwyx46941930.github.io/2019/04/06/63-Unique-Paths-II/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Wangyx">
@@ -275,7 +277,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">48. Rotate Image</h1>
+          <h1 class="post-title" itemprop="name headline">63. Unique Paths II</h1>
         
 
         <div class="post-meta">
@@ -287,8 +289,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-30T00:53:23+08:00">
-                2019-03-30
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-06T01:18:06+08:00">
+                2019-04-06
               </time>
             
 
@@ -347,20 +349,25 @@
       
 
       
-        <p>每日一题 2019 - 03 - 30</p>
+        <p>每日一题 2019 - 04 - 06</p>
 <a id="more"></a>
-<h3 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h3><p>You are given an <em>n</em> x <em>n</em> 2D matrix representing an image.</p>
-<p>Rotate the image by 90 degrees (clockwise).</p>
-<p><strong>Note:</strong></p>
-<p>You have to rotate the image <a href="https://en.wikipedia.org/wiki/In-place_algorithm" target="_blank" rel="noopener"><strong>in-place</strong></a>, which means you have to modify the input 2D matrix directly. <strong>DO NOT</strong>allocate another 2D matrix and do the rotation.</p>
+<h3 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h3><p>A robot is located at the top-left corner of a <em>m</em> x <em>n</em> grid (marked ‘Start’ in the diagram below).</p>
+<p>The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked ‘Finish’ in the diagram below).</p>
+<p>Now consider if some obstacles are added to the grids. How many unique paths would there be?</p>
+<p><img src="https://assets.leetcode.com/uploads/2018/10/22/robot_maze.png" alt="img"></p>
+<p>An obstacle and empty space is marked as <code>1</code> and <code>0</code> respectively in the grid.</p>
+<p><strong>Note:</strong> <em>m</em> and <em>n</em> will be at most 100.</p>
 <p><strong>Example 1:</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Given input matrix = </span><br><span class="line">[</span><br><span class="line">  [1,2,3],</span><br><span class="line">  [4,5,6],</span><br><span class="line">  [7,8,9]</span><br><span class="line">],</span><br><span class="line"></span><br><span class="line">rotate the input matrix <span class="keyword">in</span>-place such that it becomes:</span><br><span class="line">[</span><br><span class="line">  [7,4,1],</span><br><span class="line">  [8,5,2],</span><br><span class="line">  [9,6,3]</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
-<p><strong>Example 2:</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">Given input matrix =</span><br><span class="line">[</span><br><span class="line">  [ 5, 1, 9,11],</span><br><span class="line">  [ 2, 4, 8,10],</span><br><span class="line">  [13, 3, 6, 7],</span><br><span class="line">  [15,14,12,16]</span><br><span class="line">], </span><br><span class="line"></span><br><span class="line">rotate the input matrix <span class="keyword">in</span>-place such that it becomes:</span><br><span class="line">[</span><br><span class="line">  [15,13, 2, 5],</span><br><span class="line">  [14, 3, 4, 1],</span><br><span class="line">  [12, 6, 8, 9],</span><br><span class="line">  [16, 7,10,11]</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Input:</span><br><span class="line">[</span><br><span class="line">  [0,0,0],</span><br><span class="line">  [0,1,0],</span><br><span class="line">  [0,0,0]</span><br><span class="line">]</span><br><span class="line">Output: 2</span><br><span class="line">Explanation:</span><br><span class="line">There is one obstacle <span class="keyword">in</span> the middle of the 3x3 grid above.</span><br><span class="line">There are two ways to reach the bottom-right corner:</span><br><span class="line">1. Right -&gt; Right -&gt; Down -&gt; Down</span><br><span class="line">2. Down -&gt; Down -&gt; Right -&gt; Right</span><br></pre></td></tr></table></figure>
 <hr>
-<h3 id="解答："><a href="#解答：" class="headerlink" title="解答："></a>解答：</h3><p>这道题让我们实现矩阵的顺时针旋转90°，可以根据矩阵的性质来进行题解，也即先对矩阵进行转置，随后对转置后的矩阵进行关于垂直对称轴的交换，即可求得相应的结果。</p>
+<h3 id="解法："><a href="#解法：" class="headerlink" title="解法："></a>解法：</h3><p>这个题比 <a href="https://leetcode.com/problems/unique-paths/" target="_blank" rel="noopener">leetcode 62</a> 多了一个限制条件就是，地图中可能存在不能通行的障碍物，遇到障碍物需要躲避，那么在这种约束条件下，我们只需要排除异样即可，思路大致如下：</p>
+<ul>
+<li>初始化<code>dp</code>地图，<code>dp</code> 第一行 <code>1</code> 位置后不通行，所以 <code>1</code> 后所有可走的情况为 <code>0</code>；<code>dp</code>第一列 <code>1</code> 位置后不通行，所以 <code>1</code> 后所有可走的情况为 <code>0</code></li>
+<li>递推公式依然是 : <code>path[j][i] = path[j - 1][i] + path[j][i - 1];</code></li>
+<li>需要加上限制条件，如果非第一行第一列的其他位置出现 <code>1</code> ，则该位置的可走的路数的总和为 <code>0</code></li>
+</ul>
 <hr>
-<h3 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">rotate</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt;&amp; matrix)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n = matrix.size();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n<span class="number">-1</span>; i++)&#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = i+<span class="number">1</span>; j &lt; n; j++)&#123;</span><br><span class="line">                swap(matrix[i][j], matrix[j][i]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n/<span class="number">2</span>; i++)&#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; n; j++)&#123;</span><br><span class="line">                swap(matrix[j][i],matrix[j][n<span class="number">-1</span>-i]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">uniquePathsWithObstacles</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt;&amp; obstacleGrid)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> m = obstacleGrid.size();</span><br><span class="line">        <span class="keyword">int</span> n;</span><br><span class="line">        <span class="keyword">if</span>(!m)  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">else</span>    n = obstacleGrid[<span class="number">0</span>].size();</span><br><span class="line"> </span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">long</span> <span class="keyword">long</span> <span class="keyword">int</span>&gt;&gt; path(m,<span class="built_in">vector</span>&lt;<span class="keyword">long</span> <span class="keyword">long</span> <span class="keyword">int</span>&gt;(n,<span class="number">0</span>));</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">            <span class="keyword">if</span>(!obstacleGrid[<span class="number">0</span>][i])</span><br><span class="line">                path[<span class="number">0</span>][i] = <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">else</span>    <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m; i++)</span><br><span class="line">            <span class="keyword">if</span>(!obstacleGrid[i][<span class="number">0</span>])</span><br><span class="line">                path[i][<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">else</span>    <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n; i++) </span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; m; j++)</span><br><span class="line">                <span class="keyword">if</span>(!obstacleGrid[j][i])</span><br><span class="line">                    path[j][i] = path[j - <span class="number">1</span>][i] + path[j][i - <span class="number">1</span>];</span><br><span class="line">        <span class="keyword">return</span> path[m - <span class="number">1</span>][n - <span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -391,8 +398,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/29/47-Permutations-II/" rel="next" title="47. Permutations II">
-                <i class="fa fa-chevron-left"></i> 47. Permutations II
+              <a href="/2019/04/05/62-Unique-Paths/" rel="next" title="62. Unique Paths">
+                <i class="fa fa-chevron-left"></i> 62. Unique Paths
               </a>
             
           </div>
@@ -400,10 +407,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/31/49-Group-Anagrams/" rel="prev" title="49. Group Anagrams">
-                49. Group Anagrams <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -537,7 +540,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目："><span class="nav-number">1.</span> <span class="nav-text">题目：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解答："><span class="nav-number">2.</span> <span class="nav-text">解答：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码："><span class="nav-number">3.</span> <span class="nav-text">代码：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目："><span class="nav-number">1.</span> <span class="nav-text">题目：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解法："><span class="nav-number">2.</span> <span class="nav-text">解法：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码："><span class="nav-number">3.</span> <span class="nav-text">代码：</span></a></li></ol></div>
             
 
           </div>
