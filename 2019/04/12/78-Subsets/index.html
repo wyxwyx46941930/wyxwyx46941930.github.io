@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="每日一题  2019 - 02 - 23">
+<meta name="description" content="每日一题 2019 - 04 - 13">
 <meta name="keywords" content="leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="769. Max Chunks To Make Sorted">
-<meta property="og:url" content="http://wyxwyx46941930.github.io/2019/02/23/769-Max-Chunks-To-Make-Sorted/index.html">
+<meta property="og:title" content="78. Subsets">
+<meta property="og:url" content="http://wyxwyx46941930.github.io/2019/04/12/78-Subsets/index.html">
 <meta property="og:site_name" content="人间有味是清欢">
-<meta property="og:description" content="每日一题  2019 - 02 - 23">
+<meta property="og:description" content="每日一题 2019 - 04 - 13">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-28T15:20:19.016Z">
+<meta property="og:updated_time" content="2019-04-12T16:32:21.443Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="769. Max Chunks To Make Sorted">
-<meta name="twitter:description" content="每日一题  2019 - 02 - 23">
+<meta name="twitter:title" content="78. Subsets">
+<meta name="twitter:description" content="每日一题 2019 - 04 - 13">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://wyxwyx46941930.github.io/2019/02/23/769-Max-Chunks-To-Make-Sorted/">
+  <link rel="canonical" href="http://wyxwyx46941930.github.io/2019/04/12/78-Subsets/">
 
 
 
 
 
-  <title>769. Max Chunks To Make Sorted | 人间有味是清欢</title>
+  <title>78. Subsets | 人间有味是清欢</title>
   
 
 
@@ -258,7 +258,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://wyxwyx46941930.github.io/2019/02/23/769-Max-Chunks-To-Make-Sorted/">
+    <link itemprop="mainEntityOfPage" href="http://wyxwyx46941930.github.io/2019/04/12/78-Subsets/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Wangyx">
@@ -275,7 +275,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">769. Max Chunks To Make Sorted</h1>
+          <h1 class="post-title" itemprop="name headline">78. Subsets</h1>
         
 
         <div class="post-meta">
@@ -287,8 +287,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-23T23:28:14+08:00">
-                2019-02-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-12T23:54:19+08:00">
+                2019-04-12
               </time>
             
 
@@ -297,6 +297,28 @@
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/leetcode/" itemprop="url" rel="index">
+                    <span itemprop="name">leetcode</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -325,29 +347,16 @@
       
 
       
-        <p>每日一题  2019 - 02 - 23</p>
+        <p>每日一题 2019 - 04 - 13</p>
 <a id="more"></a>
+<h3 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h3><p>Given a set of <strong>distinct</strong> integers, <em>nums</em>, return all possible subsets (the power set).</p>
+<p><strong>Note:</strong> The solution set must not contain duplicate subsets.</p>
+<p><strong>Example:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Input: nums = [1,2,3]</span><br><span class="line">Output:</span><br><span class="line">[</span><br><span class="line">  [3],</span><br><span class="line">  [1],</span><br><span class="line">  [2],</span><br><span class="line">  [1,2,3],</span><br><span class="line">  [1,3],</span><br><span class="line">  [2,3],</span><br><span class="line">  [1,2],</span><br><span class="line">  []</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
 <hr>
-<h3 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h3><p>Given an array <code>arr</code> that is a permutation of <code>[0, 1, ..., arr.length - 1]</code>, we split the array into some number of “chunks” (partitions), and individually sort each chunk.  After concatenating them, the result equals the sorted array.</p>
-<p>What is the most number of chunks we could have made?</p>
-<p><strong>Example 1:</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Input: arr = [4,3,2,1,0]</span><br><span class="line">Output: 1</span><br><span class="line">Explanation:</span><br><span class="line">Splitting into two or more chunks will not <span class="built_in">return</span> the required result.</span><br><span class="line">For example, splitting into [4, 3], [2, 1, 0] will result <span class="keyword">in</span> [3, 4, 0, 1, 2], <span class="built_in">which</span> isn<span class="string">'t sorted.</span></span><br></pre></td></tr></table></figure>
-<p><strong>Example 2:</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Input: arr = [1,0,2,3,4]</span><br><span class="line">Output: 4</span><br><span class="line">Explanation:</span><br><span class="line">We can split into two chunks, such as [1, 0], [2, 3, 4].</span><br><span class="line">However, splitting into [1, 0], [2], [3], [4] is the highest number of chunks possible.</span><br></pre></td></tr></table></figure>
-<p><strong>Note:</strong></p>
-<ul>
-<li><code>arr</code> will have length in range <code>[1, 10]</code>.</li>
-<li><code>arr[i]</code> will be a permutation of <code>[0, 1, ..., arr.length - 1]</code>.</li>
-</ul>
+<h3 id="解法："><a href="#解法：" class="headerlink" title="解法："></a>解法：</h3><p>这个题让找出给定数组的子集的集合，思路比较直观，就是深层遍历的问题，每次都对数组中的某一个元素做深层次的遍历，但是需要设置必要的条件，也即一定要保证当前待推入数组的大小不能超过给定数组的大小，也即为了保证遍历时候不越界。</p>
 <hr>
-<h3 id="解法："><a href="#解法：" class="headerlink" title="解法："></a>解法：</h3><p>这个题让我们把一个给定的序列拆分成最大数目的块，然后将这些块内部进行排序，随后拼接起来，构成一个按照升序排列的序列。</p>
-<p>题中给定的数组序列是连续的且从0开始的，那么我们可以这么思考，给定最大数字<code>maxn</code></p>
-<ul>
-<li>如果<code>当前的(maxn = max(arr[i],maxn) ) == i</code>，那么证明这个位置<code>i</code>就可以是单独的一个块，因为不管怎么排序，这个位置依然是处于正确位置上的，那么就让结果 + 1</li>
-<li>如果<code>当前最大的(maxn = max(arr[i],maxn) ) != i</code>，那么证明这个位置<code>i</code>已经发生乱序，此时就不可以就需要继续往后遍历，把下一个位置的数据跟位置<code>i</code>的数据合成一组，继续判断是否满足单独成为一组的条件，如果不成立，那么继续往下一个位置走，并把下一个位置的数据加入到之前的两个数中；如果满足单独成为一组的条件，那么结果 + 1  </li>
-</ul>
-<hr>
-<h3 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">maxChunksToSorted</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; arr)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>, maxn = <span class="number">0</span>; i &lt; arr.size(); i++) &#123;</span><br><span class="line">            maxn = max(arr[i], maxn);</span><br><span class="line">            <span class="keyword">if</span> (maxn == i) ans++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; subsets(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums) &#123;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; temp ;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; now ;</span><br><span class="line">        temp.push_back(now);</span><br><span class="line">        fun(temp,now,nums,<span class="number">0</span>);</span><br><span class="line">        <span class="keyword">return</span> temp ;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">fun</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt;&amp; temp,<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; now, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; nums, <span class="keyword">int</span> k)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>( k &lt;= nums.size())&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i = k ; i &lt; nums.size() ; i ++ )</span><br><span class="line">            &#123;</span><br><span class="line">                now.push_back(nums[i]);</span><br><span class="line">                temp.push_back(now);</span><br><span class="line">                fun(temp,now,nums,i+<span class="number">1</span>);</span><br><span class="line">                now.pop_back();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -378,8 +387,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/04/516-Longest-Palindromic-Subsequence/" rel="next" title="516. Longest Palindromic Subsequence">
-                <i class="fa fa-chevron-left"></i> 516. Longest Palindromic Subsequence
+              <a href="/2019/04/11/77-Combinations/" rel="next" title="77. Combinations">
+                <i class="fa fa-chevron-left"></i> 77. Combinations
               </a>
             
           </div>
@@ -387,10 +396,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/02/25/863-All-Nodes-Distance-K-in-Binary-Tree/" rel="prev" title="863. All Nodes Distance K in Binary Tree">
-                863. All Nodes Distance K in Binary Tree <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
