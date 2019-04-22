@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="每日一题 2019 - 03 - 04">
+<meta name="description" content="每日一题 2019 - 04 - 23">
 <meta name="keywords" content="leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="12. Integer to Roman">
-<meta property="og:url" content="http://wyxwyx46941930.github.io/2019/03/04/12-Integer-to-Roman/index.html">
+<meta property="og:title" content="103. Binary Tree Zigzag Level Order Traversal">
+<meta property="og:url" content="http://wyxwyx46941930.github.io/2019/04/23/103-Binary-Tree-Zigzag-Level-Order-Traversal/index.html">
 <meta property="og:site_name" content="人间有味是清欢">
-<meta property="og:description" content="每日一题 2019 - 03 - 04">
+<meta property="og:description" content="每日一题 2019 - 04 - 23">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-05T16:22:25.084Z">
+<meta property="og:updated_time" content="2019-04-22T17:05:52.034Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="12. Integer to Roman">
-<meta name="twitter:description" content="每日一题 2019 - 03 - 04">
+<meta name="twitter:title" content="103. Binary Tree Zigzag Level Order Traversal">
+<meta name="twitter:description" content="每日一题 2019 - 04 - 23">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://wyxwyx46941930.github.io/2019/03/04/12-Integer-to-Roman/">
+  <link rel="canonical" href="http://wyxwyx46941930.github.io/2019/04/23/103-Binary-Tree-Zigzag-Level-Order-Traversal/">
 
 
 
 
 
-  <title>12. Integer to Roman | 人间有味是清欢</title>
+  <title>103. Binary Tree Zigzag Level Order Traversal | 人间有味是清欢</title>
   
 
 
@@ -258,7 +258,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://wyxwyx46941930.github.io/2019/03/04/12-Integer-to-Roman/">
+    <link itemprop="mainEntityOfPage" href="http://wyxwyx46941930.github.io/2019/04/23/103-Binary-Tree-Zigzag-Level-Order-Traversal/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Wangyx">
@@ -275,7 +275,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">12. Integer to Roman</h1>
+          <h1 class="post-title" itemprop="name headline">103. Binary Tree Zigzag Level Order Traversal</h1>
         
 
         <div class="post-meta">
@@ -287,8 +287,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-04T23:57:36+08:00">
-                2019-03-04
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-23T01:00:09+08:00">
+                2019-04-23
               </time>
             
 
@@ -347,38 +347,26 @@
       
 
       
-        <p>每日一题 2019 - 03 - 04</p>
+        <p>每日一题 2019 - 04 - 23</p>
 <a id="more"></a>
+<h3 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h3><p>Given a binary tree, return the <em>zigzag level order</em> traversal of its nodes’ values. (ie, from left to right, then right to left for the next level and alternate between).</p>
+<p>For example:<br>Given binary tree <code>[3,9,20,null,null,15,7]</code>,</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  3</span><br><span class="line"> / \</span><br><span class="line">9  20</span><br><span class="line">  /  \</span><br><span class="line"> 15   7</span><br></pre></td></tr></table></figure>
+<p>return its zigzag level order traversal as:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">  [3],</span><br><span class="line">  [20,9],</span><br><span class="line">  [15,7]</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
 <hr>
-<h3 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h3><p>Roman numerals are represented by seven different symbols: <code>I</code>, <code>V</code>, <code>X</code>, <code>L</code>, <code>C</code>, <code>D</code> and <code>M</code>.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Symbol       Value</span><br><span class="line">I             1</span><br><span class="line">V             5</span><br><span class="line">X             10</span><br><span class="line">L             50</span><br><span class="line">C             100</span><br><span class="line">D             500</span><br><span class="line">M             1000</span><br></pre></td></tr></table></figure>
-<p>For example, two is written as <code>II</code> in Roman numeral, just two one’s added together. Twelve is written as, <code>XII</code>, which is simply <code>X</code> + <code>II</code>. The number twenty seven is written as <code>XXVII</code>, which is <code>XX</code> + <code>V</code> + <code>II</code>.</p>
-<p>Roman numerals are usually written largest to smallest from left to right. However, the numeral for four is not <code>IIII</code>. Instead, the number four is written as <code>IV</code>. Because the one is before the five we subtract it making four. The same principle applies to the number nine, which is written as <code>IX</code>. There are six instances where subtraction is used:</p>
+<h3 id="解法："><a href="#解法：" class="headerlink" title="解法："></a>解法：</h3><p>这个题让按照二叉树的层次双数层从右至左、单数层从左至右输出；</p>
+<p>具体实现思路如下：</p>
 <ul>
-<li><code>I</code> can be placed before <code>V</code> (5) and <code>X</code> (10) to make 4 and 9. </li>
-<li><code>X</code> can be placed before <code>L</code> (50) and <code>C</code> (100) to make 40 and 90. </li>
-<li><code>C</code> can be placed before <code>D</code> (500) and <code>M</code> (1000) to make 400 and 900.</li>
+<li><p>设置一个双端队列用于处理二叉树的结点；</p>
+</li>
+<li><p>设置一个标记 <code>judge</code> 判断当前的层次的单双数</p>
+</li>
+<li>对单数层进行进行 <code>pop_front</code> 输出，<code>push_back</code> 加入</li>
+<li>对双数层进行进行 <code>pop_back</code> 输出，<code>push_front</code> 加入</li>
 </ul>
-<p>Given an integer, convert it to a roman numeral. Input is guaranteed to be within the range from 1 to 3999.</p>
-<p><strong>Example 1:</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: 3</span><br><span class="line">Output: <span class="string">"III"</span></span><br></pre></td></tr></table></figure>
-<p><strong>Example 2:</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: 4</span><br><span class="line">Output: <span class="string">"IV"</span></span><br></pre></td></tr></table></figure>
-<p><strong>Example 3:</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: 9</span><br><span class="line">Output: <span class="string">"IX"</span></span><br></pre></td></tr></table></figure>
-<p><strong>Example 4:</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: 58</span><br><span class="line">Output: <span class="string">"LVIII"</span></span><br><span class="line">Explanation: L = 50, V = 5, III = 3.</span><br></pre></td></tr></table></figure>
-<p><strong>Example 5:</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: 1994</span><br><span class="line">Output: <span class="string">"MCMXCIV"</span></span><br><span class="line">Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.</span><br></pre></td></tr></table></figure>
 <hr>
-<h3 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h3><p>这个题让我们将阿拉伯数字转成罗马数字，其实就跟以前做过的一个把阿拉伯数字转成中文写法是一样的，就是找出具体的对应关系，并且叠加在一起就好了，比如：</p>
-<ul>
-<li>千位，1000为<code>M</code>，2000为<code>MM</code>，3000为<code>MMM</code></li>
-<li>百位，100-900对应<code>C</code>,<code>CC</code>,<code>CCC</code>,<code>CD</code>,<code>D</code>,<code>DC</code>,<code>DCC</code>,<code>DCCC</code>,<code>CM</code></li>
-</ul>
-<p>等；找到对应关系我们就可以成功解决这个题。</p>
-<hr>
-<h3 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="built_in">string</span> <span class="title">intToRoman</span><span class="params">(<span class="keyword">int</span> num)</span> </span>&#123;</span><br><span class="line">        <span class="built_in">string</span> m[<span class="number">4</span>]=&#123;<span class="string">""</span>,<span class="string">"M"</span>,<span class="string">"MM"</span>,<span class="string">"MMM"</span>&#125;;</span><br><span class="line">        <span class="built_in">string</span> c[<span class="number">10</span>]=&#123;<span class="string">""</span>,<span class="string">"C"</span>,<span class="string">"CC"</span>,<span class="string">"CCC"</span>,<span class="string">"CD"</span>,<span class="string">"D"</span>,<span class="string">"DC"</span>,<span class="string">"DCC"</span>,<span class="string">"DCCC"</span>,<span class="string">"CM"</span>&#125;;</span><br><span class="line">        <span class="built_in">string</span> x[<span class="number">10</span>]=&#123;<span class="string">""</span>,<span class="string">"X"</span>,<span class="string">"XX"</span>,<span class="string">"XXX"</span>,<span class="string">"XL"</span>,<span class="string">"L"</span>,<span class="string">"LX"</span>,<span class="string">"LXX"</span>,<span class="string">"LXXX"</span>,<span class="string">"XC"</span>&#125;;</span><br><span class="line">        <span class="built_in">string</span> i[<span class="number">10</span>]=&#123;<span class="string">""</span>,<span class="string">"I"</span>,<span class="string">"II"</span>,<span class="string">"III"</span>,<span class="string">"IV"</span>,<span class="string">"V"</span>,<span class="string">"VI"</span>,<span class="string">"VII"</span>,<span class="string">"VIII"</span>,<span class="string">"IX"</span>&#125;;</span><br><span class="line">        <span class="keyword">return</span> m[num/<span class="number">1000</span>]+c[num%<span class="number">1000</span>/<span class="number">100</span>]+x[num%<span class="number">100</span>/<span class="number">10</span>]+i[num%<span class="number">10</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * struct TreeNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     TreeNode *left;</span></span><br><span class="line"><span class="comment"> *     TreeNode *right;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int x) : val(x), left(NULL), right(NULL) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; zigzagLevelOrder(TreeNode* root) &#123;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; temp ;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; cur ;</span><br><span class="line">        TreeNode* now = root ;</span><br><span class="line">        <span class="keyword">if</span>(root == <span class="literal">NULL</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> temp ;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">deque</span>&lt;TreeNode*&gt; q;</span><br><span class="line">        q.push_back(root);</span><br><span class="line">        <span class="keyword">int</span> judge = <span class="number">0</span> ;</span><br><span class="line">        <span class="keyword">int</span> number = <span class="number">1</span> ;</span><br><span class="line">        TreeNode* test = <span class="literal">NULL</span> ;</span><br><span class="line">        <span class="keyword">while</span>(q.size() != <span class="number">0</span> )</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span> ; i &lt; number ; i ++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span>(judge % <span class="number">2</span> == <span class="number">0</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    test = q.back();</span><br><span class="line">                    q.pop_back();</span><br><span class="line">                    <span class="keyword">if</span>(test-&gt;left)</span><br><span class="line">                    &#123;</span><br><span class="line">                        q.push_front(test-&gt;left);</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">if</span>(test-&gt;right)</span><br><span class="line">                    &#123;</span><br><span class="line">                        q.push_front(test-&gt;right);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                &#123;   </span><br><span class="line">                    test = q.front();</span><br><span class="line">                    q.pop_front();</span><br><span class="line">                    <span class="keyword">if</span>(test-&gt;right)</span><br><span class="line">                    &#123;</span><br><span class="line">                        q.push_back(test-&gt;right);</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">if</span>(test-&gt;left)</span><br><span class="line">                    &#123;</span><br><span class="line">                        q.push_back(test-&gt;left);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;   </span><br><span class="line">                cur.push_back(test-&gt;val);</span><br><span class="line">            &#125;</span><br><span class="line">            judge ++;</span><br><span class="line">            number = q.size() ;</span><br><span class="line">            temp.push_back(cur) ;</span><br><span class="line">            cur.resize(<span class="number">0</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> temp ;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -409,8 +397,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/03/11-Container-With-Most-Water/" rel="next" title="11. Container With Most Water">
-                <i class="fa fa-chevron-left"></i> 11. Container With Most Water
+              <a href="/2019/04/22/102-Binary-Tree-Level-Order-Traversal/" rel="next" title="102. Binary Tree Level Order Traversal">
+                <i class="fa fa-chevron-left"></i> 102. Binary Tree Level Order Traversal
               </a>
             
           </div>
@@ -418,10 +406,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/05/15-3Sum/" rel="prev" title="15. 3Sum">
-                15. 3Sum <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -555,7 +539,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目："><span class="nav-number">1.</span> <span class="nav-text">题目：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#思路："><span class="nav-number">2.</span> <span class="nav-text">思路：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码："><span class="nav-number">3.</span> <span class="nav-text">代码：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目："><span class="nav-number">1.</span> <span class="nav-text">题目：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解法："><span class="nav-number">2.</span> <span class="nav-text">解法：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码："><span class="nav-number">3.</span> <span class="nav-text">代码：</span></a></li></ol></div>
             
 
           </div>
