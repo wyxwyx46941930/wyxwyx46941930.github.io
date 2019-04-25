@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="每日一题 2019 - 04 - 17">
+<meta name="description" content="每日一题 2019 - 04 - 26">
 <meta name="keywords" content="leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="86. Partition List">
-<meta property="og:url" content="http://wyxwyx46941930.github.io/2019/04/16/86-Partition-List/index.html">
+<meta property="og:title" content="113. Path Sum II">
+<meta property="og:url" content="http://wyxwyx46941930.github.io/2019/04/26/113-Path-Sum-II/index.html">
 <meta property="og:site_name" content="人间有味是清欢">
-<meta property="og:description" content="每日一题 2019 - 04 - 17">
+<meta property="og:description" content="每日一题 2019 - 04 - 26">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-16T15:12:45.773Z">
+<meta property="og:updated_time" content="2019-04-25T17:05:54.520Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="86. Partition List">
-<meta name="twitter:description" content="每日一题 2019 - 04 - 17">
+<meta name="twitter:title" content="113. Path Sum II">
+<meta name="twitter:description" content="每日一题 2019 - 04 - 26">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://wyxwyx46941930.github.io/2019/04/16/86-Partition-List/">
+  <link rel="canonical" href="http://wyxwyx46941930.github.io/2019/04/26/113-Path-Sum-II/">
 
 
 
 
 
-  <title>86. Partition List | 人间有味是清欢</title>
+  <title>113. Path Sum II | 人间有味是清欢</title>
   
 
 
@@ -258,7 +258,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://wyxwyx46941930.github.io/2019/04/16/86-Partition-List/">
+    <link itemprop="mainEntityOfPage" href="http://wyxwyx46941930.github.io/2019/04/26/113-Path-Sum-II/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Wangyx">
@@ -275,7 +275,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">86. Partition List</h1>
+          <h1 class="post-title" itemprop="name headline">113. Path Sum II</h1>
         
 
         <div class="post-meta">
@@ -287,8 +287,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-16T23:08:54+08:00">
-                2019-04-16
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-26T00:55:56+08:00">
+                2019-04-26
               </time>
             
 
@@ -347,16 +347,23 @@
       
 
       
-        <p>每日一题 2019 - 04 - 17</p>
+        <p>每日一题 2019 - 04 - 26</p>
 <a id="more"></a>
-<h3 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h3><p>Given a linked list and a value <em>x</em>, partition it such that all nodes less than <em>x</em> come before nodes greater than or equal to <em>x</em>.</p>
-<p>You should preserve the original relative order of the nodes in each of the two partitions.</p>
+<h3 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h3><p>Given a binary tree and a sum, find all root-to-leaf paths where each path’s sum equals the given sum.</p>
+<p><strong>Note:</strong> A leaf is a node with no children.</p>
 <p><strong>Example:</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: head = 1-&gt;4-&gt;3-&gt;2-&gt;5-&gt;2, x = 3</span><br><span class="line">Output: 1-&gt;2-&gt;2-&gt;4-&gt;3-&gt;5</span><br></pre></td></tr></table></figure>
+<p>Given the below binary tree and <code>sum = 22</code>,</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">      5</span><br><span class="line">     / \</span><br><span class="line">    4   8</span><br><span class="line">   /   / \</span><br><span class="line">  11  13  4</span><br><span class="line"> /  \    / \</span><br><span class="line">7    2  5   1</span><br></pre></td></tr></table></figure>
+<p>Return:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">   [5,4,11,2],</span><br><span class="line">   [5,8,4,5]</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
 <hr>
-<h3 id="解法："><a href="#解法：" class="headerlink" title="解法："></a>解法：</h3><p>这个题让把链表中比给定 <code>x</code> 大或者等于 <code>x</code> 的数据放在比 <code>x</code> 小的元素的后面，所以思路就很直观，使用一个<code>vector</code> 存放比 <code>x</code> 大的元素，使用一个 <code>vector</code> 存放比 <code>x</code> 小的元素，随后将前者推入后者之中，然后再将值挨个赋给原先的链表，即可完成任务，等于使用空间换时间效率； </p>
+<h3 id="解法"><a href="#解法" class="headerlink" title="解法:"></a>解法:</h3><p>这个题让找出二叉树上等于给定值和的路径结点，整体来说深度优先遍历就可以解决问题，但是需要注意两个地方：</p>
+<ul>
+<li>返回的路径一定是从根节点到最低层的路径记录</li>
+<li>每一层完成遍历一定要让当前记录的 <code>vector</code> 与 <code>sum_value</code> 删除当前层的记录，避免影响进一步的搜索；</li>
+</ul>
 <hr>
-<h3 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode *next;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) : val(x), next(NULL) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">partition</span><span class="params">(ListNode* head, <span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>( head == <span class="literal">NULL</span> )</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> head ;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 记录所有比x小的节点</span></span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; first ;</span><br><span class="line">        <span class="comment">// 记录所有比x大于等于的节点</span></span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; second ;</span><br><span class="line">        ListNode * temp = head ;</span><br><span class="line">        <span class="keyword">while</span>( temp != <span class="literal">NULL</span> )</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(temp -&gt; val &lt; x)</span><br><span class="line">            &#123;</span><br><span class="line">                first.push_back(temp -&gt; val);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                second.push_back(temp -&gt; val);</span><br><span class="line">            &#125;</span><br><span class="line">            temp = temp -&gt; next ; </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span> ; i &lt; second.size() ; i ++ )</span><br><span class="line">        &#123;</span><br><span class="line">            first.push_back(second[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        temp = head ;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span> ; i &lt; first.size() ; i ++ )</span><br><span class="line">        &#123;</span><br><span class="line">            temp -&gt; val = first[i] ;</span><br><span class="line">            temp = temp -&gt; next ;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> head ;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * struct TreeNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     TreeNode *left;</span></span><br><span class="line"><span class="comment"> *     TreeNode *right;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int x) : val(x), left(NULL), right(NULL) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; pathSum(TreeNode* root, <span class="keyword">int</span> sum) &#123;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; now;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; res ;</span><br><span class="line">        <span class="keyword">if</span>(root == <span class="literal">NULL</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> res ;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> total_sum = <span class="number">0</span>;</span><br><span class="line">        find_sum(res,now,root,total_sum,sum) ;</span><br><span class="line">        <span class="keyword">return</span> res ;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">find_sum</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt;&amp; res , <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; now , TreeNode *temp, <span class="keyword">int</span> &amp;total , <span class="keyword">int</span> sum)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(temp == <span class="literal">NULL</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> ;</span><br><span class="line">        &#125;</span><br><span class="line">        total += temp -&gt; val ;</span><br><span class="line">        now.push_back(temp-&gt;val);</span><br><span class="line">        <span class="keyword">if</span>(temp-&gt; left == <span class="literal">NULL</span> &amp;&amp; temp -&gt; right == <span class="literal">NULL</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(total == sum)</span><br><span class="line">                res.push_back(now);</span><br><span class="line">            total -= temp-&gt;val;</span><br><span class="line">            now.pop_back();</span><br><span class="line">            <span class="keyword">return</span> ;</span><br><span class="line">        &#125;</span><br><span class="line">        find_sum(res,now,temp-&gt;left,total,sum);</span><br><span class="line">        find_sum(res,now,temp-&gt;right,total,sum);</span><br><span class="line">        total -= temp -&gt; val ;</span><br><span class="line">        now.pop_back();</span><br><span class="line">        <span class="keyword">return</span> ; </span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -387,8 +394,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/16/82-Remove-Duplicates-from-Sorted-List-II/" rel="next" title="82. Remove Duplicates from Sorted List II">
-                <i class="fa fa-chevron-left"></i> 82. Remove Duplicates from Sorted List II
+              <a href="/2019/04/25/109-Convert-Sorted-List-to-Binary-Search-Tree/" rel="next" title="109. Convert Sorted List to Binary Search Tree">
+                <i class="fa fa-chevron-left"></i> 109. Convert Sorted List to Binary Search Tree
               </a>
             
           </div>
@@ -396,10 +403,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/04/18/91-Decode-Ways/" rel="prev" title="91. Decode Ways">
-                91. Decode Ways <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -533,7 +536,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目："><span class="nav-number">1.</span> <span class="nav-text">题目：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解法："><span class="nav-number">2.</span> <span class="nav-text">解法：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码："><span class="nav-number">3.</span> <span class="nav-text">代码：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目："><span class="nav-number">1.</span> <span class="nav-text">题目：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解法"><span class="nav-number">2.</span> <span class="nav-text">解法:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码："><span class="nav-number">3.</span> <span class="nav-text">代码：</span></a></li></ol></div>
             
 
           </div>
