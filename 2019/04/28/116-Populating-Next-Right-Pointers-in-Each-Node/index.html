@@ -83,20 +83,20 @@
 
 
 
-<meta name="description" content="每日一题 2019 - 03 - 07">
+<meta name="description" content="每日一题 2019 - 04 - 28">
 <meta name="keywords" content="leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="17. Letter Combinations of a Phone Number">
-<meta property="og:url" content="http://wyxwyx46941930.github.io/2019/03/07/17-Letter-Combinations-of-a-Phone-Number/index.html">
+<meta property="og:title" content="116. Populating Next Right Pointers in Each Node">
+<meta property="og:url" content="http://wyxwyx46941930.github.io/2019/04/28/116-Populating-Next-Right-Pointers-in-Each-Node/index.html">
 <meta property="og:site_name" content="人间有味是清欢">
-<meta property="og:description" content="每日一题 2019 - 03 - 07">
+<meta property="og:description" content="每日一题 2019 - 04 - 28">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://wyxwyx46941930.github.io/2019/03/07/17-Letter-Combinations-of-a-Phone-Number/1.png">
-<meta property="og:updated_time" content="2019-03-07T03:07:16.066Z">
+<meta property="og:image" content="https://assets.leetcode.com/uploads/2019/02/14/116_sample.png">
+<meta property="og:updated_time" content="2019-04-27T17:09:27.027Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="17. Letter Combinations of a Phone Number">
-<meta name="twitter:description" content="每日一题 2019 - 03 - 07">
-<meta name="twitter:image" content="http://wyxwyx46941930.github.io/2019/03/07/17-Letter-Combinations-of-a-Phone-Number/1.png">
+<meta name="twitter:title" content="116. Populating Next Right Pointers in Each Node">
+<meta name="twitter:description" content="每日一题 2019 - 04 - 28">
+<meta name="twitter:image" content="https://assets.leetcode.com/uploads/2019/02/14/116_sample.png">
 
 
 
@@ -126,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="http://wyxwyx46941930.github.io/2019/03/07/17-Letter-Combinations-of-a-Phone-Number/">
+  <link rel="canonical" href="http://wyxwyx46941930.github.io/2019/04/28/116-Populating-Next-Right-Pointers-in-Each-Node/">
 
 
 
 
 
-  <title>17. Letter Combinations of a Phone Number | 人间有味是清欢</title>
+  <title>116. Populating Next Right Pointers in Each Node | 人间有味是清欢</title>
   
 
 
@@ -260,7 +260,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://wyxwyx46941930.github.io/2019/03/07/17-Letter-Combinations-of-a-Phone-Number/">
+    <link itemprop="mainEntityOfPage" href="http://wyxwyx46941930.github.io/2019/04/28/116-Populating-Next-Right-Pointers-in-Each-Node/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Wangyx">
@@ -277,7 +277,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">17. Letter Combinations of a Phone Number</h1>
+          <h1 class="post-title" itemprop="name headline">116. Populating Next Right Pointers in Each Node</h1>
         
 
         <div class="post-meta">
@@ -289,8 +289,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-07T10:29:14+08:00">
-                2019-03-07
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-28T01:04:28+08:00">
+                2019-04-28
               </time>
             
 
@@ -349,25 +349,28 @@
       
 
       
-        <p>每日一题 2019 - 03 - 07</p>
+        <p>每日一题 2019 - 04 - 28</p>
 <a id="more"></a>
-<hr>
-<h3 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h3><p>Given a string containing digits from <code>2-9</code> inclusive, return all possible letter combinations that the number could represent.</p>
-<p>A mapping of digit to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters.</p>
-<p><img src="/2019/03/07/17-Letter-Combinations-of-a-Phone-Number/1.png" alt="1"></p>
+<h3 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h3><p>You are given a <strong>perfect binary tree</strong> where all leaves are on the same level, and every parent has two children. The binary tree has the following definition:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">struct Node &#123;</span><br><span class="line">  int val;</span><br><span class="line">  Node *left;</span><br><span class="line">  Node *right;</span><br><span class="line">  Node *next;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Populate each next pointer to point to its next right node. If there is no next right node, the next pointer should be set to <code>NULL</code>.</p>
+<p>Initially, all next pointers are set to <code>NULL</code>.</p>
 <p><strong>Example:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: &quot;23&quot;</span><br><span class="line">Output: [&quot;ad&quot;, &quot;ae&quot;, &quot;af&quot;, &quot;bd&quot;, &quot;be&quot;, &quot;bf&quot;, &quot;cd&quot;, &quot;ce&quot;, &quot;cf&quot;].</span><br></pre></td></tr></table></figure>
+<p><img src="https://assets.leetcode.com/uploads/2019/02/14/116_sample.png" alt="img"></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Input: &#123;<span class="string">"<span class="variable">$id</span>"</span>:<span class="string">"1"</span>,<span class="string">"left"</span>:&#123;<span class="string">"<span class="variable">$id</span>"</span>:<span class="string">"2"</span>,<span class="string">"left"</span>:&#123;<span class="string">"<span class="variable">$id</span>"</span>:<span class="string">"3"</span>,<span class="string">"left"</span>:null,<span class="string">"next"</span>:null,<span class="string">"right"</span>:null,<span class="string">"val"</span>:4&#125;,<span class="string">"next"</span>:null,<span class="string">"right"</span>:&#123;<span class="string">"<span class="variable">$id</span>"</span>:<span class="string">"4"</span>,<span class="string">"left"</span>:null,<span class="string">"next"</span>:null,<span class="string">"right"</span>:null,<span class="string">"val"</span>:5&#125;,<span class="string">"val"</span>:2&#125;,<span class="string">"next"</span>:null,<span class="string">"right"</span>:&#123;<span class="string">"<span class="variable">$id</span>"</span>:<span class="string">"5"</span>,<span class="string">"left"</span>:&#123;<span class="string">"<span class="variable">$id</span>"</span>:<span class="string">"6"</span>,<span class="string">"left"</span>:null,<span class="string">"next"</span>:null,<span class="string">"right"</span>:null,<span class="string">"val"</span>:6&#125;,<span class="string">"next"</span>:null,<span class="string">"right"</span>:&#123;<span class="string">"<span class="variable">$id</span>"</span>:<span class="string">"7"</span>,<span class="string">"left"</span>:null,<span class="string">"next"</span>:null,<span class="string">"right"</span>:null,<span class="string">"val"</span>:7&#125;,<span class="string">"val"</span>:3&#125;,<span class="string">"val"</span>:1&#125;</span><br><span class="line"></span><br><span class="line">Output: &#123;<span class="string">"<span class="variable">$id</span>"</span>:<span class="string">"1"</span>,<span class="string">"left"</span>:&#123;<span class="string">"<span class="variable">$id</span>"</span>:<span class="string">"2"</span>,<span class="string">"left"</span>:&#123;<span class="string">"<span class="variable">$id</span>"</span>:<span class="string">"3"</span>,<span class="string">"left"</span>:null,<span class="string">"next"</span>:&#123;<span class="string">"<span class="variable">$id</span>"</span>:<span class="string">"4"</span>,<span class="string">"left"</span>:null,<span class="string">"next"</span>:&#123;<span class="string">"<span class="variable">$id</span>"</span>:<span class="string">"5"</span>,<span class="string">"left"</span>:null,<span class="string">"next"</span>:&#123;<span class="string">"<span class="variable">$id</span>"</span>:<span class="string">"6"</span>,<span class="string">"left"</span>:null,<span class="string">"next"</span>:null,<span class="string">"right"</span>:null,<span class="string">"val"</span>:7&#125;,<span class="string">"right"</span>:null,<span class="string">"val"</span>:6&#125;,<span class="string">"right"</span>:null,<span class="string">"val"</span>:5&#125;,<span class="string">"right"</span>:null,<span class="string">"val"</span>:4&#125;,<span class="string">"next"</span>:&#123;<span class="string">"<span class="variable">$id</span>"</span>:<span class="string">"7"</span>,<span class="string">"left"</span>:&#123;<span class="string">"<span class="variable">$ref</span>"</span>:<span class="string">"5"</span>&#125;,<span class="string">"next"</span>:null,<span class="string">"right"</span>:&#123;<span class="string">"<span class="variable">$ref</span>"</span>:<span class="string">"6"</span>&#125;,<span class="string">"val"</span>:3&#125;,<span class="string">"right"</span>:&#123;<span class="string">"<span class="variable">$ref</span>"</span>:<span class="string">"4"</span>&#125;,<span class="string">"val"</span>:2&#125;,<span class="string">"next"</span>:null,<span class="string">"right"</span>:&#123;<span class="string">"<span class="variable">$ref</span>"</span>:<span class="string">"7"</span>&#125;,<span class="string">"val"</span>:1&#125;</span><br><span class="line"></span><br><span class="line">Explanation: Given the above perfect binary tree (Figure A), your <span class="keyword">function</span> should populate each next pointer to point to its next right node, just like <span class="keyword">in</span> Figure B.</span><br></pre></td></tr></table></figure>
 <p><strong>Note:</strong></p>
-<p>Although the above answer is in lexicographical order, your answer could be in any order you want.</p>
-<hr>
-<h3 id="解法："><a href="#解法：" class="headerlink" title="解法："></a>解法：</h3><p>这个题让我们找到<strong>给定电话号码上的所有不重复的排列组合</strong>，具体可以用三重循环的方法做，这三重循环的作用分别是：</p>
 <ul>
-<li>第一层遍历给定的<code>string digits</code>，因为我们要找到所有的待遍历电话数字</li>
-<li>第二层遍历待返回<code>vector&lt;string&gt;</code>，保证<code>digits</code>中的所有数据都能被遍历到，同时在遍历时候由于不能返回过程字符，所以要删除过程中遍历过的量</li>
-<li>第三层遍历<code>digts</code>中对应的每一个字母</li>
+<li>You may only use constant extra space.</li>
+<li>Recursive approach is fine, implicit stack space does not count as extra space for this problem.</li>
 </ul>
 <hr>
-<h3 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; letterCombinations(<span class="built_in">string</span> digits) &#123;</span><br><span class="line">            <span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; res;</span><br><span class="line">            <span class="keyword">if</span> (digits.empty()) <span class="keyword">return</span> res;</span><br><span class="line">            <span class="built_in">string</span> dict[] = &#123;<span class="string">"abc"</span>, <span class="string">"def"</span>, <span class="string">"ghi"</span>, <span class="string">"jkl"</span>, <span class="string">"mno"</span>, <span class="string">"pqrs"</span>, <span class="string">"tuv"</span>, <span class="string">"wxyz"</span>&#125;;</span><br><span class="line">            res.push_back(<span class="string">""</span>);</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; digits.size(); ++i) &#123;</span><br><span class="line">                <span class="keyword">int</span> n = res.size();</span><br><span class="line">                <span class="built_in">string</span> str = dict[digits[i] - <span class="string">'2'</span>];</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; n; ++j) &#123;</span><br><span class="line">                    <span class="built_in">string</span> tmp = res.front();</span><br><span class="line">                    res.erase(res.begin());</span><br><span class="line">                    <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; str.size(); ++k) &#123;</span><br><span class="line">                        res.push_back(tmp + str[k]);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> res;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="解法："><a href="#解法：" class="headerlink" title="解法："></a>解法：</h3><p>这个题让把一颗二叉树的每一层的每个结点之间都以链表的形式连接起来，最直观的思路就是使用层次遍历的方法，但是需要注意一个问题，这个题中<strong>不能使用额外的空间进行处理</strong>，所以就考虑放弃使用队列来解决问题，考虑使用递归的方法：</p>
+<ul>
+<li>深层次进入二叉树的最左下的子节点，从左子节点开始进行连接</li>
+<li>由于这是一颗满二叉树，所以除了每一层的最左边与最右边，一定相邻之间存在节点，所以通过上层结点直接进行连接即可；</li>
+</ul>
+<hr>
+<h3 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">// Definition for a Node.</span></span><br><span class="line"><span class="comment">class Node &#123;</span></span><br><span class="line"><span class="comment">public:</span></span><br><span class="line"><span class="comment">    int val;</span></span><br><span class="line"><span class="comment">    Node* left;</span></span><br><span class="line"><span class="comment">    Node* right;</span></span><br><span class="line"><span class="comment">    Node* next;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">    Node() &#123;&#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">    Node(int _val, Node* _left, Node* _right, Node* _next) &#123;</span></span><br><span class="line"><span class="comment">        val = _val;</span></span><br><span class="line"><span class="comment">        left = _left;</span></span><br><span class="line"><span class="comment">        right = _right;</span></span><br><span class="line"><span class="comment">        next = _next;</span></span><br><span class="line"><span class="comment">    &#125;</span></span><br><span class="line"><span class="comment">&#125;;</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">Node* <span class="title">connect</span><span class="params">(Node* root)</span> </span>&#123;</span><br><span class="line">        deconnect(root);</span><br><span class="line">        <span class="keyword">return</span> root ;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">deconnect</span><span class="params">(Node *root)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">       <span class="keyword">if</span>( root == <span class="literal">NULL</span> || root -&gt; left == <span class="literal">NULL</span>)</span><br><span class="line">       &#123;</span><br><span class="line">           <span class="keyword">return</span>;</span><br><span class="line">       &#125; </span><br><span class="line">       Node* temp = root ;</span><br><span class="line">       <span class="keyword">while</span>(root)</span><br><span class="line">       &#123;</span><br><span class="line">           root -&gt; left -&gt; next = root -&gt; right ;</span><br><span class="line">           <span class="keyword">if</span>(root-&gt; next)</span><br><span class="line">           &#123;</span><br><span class="line">               root -&gt; right -&gt; next = root -&gt; next -&gt; left;</span><br><span class="line">           &#125;</span><br><span class="line">           root = root -&gt; next ;</span><br><span class="line">       &#125;</span><br><span class="line">       connect(temp -&gt; left);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -398,8 +401,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/06/16-3Sum-Closest/" rel="next" title="16. 3Sum Closest">
-                <i class="fa fa-chevron-left"></i> 16. 3Sum Closest
+              <a href="/2019/04/26/114-Flatten-Binary-Tree-to-Linked-List/" rel="next" title="114. Flatten Binary Tree to Linked List">
+                <i class="fa fa-chevron-left"></i> 114. Flatten Binary Tree to Linked List
               </a>
             
           </div>
@@ -407,10 +410,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/09/18-4Sum/" rel="prev" title="18. 4Sum">
-                18. 4Sum <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
