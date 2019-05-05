@@ -254,6 +254,221 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://wyxwyx46941930.github.io/2019/05/05/系统分析HW9/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Wangyx">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/test.JPG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="人间有味是清欢">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/05/05/系统分析HW9/" itemprop="url">系统分析HW9</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-05T21:18:09+08:00">
+                2019-05-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/系统分析设计/" itemprop="url" rel="index">
+                    <span itemprop="name">系统分析设计</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="系统分析HW9"><a href="#系统分析HW9" class="headerlink" title="系统分析HW9"></a>系统分析HW9</h2><p>学号：16340226</p>
+<p>姓名：王迎旭</p>
+<p>方向：16级软件工程嵌入式</p>
+<p>日期：2019 - 05 - 05</p>
+<hr>
+<p>1、使用类图，分别对 Asg_RH 文档中 Make Reservation 用例以及 Payment 用例开展领域建模。然后，根据上述模型，给出建议的数据表以及主要字段，特别是主键和外键</p>
+<ul>
+<li>注意事项：<ul>
+<li>对象必须是名词、特别是技术名词、报表、描述类的处理；</li>
+<li>关联必须有多重性、部分有名称与导航方向</li>
+<li>属性要注意计算字段</li>
+</ul>
+</li>
+<li>数据建模，为了简化描述仅需要给出表清单，例如：<ul>
+<li>Hotel（ID/Key，Name，LoctionID/Fkey，Address…..）</li>
+</ul>
+</li>
+</ul>
+<p><strong>解答</strong>：</p>
+<ul>
+<li><p>Make Reservation 领域建模：</p>
+<ul>
+<li><p>图示：</p>
+<p><img src="/2019/05/05/系统分析HW9/1.png" alt="1"></p>
+</li>
+<li><p>数据表与主要字段：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"> [new.uxf](new.uxf) Customer(ID/key, FullName, EmailAdress)</span><br><span class="line">City(ID/key, Name)</span><br><span class="line">Hotel(ID/key, Name, Adress, CityID/Fkey)</span><br><span class="line">Room(RoomID/key, HotelID/Fkey, Type, Availability)</span><br><span class="line">ReservationItem(ID/key, RoomID/Fkey, BasketID/Fkey, checkInDate, checkOutDate, NumberOfAdults, NumberOfChildren, Price, IsSmoking)</span><br><span class="line">ReservationBasket(ID/key, CustomerID/Key)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>Payment 领域建模：</p>
+<ul>
+<li><p>图示：</p>
+<p><img src="/2019/05/05/系统分析HW9/2.png" alt="2"></p>
+</li>
+<li><p>数据表与主要字段：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Payment(ID/key, totalPrice, reservationID/Fkey, cardID/Fkey)</span><br><span class="line">ReservationItem(ID/key, paymentID/Fkey,checkInDate, ...)</span><br><span class="line">CreditCard(ID/key, Type, CardSecurityCode, ExpiryDate, CardHolderID/Fkey)</span><br><span class="line">CardHolder(ID/key, Title, FirstName, LastName, Address1, Address2, City, CountyOrState, Country, Postcode, DaytimeTelephone, EveningTelephone)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>2、使用 UML State Model，对每个订单对象生命周期建模</p>
+<ul>
+<li>建模对象： 参考 Asg_RH 文档， 对 Reservation/Order 对象建模。</li>
+<li>建模要求： 参考练习不能提供足够信息帮助你对订单对象建模，请参考现在 定旅馆 的旅游网站，尽可能分析围绕订单发生的各种情况，直到订单通过销售事件（柜台销售）结束订单。</li>
+</ul>
+<p><strong>解答</strong>：</p>
+<p>参考携程网酒店订单的生命周期，进行状态建模：</p>
+<p>状态集合 S:</p>
+<ul>
+<li>选择酒店中</li>
+<li>设置详细信息中</li>
+<li>待支付</li>
+<li>酒店确认中</li>
+<li>退款中</li>
+<li>待入住</li>
+<li>酒店确认取消订单中</li>
+<li>已入住</li>
+</ul>
+<p>常见事件 E:</p>
+<ul>
+<li>搜索酒店</li>
+<li>修改筛选信息</li>
+<li>创建订单</li>
+<li>修改详细信息</li>
+<li>确认下单</li>
+<li>支付</li>
+<li>取消订单</li>
+<li>酒店确认</li>
+<li>客户入住</li>
+</ul>
+<p><strong>状态建模图示</strong>：</p>
+<p><img src="/2019/05/05/系统分析HW9/new3.jpg" alt="new3"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://wyxwyx46941930.github.io/2019/05/05/134-Gas-Station/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1558,152 +1773,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://wyxwyx46941930.github.io/2019/04/26/114-Flatten-Binary-Tree-to-Linked-List/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Wangyx">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/test.JPG">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="人间有味是清欢">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/04/26/114-Flatten-Binary-Tree-to-Linked-List/" itemprop="url">114. Flatten Binary Tree to Linked List</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-26T23:27:16+08:00">
-                2019-04-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/leetcode/" itemprop="url" rel="index">
-                    <span itemprop="name">leetcode</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>每日一题 2019 - 04 - 27</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/04/26/114-Flatten-Binary-Tree-to-Linked-List/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1756,7 +1825,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">74</span>
+                  <span class="site-state-item-count">75</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
