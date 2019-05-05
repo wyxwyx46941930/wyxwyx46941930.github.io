@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="每日一题 2019 - 01 - 23">
+<meta name="description" content="每日一题 2019 - 05 - 05">
 <meta name="keywords" content="leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="331. Verify Preorder Serialization of a Binary Tree">
-<meta property="og:url" content="http://wyxwyx46941930.github.io/2019/01/23/331-Verify-Preorder-Serialization-of-a-Binary-Tree/index.html">
+<meta property="og:title" content="137. Single Number II">
+<meta property="og:url" content="http://wyxwyx46941930.github.io/2019/05/06/137-Single-Number-II/index.html">
 <meta property="og:site_name" content="人间有味是清欢">
-<meta property="og:description" content="每日一题 2019 - 01 - 23">
+<meta property="og:description" content="每日一题 2019 - 05 - 05">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-28T15:19:41.341Z">
+<meta property="og:updated_time" content="2019-05-05T16:36:52.653Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="331. Verify Preorder Serialization of a Binary Tree">
-<meta name="twitter:description" content="每日一题 2019 - 01 - 23">
+<meta name="twitter:title" content="137. Single Number II">
+<meta name="twitter:description" content="每日一题 2019 - 05 - 05">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://wyxwyx46941930.github.io/2019/01/23/331-Verify-Preorder-Serialization-of-a-Binary-Tree/">
+  <link rel="canonical" href="http://wyxwyx46941930.github.io/2019/05/06/137-Single-Number-II/">
 
 
 
 
 
-  <title>331. Verify Preorder Serialization of a Binary Tree | 人间有味是清欢</title>
+  <title>137. Single Number II | 人间有味是清欢</title>
   
 
 
@@ -258,7 +258,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://wyxwyx46941930.github.io/2019/01/23/331-Verify-Preorder-Serialization-of-a-Binary-Tree/">
+    <link itemprop="mainEntityOfPage" href="http://wyxwyx46941930.github.io/2019/05/06/137-Single-Number-II/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Wangyx">
@@ -275,7 +275,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">331. Verify Preorder Serialization of a Binary Tree</h1>
+          <h1 class="post-title" itemprop="name headline">137. Single Number II</h1>
         
 
         <div class="post-meta">
@@ -287,8 +287,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-23T23:48:10+08:00">
-                2019-01-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-06T00:05:35+08:00">
+                2019-05-06
               </time>
             
 
@@ -347,33 +347,31 @@
       
 
       
-        <p>每日一题 2019 - 01 - 23</p>
+        <p>每日一题 2019 - 05 - 05</p>
 <a id="more"></a>
-<h3 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h3><p>One way to serialize a binary tree is to use pre-order traversal. When we encounter a non-null node, we record the node’s value. If it is a null node, we record using a sentinel value such as <code>#</code>.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">     _9_</span><br><span class="line">    /   \</span><br><span class="line">   3     2</span><br><span class="line">  / \   / \</span><br><span class="line"> 4   1  <span class="comment">#  6</span></span><br><span class="line">/ \ / \   / \</span><br><span class="line"><span class="comment"># # # #   # #</span></span><br></pre></td></tr></table></figure>
-<p>For example, the above binary tree can be serialized to the string <code>&quot;9,3,4,#,#,1,#,#,2,#,6,#,#&quot;</code>, where <code>#</code> represents a null node.</p>
-<p>Given a string of comma separated values, verify whether it is a correct preorder traversal serialization of a binary tree. Find an algorithm without reconstructing the tree.</p>
-<p>Each comma separated value in the string must be either an integer or a character <code>&#39;#&#39;</code> representing <code>null</code> pointer.</p>
-<p>You may assume that the input format is always valid, for example it could never contain two consecutive commas such as <code>&quot;1,,3&quot;</code>.</p>
+<h3 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h3><p>Given a <strong>non-empty</strong> array of integers, every element appears <em>three</em> times except for one, which appears exactly once. Find that single one.</p>
+<p><strong>Note:</strong></p>
+<p>Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?</p>
 <p><strong>Example 1:</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: <span class="string">"9,3,4,#,#,1,#,#,2,#,6,#,#"</span></span><br><span class="line">Output: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: [2,2,3,2]</span><br><span class="line">Output: 3</span><br></pre></td></tr></table></figure>
 <p><strong>Example 2:</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: <span class="string">"1,#"</span></span><br><span class="line">Output: <span class="literal">false</span></span><br></pre></td></tr></table></figure>
-<p><strong>Example 3:</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: <span class="string">"9,#,#,1"</span></span><br><span class="line">Output: <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: [0,1,0,1,0,1,99]</span><br><span class="line">Output: 99</span><br></pre></td></tr></table></figure>
 <hr>
-<h3 id="解法："><a href="#解法：" class="headerlink" title="解法："></a>解法：</h3><p>这个题让我们判断给定的序列是不是二叉树的先序遍历序列，这里我们需要注意给定的序列的特点：</p>
-<ul>
-<li>任意一个非空结点一定有两个子结点，这两个子结点可以为空，也即<code>#</code></li>
-<li>一颗空树的序列为 <code>#</code>，满足题意要求</li>
-</ul>
-<p>同时我们还需要注意题中所给的二叉树的一个特点就是：</p>
-<ul>
-<li><strong>空结点的个数 = 非空结点的个数 + 1</strong></li>
-</ul>
-<p>所以如果我们在遍历序列的过程中发现<code>#</code>的个数大于当前已经遍历过的非空节点的个数 + 1，那么证明这颗树是不存在的，有了这个思路我们就可以完成这个题的解答。</p>
+<h3 id="解法："><a href="#解法：" class="headerlink" title="解法："></a>解法：</h3><p>这个题让找出给定的数组中只出现一次的数据，如果使用排序的话，也可以解决问题，只要在排序中找到与前后都不相同的数据返回即可，这样的话时间复杂度大概是 <code>o(nlogn)</code>，但是为了达到时间复杂度 <code>o(n)</code>，也即保证搜索时间是线性的，还需要进一步改进算法；</p>
 <hr>
-<h3 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">isValidSerialization</span><span class="params">(<span class="built_in">string</span> preorder)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n = preorder.size();</span><br><span class="line">        <span class="keyword">if</span>(n == <span class="number">0</span>) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; v;</span><br><span class="line">        <span class="keyword">int</span> pos = <span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(preorder[i] == <span class="string">','</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                v.push_back(preorder.substr(pos+<span class="number">1</span>, i-pos<span class="number">-1</span>));</span><br><span class="line">                pos = i;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(preorder[n<span class="number">-1</span>] != <span class="string">'#'</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        v.push_back(<span class="string">"#"</span>);</span><br><span class="line">        <span class="keyword">int</span> cnt = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; v.size(); i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(cnt &lt;= <span class="number">0</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            <span class="keyword">if</span>(v[i] == <span class="string">"#"</span>) cnt -= <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">else</span> cnt += <span class="number">1</span>;</span><br><span class="line">        &#125;    </span><br><span class="line">        <span class="keyword">return</span> cnt == <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>参考网上大神的算法，思路如下：</p>
+<p>数组为[2,2,2,3]，一共有四个元素，进行四次循环。</p>
+<p>第一次循环，b=(0000^0010)&amp;1111=0010=2，a=(0000^0010)&amp;1101=0000=0</p>
+<p>第二次循环，b=(0010^0010)&amp;1111=0000=0，a=(0000^0010)&amp;1111=0010=2</p>
+<p>第三次循环，b=(0000^0010)&amp;1101=0000=0，a=(0010^0010)&amp;1111=0000=0</p>
+<p>第四次循环，b=(0000^0011)&amp;1111=0011=3，a=(0000^0011)&amp;1100=0000=0</p>
+<p>不知道大家有没有发现，某个值nums[i]第一次出现的时候，b把它记录了下来，这时候a=0；接着第二次出现的时候，b被清空了，记录到了a里面；接着第三次出现的时候，b和a都被清空了。</p>
+<p>如果一个数组中，所有的元素除了一个特殊的只出现一次，其他都出现了三次，那么根据我们刚刚观察到的结论，最后这个特殊元素必定会被记录在b中。</p>
+<p>有些朋友会说，但是不一定数组都是刚好3个2都在一起，3个4都在一起，都能够满足刚刚这样子的做法。</p>
+<p>上上篇博客136题中，笔者本人提出了异或其实是满足交换律和结合律的，而且&amp;这个操作也是满足交换律和结合律的，所以无论3个2会不会一起出现，结果都是会刚好抵消的。</p>
+<p>所以上述的方法可以解决这个问题。</p>
+<hr>
+<h3 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">singleNumber</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums)</span> </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">0</span>, b = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.size(); ++i) </span><br><span class="line">    &#123;</span><br><span class="line">        b = (b ^ nums[i]) &amp; ~a;</span><br><span class="line">        a = (a ^ nums[i]) &amp; ~b;</span><br><span class="line">    &#125; </span><br><span class="line">    <span class="keyword">return</span> b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -404,8 +402,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/01/23/713-Subarray-Product-Less-Than-K/" rel="next" title="713. Subarray Product Less Than K">
-                <i class="fa fa-chevron-left"></i> 713. Subarray Product Less Than K
+              <a href="/2019/05/05/系统分析HW9/" rel="next" title="系统分析HW9">
+                <i class="fa fa-chevron-left"></i> 系统分析HW9
               </a>
             
           </div>
@@ -413,10 +411,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/01/24/969-Pancake-Sorting/" rel="prev" title="969. Pancake Sorting">
-                969. Pancake Sorting <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
