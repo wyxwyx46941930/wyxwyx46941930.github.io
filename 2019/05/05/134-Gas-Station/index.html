@@ -83,20 +83,18 @@
 
 
 
-<meta name="description" content="每日一题 2019 - 04 - 06">
+<meta name="description" content="每日一题 2019 - 05 - 04">
 <meta name="keywords" content="leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="63. Unique Paths II">
-<meta property="og:url" content="http://wyxwyx46941930.github.io/2019/04/06/63-Unique-Paths-II/index.html">
+<meta property="og:title" content="134. Gas Station">
+<meta property="og:url" content="http://wyxwyx46941930.github.io/2019/05/05/134-Gas-Station/index.html">
 <meta property="og:site_name" content="人间有味是清欢">
-<meta property="og:description" content="每日一题 2019 - 04 - 06">
+<meta property="og:description" content="每日一题 2019 - 05 - 04">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://assets.leetcode.com/uploads/2018/10/22/robot_maze.png">
-<meta property="og:updated_time" content="2019-04-05T17:40:39.842Z">
+<meta property="og:updated_time" content="2019-05-05T05:22:02.229Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="63. Unique Paths II">
-<meta name="twitter:description" content="每日一题 2019 - 04 - 06">
-<meta name="twitter:image" content="https://assets.leetcode.com/uploads/2018/10/22/robot_maze.png">
+<meta name="twitter:title" content="134. Gas Station">
+<meta name="twitter:description" content="每日一题 2019 - 05 - 04">
 
 
 
@@ -126,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://wyxwyx46941930.github.io/2019/04/06/63-Unique-Paths-II/">
+  <link rel="canonical" href="http://wyxwyx46941930.github.io/2019/05/05/134-Gas-Station/">
 
 
 
 
 
-  <title>63. Unique Paths II | 人间有味是清欢</title>
+  <title>134. Gas Station | 人间有味是清欢</title>
   
 
 
@@ -260,7 +258,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://wyxwyx46941930.github.io/2019/04/06/63-Unique-Paths-II/">
+    <link itemprop="mainEntityOfPage" href="http://wyxwyx46941930.github.io/2019/05/05/134-Gas-Station/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Wangyx">
@@ -277,7 +275,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">63. Unique Paths II</h1>
+          <h1 class="post-title" itemprop="name headline">134. Gas Station</h1>
         
 
         <div class="post-meta">
@@ -289,8 +287,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-06T01:18:06+08:00">
-                2019-04-06
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-05T13:17:49+08:00">
+                2019-05-05
               </time>
             
 
@@ -349,25 +347,25 @@
       
 
       
-        <p>每日一题 2019 - 04 - 06</p>
+        <p>每日一题 2019 - 05 - 04</p>
 <a id="more"></a>
-<h3 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h3><p>A robot is located at the top-left corner of a <em>m</em> x <em>n</em> grid (marked ‘Start’ in the diagram below).</p>
-<p>The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked ‘Finish’ in the diagram below).</p>
-<p>Now consider if some obstacles are added to the grids. How many unique paths would there be?</p>
-<p><img src="https://assets.leetcode.com/uploads/2018/10/22/robot_maze.png" alt="img"></p>
-<p>An obstacle and empty space is marked as <code>1</code> and <code>0</code> respectively in the grid.</p>
-<p><strong>Note:</strong> <em>m</em> and <em>n</em> will be at most 100.</p>
-<p><strong>Example 1:</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Input:</span><br><span class="line">[</span><br><span class="line">  [0,0,0],</span><br><span class="line">  [0,1,0],</span><br><span class="line">  [0,0,0]</span><br><span class="line">]</span><br><span class="line">Output: 2</span><br><span class="line">Explanation:</span><br><span class="line">There is one obstacle <span class="keyword">in</span> the middle of the 3x3 grid above.</span><br><span class="line">There are two ways to reach the bottom-right corner:</span><br><span class="line">1. Right -&gt; Right -&gt; Down -&gt; Down</span><br><span class="line">2. Down -&gt; Down -&gt; Right -&gt; Right</span><br></pre></td></tr></table></figure>
-<hr>
-<h3 id="解法："><a href="#解法：" class="headerlink" title="解法："></a>解法：</h3><p>这个题比 <a href="https://leetcode.com/problems/unique-paths/" target="_blank" rel="noopener">leetcode 62</a> 多了一个限制条件就是，地图中可能存在不能通行的障碍物，遇到障碍物需要躲避，那么在这种约束条件下，我们只需要排除异样即可，思路大致如下：</p>
+<h3 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h3><p>There are <em>N</em> gas stations along a circular route, where the amount of gas at station <em>i</em> is <code>gas[i]</code>.</p>
+<p>You have a car with an unlimited gas tank and it costs <code>cost[i]</code> of gas to travel from station <em>i</em> to its next station (<em>i</em>+1). You begin the journey with an empty tank at one of the gas stations.</p>
+<p>Return the starting gas station’s index if you can travel around the circuit once in the clockwise direction, otherwise return -1.</p>
+<p><strong>Note:</strong></p>
 <ul>
-<li>初始化<code>dp</code>地图，<code>dp</code> 第一行 <code>1</code> 位置后不通行，所以 <code>1</code> 后所有可走的情况为 <code>0</code>；<code>dp</code>第一列 <code>1</code> 位置后不通行，所以 <code>1</code> 后所有可走的情况为 <code>0</code></li>
-<li>递推公式依然是 : <code>path[j][i] = path[j - 1][i] + path[j][i - 1];</code></li>
-<li>需要加上限制条件，如果非第一行第一列的其他位置出现 <code>1</code> ，则该位置的可走的路数的总和为 <code>0</code></li>
+<li>If there exists a solution, it is guaranteed to be unique.</li>
+<li>Both input arrays are non-empty and have the same length.</li>
+<li>Each element in the input arrays is a non-negative integer.</li>
 </ul>
+<p><strong>Example 1:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">Input: </span><br><span class="line">gas  = [1,2,3,4,5]</span><br><span class="line">cost = [3,4,5,1,2]</span><br><span class="line"></span><br><span class="line">Output: 3</span><br><span class="line"></span><br><span class="line">Explanation:</span><br><span class="line">Start at station 3 (index 3) and fill up with 4 unit of gas. Your tank = 0 + 4 = 4</span><br><span class="line">Travel to station 4. Your tank = 4 - 1 + 5 = 8</span><br><span class="line">Travel to station 0. Your tank = 8 - 2 + 1 = 7</span><br><span class="line">Travel to station 1. Your tank = 7 - 3 + 2 = 6</span><br><span class="line">Travel to station 2. Your tank = 6 - 4 + 3 = 5</span><br><span class="line">Travel to station 3. The cost is 5. Your gas is just enough to travel back to station 3.</span><br><span class="line">Therefore, <span class="built_in">return</span> 3 as the starting index.</span><br></pre></td></tr></table></figure>
+<p><strong>Example 2:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Input: </span><br><span class="line">gas  = [2,3,4]</span><br><span class="line">cost = [3,4,3]</span><br><span class="line"></span><br><span class="line">Output: -1</span><br><span class="line"></span><br><span class="line">Explanation:</span><br><span class="line">You can<span class="string">'t start at station 0 or 1, as there is not enough gas to travel to the next station.</span></span><br><span class="line"><span class="string">Let'</span>s start at station 2 and fill up with 4 unit of gas. Your tank = 0 + 4 = 4</span><br><span class="line">Travel to station 0. Your tank = 4 - 3 + 2 = 3</span><br><span class="line">Travel to station 1. Your tank = 3 - 3 + 3 = 3</span><br><span class="line">You cannot travel back to station 2, as it requires 4 unit of gas but you only have 3.</span><br><span class="line">Therefore, you can<span class="string">'t travel around the circuit once no matter where you start.</span></span><br></pre></td></tr></table></figure>
 <hr>
-<h3 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">uniquePathsWithObstacles</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt;&amp; obstacleGrid)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> m = obstacleGrid.size();</span><br><span class="line">        <span class="keyword">int</span> n;</span><br><span class="line">        <span class="keyword">if</span>(!m)  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">else</span>    n = obstacleGrid[<span class="number">0</span>].size();</span><br><span class="line"> </span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">long</span> <span class="keyword">long</span> <span class="keyword">int</span>&gt;&gt; path(m,<span class="built_in">vector</span>&lt;<span class="keyword">long</span> <span class="keyword">long</span> <span class="keyword">int</span>&gt;(n,<span class="number">0</span>));</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">            <span class="keyword">if</span>(!obstacleGrid[<span class="number">0</span>][i])</span><br><span class="line">                path[<span class="number">0</span>][i] = <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">else</span>    <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m; i++)</span><br><span class="line">            <span class="keyword">if</span>(!obstacleGrid[i][<span class="number">0</span>])</span><br><span class="line">                path[i][<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">else</span>    <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n; i++) </span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; m; j++)</span><br><span class="line">                <span class="keyword">if</span>(!obstacleGrid[j][i])</span><br><span class="line">                    path[j][i] = path[j - <span class="number">1</span>][i] + path[j][i - <span class="number">1</span>];</span><br><span class="line">        <span class="keyword">return</span> path[m - <span class="number">1</span>][n - <span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="解法："><a href="#解法：" class="headerlink" title="解法："></a>解法：</h3><p>这个题让找出从某处出发在给定 <code>gas</code> 与 <code>cost</code> 情况下能够走完整个队列的位置，思路比较简单，二重循环就可以搞定，同时需要注意：一个点走到另一个点过程中<strong>可以用上一次遗留下来的油</strong>以及<strong>上一个点遗留下来的油量与当前点补充的油量加起来要大于到达下一个点消耗量</strong>；</p>
+<hr>
+<h3 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">canCompleteCircuit</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; gas, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; cost)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> now = <span class="number">0</span> ;</span><br><span class="line">        <span class="keyword">int</span> times = <span class="number">0</span> ;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span> ; i &lt; gas.size() ; i ++ )</span><br><span class="line">        &#123;</span><br><span class="line">            now = <span class="number">0</span> ; </span><br><span class="line">            times = <span class="number">0</span> ;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = i ; j &lt; gas.size() ; j = ( j + <span class="number">1</span>) % gas.size())</span><br><span class="line">            &#123;</span><br><span class="line">                times ++ ;</span><br><span class="line">                now = now + gas[j] - cost[j] ;</span><br><span class="line">                <span class="keyword">if</span>(now &gt;= <span class="number">0</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">if</span>(times &lt; gas.size())</span><br><span class="line">                        <span class="keyword">continue</span> ;</span><br><span class="line">                    <span class="keyword">else</span></span><br><span class="line">                    &#123;</span><br><span class="line">                        <span class="keyword">return</span> i ;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">break</span> ;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -398,8 +396,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/05/62-Unique-Paths/" rel="next" title="62. Unique Paths">
-                <i class="fa fa-chevron-left"></i> 62. Unique Paths
+              <a href="/2019/05/04/130-Surrounded-Regions/" rel="next" title="130. Surrounded Regions">
+                <i class="fa fa-chevron-left"></i> 130. Surrounded Regions
               </a>
             
           </div>
@@ -407,10 +405,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/04/06/64-Minimum-Path-Sum/" rel="prev" title="64. Minimum Path Sum">
-                64. Minimum Path Sum <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
