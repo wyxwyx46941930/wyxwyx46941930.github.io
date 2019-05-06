@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="每日一题 2019 - 04 - 14">
+<meta name="description" content="每日一题 2019 - 05 - 07">
 <meta name="keywords" content="leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="79. Word Search">
-<meta property="og:url" content="http://wyxwyx46941930.github.io/2019/04/14/79-Word-Search/index.html">
+<meta property="og:title" content="139. Word Break">
+<meta property="og:url" content="http://wyxwyx46941930.github.io/2019/05/07/139-Word-Break/index.html">
 <meta property="og:site_name" content="人间有味是清欢">
-<meta property="og:description" content="每日一题 2019 - 04 - 14">
+<meta property="og:description" content="每日一题 2019 - 05 - 07">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-13T16:45:24.658Z">
+<meta property="og:updated_time" content="2019-05-06T16:27:52.917Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="79. Word Search">
-<meta name="twitter:description" content="每日一题 2019 - 04 - 14">
+<meta name="twitter:title" content="139. Word Break">
+<meta name="twitter:description" content="每日一题 2019 - 05 - 07">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://wyxwyx46941930.github.io/2019/04/14/79-Word-Search/">
+  <link rel="canonical" href="http://wyxwyx46941930.github.io/2019/05/07/139-Word-Break/">
 
 
 
 
 
-  <title>79. Word Search | 人间有味是清欢</title>
+  <title>139. Word Break | 人间有味是清欢</title>
   
 
 
@@ -258,7 +258,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://wyxwyx46941930.github.io/2019/04/14/79-Word-Search/">
+    <link itemprop="mainEntityOfPage" href="http://wyxwyx46941930.github.io/2019/05/07/139-Word-Break/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Wangyx">
@@ -275,7 +275,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">79. Word Search</h1>
+          <h1 class="post-title" itemprop="name headline">139. Word Break</h1>
         
 
         <div class="post-meta">
@@ -287,8 +287,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-14T00:38:14+08:00">
-                2019-04-14
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-07T00:19:42+08:00">
+                2019-05-07
               </time>
             
 
@@ -347,20 +347,25 @@
       
 
       
-        <p>每日一题 2019 - 04 - 14</p>
+        <p>每日一题 2019 - 05 - 07</p>
 <a id="more"></a>
-<h3 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h3><p>Given a 2D board and a word, find if the word exists in the grid.</p>
-<p>The word can be constructed from letters of sequentially adjacent cell, where “adjacent” cells are those horizontally or vertically neighboring. The same letter cell may not be used more than once.</p>
-<p><strong>Example:</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">board =</span><br><span class="line">[</span><br><span class="line">  [<span class="string">'A'</span>,<span class="string">'B'</span>,<span class="string">'C'</span>,<span class="string">'E'</span>],</span><br><span class="line">  [<span class="string">'S'</span>,<span class="string">'F'</span>,<span class="string">'C'</span>,<span class="string">'S'</span>],</span><br><span class="line">  [<span class="string">'A'</span>,<span class="string">'D'</span>,<span class="string">'E'</span>,<span class="string">'E'</span>]</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">Given word = <span class="string">"ABCCED"</span>, <span class="built_in">return</span> <span class="literal">true</span>.</span><br><span class="line">Given word = <span class="string">"SEE"</span>, <span class="built_in">return</span> <span class="literal">true</span>.</span><br><span class="line">Given word = <span class="string">"ABCB"</span>, <span class="built_in">return</span> <span class="literal">false</span>.</span><br></pre></td></tr></table></figure>
-<hr>
-<h3 id="解法："><a href="#解法：" class="headerlink" title="解法："></a>解法：</h3><p>这个题要求判定在给定二维字符图中能否找到给定的字符串，最直观的思路就是对全图就行暴力搜索，当然搜索也要有一定技巧：</p>
+<h3 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h3><p>Given a <strong>non-empty</strong> string <em>s</em> and a dictionary <em>wordDict</em> containing a list of <strong>non-empty</strong> words, determine if <em>s</em> can be segmented into a space-separated sequence of one or more dictionary words.</p>
+<p><strong>Note:</strong></p>
 <ul>
-<li>从地图左上往右下搜索，对每一个格子的前后左右进行进一步搜索，只要有一个格子满足序列的要求，就继续顺着这个格子往后搜索</li>
-<li>需要注意，<strong>序列越界或者当前遍历的字符在地图上找不到，那就证明搜索错误，直接宣告本次搜索失败</strong></li>
+<li>The same word in the dictionary may be reused multiple times in the segmentation.</li>
+<li>You may assume the dictionary does not contain duplicate words.</li>
 </ul>
+<p><strong>Example 1:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: s = <span class="string">"leetcode"</span>, wordDict = [<span class="string">"leet"</span>, <span class="string">"code"</span>]</span><br><span class="line">Output: <span class="literal">true</span></span><br><span class="line">Explanation: Return <span class="literal">true</span> because <span class="string">"leetcode"</span> can be segmented as <span class="string">"leet code"</span>.</span><br></pre></td></tr></table></figure>
+<p><strong>Example 2:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Input: s = <span class="string">"applepenapple"</span>, wordDict = [<span class="string">"apple"</span>, <span class="string">"pen"</span>]</span><br><span class="line">Output: <span class="literal">true</span></span><br><span class="line">Explanation: Return <span class="literal">true</span> because <span class="string">"applepenapple"</span> can be segmented as <span class="string">"apple pen apple"</span>.</span><br><span class="line">             Note that you are allowed to reuse a dictionary word.</span><br></pre></td></tr></table></figure>
+<p><strong>Example 3:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: s = <span class="string">"catsandog"</span>, wordDict = [<span class="string">"cats"</span>, <span class="string">"dog"</span>, <span class="string">"sand"</span>, <span class="string">"and"</span>, <span class="string">"cat"</span>]</span><br><span class="line">Output: <span class="literal">false</span></span><br></pre></td></tr></table></figure>
 <hr>
-<h3 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">exist</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">char</span>&gt;&gt;&amp; board, <span class="built_in">string</span> word)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> length = board[<span class="number">0</span>].size();</span><br><span class="line">        <span class="keyword">int</span> width = board.size() ;</span><br><span class="line">        <span class="keyword">if</span> (word.empty()) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">if</span> (board.empty() || board[<span class="number">0</span>].empty()) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">bool</span>&gt;&gt; temp(width, <span class="built_in">vector</span>&lt;<span class="keyword">bool</span>&gt; (length,<span class="literal">false</span>));</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span> ;  i &lt; width ; i ++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span> ; j &lt; length ; j ++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span>(word_search(board,word,<span class="number">0</span>,i,j,temp))</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">                &#125;    </span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">word_search</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">char</span>&gt;&gt;&amp; board,<span class="built_in">string</span> word,<span class="keyword">int</span> size,<span class="keyword">int</span> i, <span class="keyword">int</span> j,<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">bool</span>&gt;&gt; &amp;now)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>( size == word.size())</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span> ;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>( i &lt; <span class="number">0</span> || j &lt; <span class="number">0</span> || i == board.size() || j == board[<span class="number">0</span>].size() || now[i][j] == <span class="literal">true</span> || word[size]!=board[i][j])</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span> ;</span><br><span class="line">        &#125;</span><br><span class="line">        now[i][j] = <span class="literal">true</span> ;</span><br><span class="line">        <span class="keyword">bool</span> res = word_search(board,word,size+<span class="number">1</span>,i<span class="number">-1</span>,j,now) ||</span><br><span class="line">            word_search(board,word,size+<span class="number">1</span>,i,j<span class="number">-1</span>,now)||</span><br><span class="line">            word_search(board,word,size+<span class="number">1</span>,i+<span class="number">1</span>,j,now)||</span><br><span class="line">            word_search(board,word,size+<span class="number">1</span>,i,j+<span class="number">1</span>,now);</span><br><span class="line">        now[i][j] = <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">return</span> res ;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="解法："><a href="#解法：" class="headerlink" title="解法："></a>解法：</h3><p>这个题让根据给定的字典判断是否待定字符串可以分割为字典中的单词，刚开始拿到这个题的时候，我首先对词典进行遍历，通过消除字符串来判断是否能完成分割，但是发现在求解过程中会遇到问题，比如<code>aaaaaa</code>，可以分割为 <code>aaa</code> , <code>aaa</code>，但是如果字典中同时给出 <code>aaaa</code> 与 <code>aaa</code> ，就没有办法完成任务了，所以只能换一种思路；</p>
+<p>另外一种思路就是动态规划了，通过字符串找字典中的单词匹配情况， 从字符串从前往后匹配，<strong>如果当前位置可以与前面某位置结合得到一个单词(也即test[j-1] == true)</strong>，那么证明当前位置可以在字典中完成匹配，重复这个过程，直到字符串结尾；</p>
+<hr>
+<h3 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">wordBreak</span><span class="params">(<span class="built_in">string</span> s, <span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt;&amp; wordDict)</span> </span>&#123;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">bool</span>&gt; test(s.size()+<span class="number">1</span>,<span class="literal">false</span>);</span><br><span class="line">        test[<span class="number">0</span>] = <span class="literal">true</span> ;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span> ; i &lt;= s.size() ; i ++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = i ; j &gt; <span class="number">0</span> ; j -- )</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span>(test[j<span class="number">-1</span>] == <span class="literal">false</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">continue</span> ;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span>(find(wordDict.begin(),wordDict.end(),s.substr(j<span class="number">-1</span>,i-j+<span class="number">1</span>)) != wordDict.end())</span><br><span class="line">                &#123;</span><br><span class="line">                    test[i] = <span class="literal">true</span> ;</span><br><span class="line">                    <span class="keyword">break</span> ;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> test[s.size()];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -391,8 +396,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/12/78-Subsets/" rel="next" title="78. Subsets">
-                <i class="fa fa-chevron-left"></i> 78. Subsets
+              <a href="/2019/05/06/137-Single-Number-II/" rel="next" title="137. Single Number II">
+                <i class="fa fa-chevron-left"></i> 137. Single Number II
               </a>
             
           </div>
@@ -400,10 +405,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/04/15/81-Search-in-Rotated-Sorted-Array-II/" rel="prev" title="81. Search in Rotated Sorted Array II">
-                81. Search in Rotated Sorted Array II <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
