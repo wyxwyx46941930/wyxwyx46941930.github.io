@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="每日一题 2019 - 03 - 31">
+<meta name="description" content="每日一题 2019 - 05 - 09">
 <meta name="keywords" content="leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="49. Group Anagrams">
-<meta property="og:url" content="http://wyxwyx46941930.github.io/2019/03/31/49-Group-Anagrams/index.html">
+<meta property="og:title" content="143. Reorder List">
+<meta property="og:url" content="http://wyxwyx46941930.github.io/2019/05/09/143-Reorder-List/index.html">
 <meta property="og:site_name" content="人间有味是清欢">
-<meta property="og:description" content="每日一题 2019 - 03 - 31">
+<meta property="og:description" content="每日一题 2019 - 05 - 09">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-30T17:49:00.094Z">
+<meta property="og:updated_time" content="2019-05-08T17:22:41.246Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="49. Group Anagrams">
-<meta name="twitter:description" content="每日一题 2019 - 03 - 31">
+<meta name="twitter:title" content="143. Reorder List">
+<meta name="twitter:description" content="每日一题 2019 - 05 - 09">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://wyxwyx46941930.github.io/2019/03/31/49-Group-Anagrams/">
+  <link rel="canonical" href="http://wyxwyx46941930.github.io/2019/05/09/143-Reorder-List/">
 
 
 
 
 
-  <title>49. Group Anagrams | 人间有味是清欢</title>
+  <title>143. Reorder List | 人间有味是清欢</title>
   
 
 
@@ -258,7 +258,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://wyxwyx46941930.github.io/2019/03/31/49-Group-Anagrams/">
+    <link itemprop="mainEntityOfPage" href="http://wyxwyx46941930.github.io/2019/05/09/143-Reorder-List/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Wangyx">
@@ -275,7 +275,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">49. Group Anagrams</h1>
+          <h1 class="post-title" itemprop="name headline">143. Reorder List</h1>
         
 
         <div class="post-meta">
@@ -287,8 +287,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-31T01:07:38+08:00">
-                2019-03-31
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-09T01:13:18+08:00">
+                2019-05-09
               </time>
             
 
@@ -347,25 +347,24 @@
       
 
       
-        <p>每日一题 2019 - 03 - 31</p>
+        <p>每日一题 2019 - 05 - 09</p>
 <a id="more"></a>
-<h3 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h3><p>Given an array of strings, group anagrams together.</p>
-<p><strong>Example:</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Input: [<span class="string">"eat"</span>, <span class="string">"tea"</span>, <span class="string">"tan"</span>, <span class="string">"ate"</span>, <span class="string">"nat"</span>, <span class="string">"bat"</span>],</span><br><span class="line">Output:</span><br><span class="line">[</span><br><span class="line">  [<span class="string">"ate"</span>,<span class="string">"eat"</span>,<span class="string">"tea"</span>],</span><br><span class="line">  [<span class="string">"nat"</span>,<span class="string">"tan"</span>],</span><br><span class="line">  [<span class="string">"bat"</span>]</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
-<p><strong>Note:</strong></p>
-<ul>
-<li>All inputs will be in lowercase.</li>
-<li>The order of your output does not matter.</li>
-</ul>
+<h3 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h3><p>Given a singly linked list <em>L</em>: <em>L</em>0→<em>L</em>1→…→<em>L**n</em>-1→<em>L</em>n,<br>reorder it to: <em>L</em>0→<em>L**n</em>→<em>L</em>1→<em>L**n</em>-1→<em>L</em>2→<em>L**n</em>-2→…</p>
+<p>You may <strong>not</strong> modify the values in the list’s nodes, only nodes itself may be changed.</p>
+<p><strong>Example 1:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Given 1-&gt;2-&gt;3-&gt;4, reorder it to 1-&gt;4-&gt;2-&gt;3.</span><br></pre></td></tr></table></figure>
+<p><strong>Example 2:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Given 1-&gt;2-&gt;3-&gt;4-&gt;5, reorder it to 1-&gt;5-&gt;2-&gt;4-&gt;3.</span><br></pre></td></tr></table></figure>
 <hr>
-<h3 id="解法"><a href="#解法" class="headerlink" title="解法:"></a>解法:</h3><p>这个题让我们将来自相同字母组合的序列进行分类，思路如下：</p>
+<h3 id="解法："><a href="#解法：" class="headerlink" title="解法："></a>解法：</h3><p>这个题让把链表按照题目要求的方式进行重新排序，可以把排序的结果看作是两个过程的结合：</p>
 <ul>
-<li>使用 <code>map &lt;string,int&gt;</code> 存放已经存在的字母序列，<code>int</code> 代表该字母组合存在多少个</li>
-<li>每次都将当前待查询的字母序列进行排序，保证所有相同字母组成的序列顺序相同</li>
-<li>如果不存在当前字母组合，创建新的 <code>vector</code>；否则，直接推入</li>
+<li>先找到链表的中间位置把后一部分翻转</li>
+<li>把后一部分倒序插入链表之中</li>
 </ul>
+<p>所以就需要使用两个指针完成查找工作，一个快指针用于遍历整个链表，一个慢指针用来找到链表中间的位置，随后，每一次从链表后半部分开始往前插入，这时候可以找到对应的插入关系，也即当前待插入的位置与即将被移动的位置之和为链表长度的一半减1，所以根据这个关系就能很好的完成相应的插入操作；</p>
+<p>最后还要注意把插入完成后的链表末尾位置指向 <code>NULL</code>；</p>
 <hr>
-<h3 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt;&gt; groupAnagrams(<span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt;&amp; strs) &#123;</span><br><span class="line">        <span class="keyword">int</span> cnt=<span class="number">0</span>,len=strs.size();</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt;&gt;result(len);</span><br><span class="line">        <span class="built_in">map</span>&lt;<span class="built_in">string</span>,<span class="keyword">int</span>&gt;m;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;strs.size();i++)&#123;</span><br><span class="line">            <span class="built_in">string</span> temp=strs[i];</span><br><span class="line">            sort(temp.begin(),temp.end());</span><br><span class="line">            <span class="keyword">if</span>(m.find(temp)==m.end())</span><br><span class="line">                m[temp]=cnt++;</span><br><span class="line">            result[m[temp]].push_back(strs[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        result.resize(cnt);</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode *next;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) : val(x), next(NULL) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">reorderList</span><span class="params">(ListNode* head)</span> </span>&#123;</span><br><span class="line">        ListNode* p = head ;</span><br><span class="line">        ListNode* q = head ;</span><br><span class="line">        ListNode* temp = head ;</span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">0</span> ;</span><br><span class="line">        <span class="keyword">if</span>(head == <span class="literal">NULL</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> ;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(p-&gt;next)</span><br><span class="line">        &#123;</span><br><span class="line">            p = p -&gt; next ;</span><br><span class="line">            count ++;</span><br><span class="line">            <span class="keyword">if</span>(count % <span class="number">2</span> == <span class="number">1</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                temp = temp -&gt; next ;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        count /= <span class="number">2</span> ;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span> ; i &lt; count ; i ++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span> ; j &lt; count - i - <span class="number">1</span> ; j ++ )</span><br><span class="line">            &#123;</span><br><span class="line">                q = q -&gt; next ;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//链表结点的拼接步骤</span></span><br><span class="line">            p = temp -&gt; next ;</span><br><span class="line">            temp -&gt; next = p -&gt; next ;</span><br><span class="line">            p -&gt; next = q -&gt; next ;</span><br><span class="line">            q -&gt; next = p ;</span><br><span class="line">            q = head ; </span><br><span class="line">        &#125;</span><br><span class="line">        temp -&gt; next = <span class="literal">NULL</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -396,8 +395,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/30/48-Rotate-Image/" rel="next" title="48. Rotate Image">
-                <i class="fa fa-chevron-left"></i> 48. Rotate Image
+              <a href="/2019/05/08/142-Linked-List-Cycle-II/" rel="next" title="142. Linked List Cycle II">
+                <i class="fa fa-chevron-left"></i> 142. Linked List Cycle II
               </a>
             
           </div>
@@ -405,10 +404,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/04/01/50-Pow-x-n/" rel="prev" title="50. Pow(x, n)">
-                50. Pow(x, n) <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -542,7 +537,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目："><span class="nav-number">1.</span> <span class="nav-text">题目：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解法"><span class="nav-number">2.</span> <span class="nav-text">解法:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码："><span class="nav-number">3.</span> <span class="nav-text">代码：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目："><span class="nav-number">1.</span> <span class="nav-text">题目：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解法："><span class="nav-number">2.</span> <span class="nav-text">解法：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码："><span class="nav-number">3.</span> <span class="nav-text">代码：</span></a></li></ol></div>
             
 
           </div>
