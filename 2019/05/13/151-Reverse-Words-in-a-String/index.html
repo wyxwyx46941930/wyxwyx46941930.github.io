@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="每日一题  2019 - 01 - 24">
+<meta name="description" content="每日一题 2019 - 05 - 13">
 <meta name="keywords" content="leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="969. Pancake Sorting">
-<meta property="og:url" content="http://wyxwyx46941930.github.io/2019/01/24/969-Pancake-Sorting/index.html">
+<meta property="og:title" content="151. Reverse Words in a String">
+<meta property="og:url" content="http://wyxwyx46941930.github.io/2019/05/13/151-Reverse-Words-in-a-String/index.html">
 <meta property="og:site_name" content="人间有味是清欢">
-<meta property="og:description" content="每日一题  2019 - 01 - 24">
+<meta property="og:description" content="每日一题 2019 - 05 - 13">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-28T15:20:32.023Z">
+<meta property="og:updated_time" content="2019-05-12T17:00:21.611Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="969. Pancake Sorting">
-<meta name="twitter:description" content="每日一题  2019 - 01 - 24">
+<meta name="twitter:title" content="151. Reverse Words in a String">
+<meta name="twitter:description" content="每日一题 2019 - 05 - 13">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://wyxwyx46941930.github.io/2019/01/24/969-Pancake-Sorting/">
+  <link rel="canonical" href="http://wyxwyx46941930.github.io/2019/05/13/151-Reverse-Words-in-a-String/">
 
 
 
 
 
-  <title>969. Pancake Sorting | 人间有味是清欢</title>
+  <title>151. Reverse Words in a String | 人间有味是清欢</title>
   
 
 
@@ -258,7 +258,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://wyxwyx46941930.github.io/2019/01/24/969-Pancake-Sorting/">
+    <link itemprop="mainEntityOfPage" href="http://wyxwyx46941930.github.io/2019/05/13/151-Reverse-Words-in-a-String/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Wangyx">
@@ -275,7 +275,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">969. Pancake Sorting</h1>
+          <h1 class="post-title" itemprop="name headline">151. Reverse Words in a String</h1>
         
 
         <div class="post-meta">
@@ -287,8 +287,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-24T21:46:10+08:00">
-                2019-01-24
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-13T00:53:45+08:00">
+                2019-05-13
               </time>
             
 
@@ -297,6 +297,28 @@
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/leetcode/" itemprop="url" rel="index">
+                    <span itemprop="name">leetcode</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -325,34 +347,33 @@
       
 
       
-        <p>每日一题  2019 - 01 - 24</p>
+        <p>每日一题 2019 - 05 - 13</p>
 <a id="more"></a>
 <hr>
-<h3 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h3><p>Given an array <code>A</code>, we can perform a <em>pancake flip</em>: We choose some positive integer <code>**k** &lt;= A.length</code>, then reverse the order of the first <strong>k</strong> elements of <code>A</code>.  We want to perform zero or more pancake flips (doing them one after another in succession) to sort the array <code>A</code>.</p>
-<p>Return the k-values corresponding to a sequence of pancake flips that sort <code>A</code>.  Any valid answer that sorts the array within <code>10 * A.length</code> flips will be judged as correct.</p>
+<h3 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h3><p>Given an input string, reverse the string word by word.</p>
 <p><strong>Example 1:</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Input: [3,2,4,1]</span><br><span class="line">Output: [4,2,4,3]</span><br><span class="line">Explanation: </span><br><span class="line">We perform 4 pancake flips, with k values 4, 2, 4, and 3.</span><br><span class="line">Starting state: A = [3, 2, 4, 1]</span><br><span class="line">After 1st flip (k=4): A = [1, 4, 2, 3]</span><br><span class="line">After 2nd flip (k=2): A = [4, 1, 2, 3]</span><br><span class="line">After 3rd flip (k=4): A = [3, 2, 1, 4]</span><br><span class="line">After 4th flip (k=3): A = [1, 2, 3, 4], <span class="built_in">which</span> is sorted.</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: <span class="string">"the sky is blue"</span></span><br><span class="line">Output: <span class="string">"blue is sky the"</span></span><br></pre></td></tr></table></figure>
 <p><strong>Example 2:</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Input: [1,2,3]</span><br><span class="line">Output: []</span><br><span class="line">Explanation: The input is already sorted, so there is no need to flip anything.</span><br><span class="line">Note that other answers, such as [3, 3], would also be accepted.</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: <span class="string">"  hello world!  "</span></span><br><span class="line">Output: <span class="string">"world! hello"</span></span><br><span class="line">Explanation: Your reversed string should not contain leading or trailing spaces.</span><br></pre></td></tr></table></figure>
+<p><strong>Example 3:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: <span class="string">"a good   example"</span></span><br><span class="line">Output: <span class="string">"example good a"</span></span><br><span class="line">Explanation: You need to reduce multiple spaces between two words to a single space <span class="keyword">in</span> the reversed string.</span><br></pre></td></tr></table></figure>
 <p><strong>Note:</strong></p>
-<ol>
-<li><code>1 &lt;= A.length &lt;= 100</code></li>
-<li><code>A[i]</code> is a permutation of <code>[1, 2, ..., A.length]</code></li>
-</ol>
-<hr>
-<h3 id="解法："><a href="#解法：" class="headerlink" title="解法："></a>解法：</h3><p>这个题的意思是让我们使用<code>pancake sort</code>对给定数组进行排序，并且记录下每次排序的位置，关于<code>pancake sort</code>的排序思路是：</p>
 <ul>
-<li>每次找出最大的待排元素的位置 <code>pos</code></li>
-<li>翻转 0 到 pos 位置的元素</li>
-<li>记录 pos + 1</li>
-<li>翻转 0 到 末尾（这里的末尾指的是待排序列的末尾，每两次翻转之后，都会有一个元素被放置在应该放置的位置）</li>
-<li>记录 末尾元素 i</li>
+<li>A word is defined as a sequence of non-space characters.</li>
+<li>Input string may contain leading or trailing spaces. However, your reversed string should not contain leading or trailing spaces.</li>
+<li>You need to reduce multiple spaces between two words to a single space in the reversed string.</li>
 </ul>
-<p>返回上述的记录过程</p>
-<p><strong>注：</strong></p>
-<p>这里有个地方需要提醒一下，题目中给出的<code>example</code>的序列<code>[3,2,4,1]</code>的正确排序过程应该是<code>[3,4,2,3,1,2]</code></p>
+<p><strong>Follow up:</strong></p>
+<p>For C programmers, try to solve it <em>in-place</em> in <em>O</em>(1) extra space.</p>
 <hr>
-<h3 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; pancakeSort(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; a) &#123;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; ret;</span><br><span class="line">        <span class="keyword">if</span>(isSorted(a))</span><br><span class="line">            <span class="keyword">return</span> ret;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=a.size();i&gt;<span class="number">0</span>;i--)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(isSorted(a))</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">int</span> pos=findMax(a,i);</span><br><span class="line">            reverse(a.begin(),a.begin()+pos+<span class="number">1</span>);</span><br><span class="line">            ret.emplace_back(pos+<span class="number">1</span>);</span><br><span class="line">            reverse(a.begin(),a.begin()+i);</span><br><span class="line">            ret.emplace_back(i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ret;        </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">findMax</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; a, <span class="keyword">int</span> e)</span><span class="comment">//找到0到end的序列中，最大值的位置</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> max=a[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">int</span> pos=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;e;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(a[i]&gt;max)</span><br><span class="line">            &#123;</span><br><span class="line">                max=a[i];</span><br><span class="line">                pos=i;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> pos;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">isSorted</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; a)</span><span class="comment">//判断当前序列是否有序</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;a.size();i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(a[i]&lt;a[i<span class="number">-1</span>])</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="解法："><a href="#解法：" class="headerlink" title="解法："></a>解法：</h3><p>这个题让把给定字符串 s 中的单词全部进行逆序重新排列，但是单词自身的顺序不变，只改变位置顺序，所以使用数据结构栈就可以完成任务，但是在对单词进行提取过程中，需要注意一些点：</p>
+<ul>
+<li>提取单词开始，如果是空格则一直跳过，不进行提取</li>
+<li>当提取单词过程中遇到空格时候，则单词提取结束</li>
+<li>如果到单词结尾，结尾符是空格则要保证提取的字符串少一位</li>
+</ul>
+<hr>
+<h3 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="built_in">string</span> <span class="title">reverseWords</span><span class="params">(<span class="built_in">string</span> s)</span> </span>&#123;</span><br><span class="line">        <span class="built_in">stack</span>&lt;<span class="built_in">string</span>&gt; now ;</span><br><span class="line">        <span class="keyword">if</span>(s.size() == <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> s ;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span> ; i &lt; s.size() ; i ++ )</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(s[i] == <span class="string">' '</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">continue</span> ;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = i ; j &lt; s.size() ; j ++ )</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span>(s[j] != <span class="string">' '</span> &amp;&amp; j != s.size() - <span class="number">1</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">continue</span> ;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="built_in">string</span> temp ;</span><br><span class="line">                    <span class="keyword">if</span>(j == s.size() - <span class="number">1</span> &amp;&amp; s[s.size()<span class="number">-1</span>]!= <span class="string">' '</span>)</span><br><span class="line">                    &#123;</span><br><span class="line">                        temp = s.substr(i,j-i+<span class="number">1</span>);</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">else</span></span><br><span class="line">                    &#123;</span><br><span class="line">                         temp = s.substr(i,j-i);   </span><br><span class="line">                    &#125;</span><br><span class="line">                    now.push(temp);</span><br><span class="line">                    i = j ;</span><br><span class="line">                    <span class="keyword">break</span> ;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">string</span> test ;</span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">0</span> ;</span><br><span class="line">        <span class="keyword">while</span>(!now.empty())</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(i == <span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                test += now.top() ;</span><br><span class="line">                now.pop();</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                test += <span class="string">" "</span> ;</span><br><span class="line">                test += now.top();</span><br><span class="line">                now.pop();</span><br><span class="line">            &#125;</span><br><span class="line">            i ++ ;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> test ;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -383,8 +404,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/01/23/331-Verify-Preorder-Serialization-of-a-Binary-Tree/" rel="next" title="331. Verify Preorder Serialization of a Binary Tree">
-                <i class="fa fa-chevron-left"></i> 331. Verify Preorder Serialization of a Binary Tree
+              <a href="/2019/05/12/150-Evaluate-Reverse-Polish-Notation/" rel="next" title="150. Evaluate Reverse Polish Notation">
+                <i class="fa fa-chevron-left"></i> 150. Evaluate Reverse Polish Notation
               </a>
             
           </div>
@@ -392,10 +413,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/02/04/516-Longest-Palindromic-Subsequence/" rel="prev" title="516. Longest Palindromic Subsequence">
-                516. Longest Palindromic Subsequence <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
