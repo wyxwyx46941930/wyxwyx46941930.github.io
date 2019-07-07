@@ -91,16 +91,16 @@
 <meta property="og:site_name" content="人间有味是清欢">
 <meta property="og:description" content="产品经理技术分享——后端开发1. API1.1 API 的种类及定义一种用于前后端通信的API，其作用方式之一是：前端随请求将要传递的数据打包并发送到服务器，服务器执行相应处理程序，并将程序的输出发回前端。前端通常使用这种方式从服务器请求最新数据，因为这些工作涉及到前后端配合，因而在实际工作中还需要产出相应的API文档（甚至于在一些公司是由产品经理去输出API文档），指明随请求发送的参数、请求方法">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://wyxwyx46941930.github.io/2019/07/07/产品经理后端技术/Hexo/source/_posts/产品经理后端技术/1.png">
-<meta property="og:image" content="http://wyxwyx46941930.github.io/2019/07/07/产品经理后端技术/Hexo/source/_posts/产品经理后端技术/2.png">
-<meta property="og:image" content="http://wyxwyx46941930.github.io/2019/07/07/产品经理后端技术/Hexo/source/_posts/产品经理后端技术/3.png">
-<meta property="og:image" content="http://wyxwyx46941930.github.io/2019/07/07/产品经理后端技术/Hexo/source/_posts/产品经理后端技术/4.png">
-<meta property="og:image" content="http://wyxwyx46941930.github.io/2019/07/07/产品经理后端技术/Hexo/source/_posts/产品经理后端技术/5.png">
-<meta property="og:updated_time" content="2019-07-07T08:02:43.864Z">
+<meta property="og:image" content="http://wyxwyx46941930.github.io/2019/07/07/产品经理后端技术/1.png">
+<meta property="og:image" content="http://wyxwyx46941930.github.io/2019/07/07/产品经理后端技术/2.png">
+<meta property="og:image" content="http://wyxwyx46941930.github.io/2019/07/07/产品经理后端技术/3.png">
+<meta property="og:image" content="http://wyxwyx46941930.github.io/2019/07/07/产品经理后端技术/4.png">
+<meta property="og:image" content="http://wyxwyx46941930.github.io/2019/07/07/产品经理后端技术/5.png">
+<meta property="og:updated_time" content="2019-07-07T08:05:45.269Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="产品经理后端技术">
 <meta name="twitter:description" content="产品经理技术分享——后端开发1. API1.1 API 的种类及定义一种用于前后端通信的API，其作用方式之一是：前端随请求将要传递的数据打包并发送到服务器，服务器执行相应处理程序，并将程序的输出发回前端。前端通常使用这种方式从服务器请求最新数据，因为这些工作涉及到前后端配合，因而在实际工作中还需要产出相应的API文档（甚至于在一些公司是由产品经理去输出API文档），指明随请求发送的参数、请求方法">
-<meta name="twitter:image" content="http://wyxwyx46941930.github.io/2019/07/07/产品经理后端技术/Hexo/source/_posts/产品经理后端技术/1.png">
+<meta name="twitter:image" content="http://wyxwyx46941930.github.io/2019/07/07/产品经理后端技术/1.png">
 
 
 
@@ -364,7 +364,7 @@
 <li>明确各种API调用的效果以最终确定要选取的API，以及该API需要自定义哪些参数；</li>
 </ul>
 <p>如图:</p>
-<p><img src="/2019/07/07/产品经理后端技术/Hexo\source\_posts\产品经理后端技术\1.png" alt="1"></p>
+<p><img src="/2019/07/07/产品经理后端技术/1.png" alt="1"></p>
 <hr>
 <h3 id="2-web-开发"><a href="#2-web-开发" class="headerlink" title="2. web 开发"></a>2. web 开发</h3><p>web 应用的工作方式大致如下：</p>
 <ul>
@@ -399,18 +399,18 @@
 <p>可以这样理解数据库和数据库管理软件的关系，数据库就是一个类似Excel文件的数据文件，里面包含很多的数据表，这些文件会放在web应用的根文件夹下，以便在运行程序时进行访问；数据库管理系统类似于Excel软件，可以可视化的查看并管理数据库文件。</p>
 <p>本文只对关系型数据库做简要介绍。</p>
 <h4 id="3-1-如何与数据库完成交互"><a href="#3-1-如何与数据库完成交互" class="headerlink" title="3.1 如何与数据库完成交互"></a>3.1 如何与数据库完成交互</h4><p>这里以python编程为例，讲解服务端程序与数据库如何进行交互。python的数据库API提供了一种操作数据库的标准机制，如下图（注意这并不是与数据库进行交互的唯一方式）:</p>
-<p><img src="/2019/07/07/产品经理后端技术/Hexo\source\_posts\产品经理后端技术\2.png" alt="2"></p>
+<p><img src="/2019/07/07/产品经理后端技术/2.png" alt="2"></p>
 <p>以上流程翻译成 <code>python</code> 代码是这样的：</p>
-<p><img src="/2019/07/07/产品经理后端技术/Hexo\source\_posts\产品经理后端技术\3.png" alt="3"></p>
+<p><img src="/2019/07/07/产品经理后端技术/3.png" alt="3"></p>
 <h4 id="3-2-设计并建立数据库"><a href="#3-2-设计并建立数据库" class="headerlink" title="3.2 设计并建立数据库"></a>3.2 设计并建立数据库</h4><p>关系型数据库是由一张张相互关联的数据表构成的，对数据库的设计也就是设计数据表的结构和关联。我们现在来设计一个数据库，并使用 <code>python</code> 真正建立这个数据库。</p>
 <p>现在我们设计了一个名为 <code>runningdata</code> 的数据库，里面包含两张数据表，一张表记录每个用户的基本信息（姓名和出生日期），另一张表记录每个用户的跑步时间数据。</p>
 <p>两张数据表分别如下：</p>
-<p><img src="/2019/07/07/产品经理后端技术/Hexo\source\_posts\产品经理后端技术\4.png" alt="4"></p>
+<p><img src="/2019/07/07/产品经理后端技术/4.png" alt="4"></p>
 <p>可以看到，这两张表通过用户ID进行关联，这种表的结构和关联应该是具有逻辑意义、现实意义、业务导向、支持扩展的。</p>
 <p>上面是对数据表的设计，那么如何通过python建立上面的数据表，并进行数据插入和查询等操作呢？</p>
 <p>首先套用 <code>3.1</code>中的流程，建立与数据库的连接、创建数据游标，然后使用create语句创建两个数据表。使用SELECT语句对数据表进行查询并获取结果，使用INSERT语句分别向表增加数据（其中用户ID可以自动生成，我们使用第一个表生成的用户ID填充第二个表，使之关联起来），然后提交修改并关闭连接。</p>
 <p>建立后的数据库一般长这个样子：</p>
-<p><img src="/2019/07/07/产品经理后端技术/Hexo\source\_posts\产品经理后端技术\5.png" alt="5"></p>
+<p><img src="/2019/07/07/产品经理后端技术/5.png" alt="5"></p>
 <h4 id="3-3-将数据库集成到-web-应用"><a href="#3-3-将数据库集成到-web-应用" class="headerlink" title="3.3 将数据库集成到 web 应用"></a>3.3 将数据库集成到 web 应用</h4><p>上面讲MVC（模型-视图-控制器）时我们提到，模型代码用来存储并提供数据。所以，我们只需在模型（model）中编写上述代码，让其帮助我们创建数据库，并定义相关的数据处理方法。这样在控制器代码进行响应时就可以调用该方法，使之返回我们需要的数据。</p>
 <h4 id="3-4-web-开发在产品工作中的应用"><a href="#3-4-web-开发在产品工作中的应用" class="headerlink" title="3.4 web 开发在产品工作中的应用"></a>3.4 web 开发在产品工作中的应用</h4><p>产品经理对于数据库的设计方式、作用方式有一定的了解，有助于评估产品功能的实现对现有数据库的影响，以及新的设计对原有数据的兼容性问题。</p>
 <p>另一方面，现在的产品设计往往需要参考大量的用户行为数据，进行下一步优化。这些用户数据往往存储在数据库中，产品经理有时需要使用SQL语句对数据库进行查询，因而对于数据库的了解也是大有帮助的。</p>
