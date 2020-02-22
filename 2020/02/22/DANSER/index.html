@@ -105,7 +105,7 @@
 <meta property="og:image" content="http://wyxwyx46941930.github.io/2020/02/22/DANSER/12.jpg">
 <meta property="og:image" content="http://wyxwyx46941930.github.io/2020/02/22/DANSER/13.jpg">
 <meta property="og:image" content="http://wyxwyx46941930.github.io/2020/02/22/DANSER/14.jpg">
-<meta property="og:updated_time" content="2020-02-22T09:26:04.878Z">
+<meta property="og:updated_time" content="2020-02-22T09:47:05.394Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DANSER">
 <meta name="twitter:description" content="阅读笔记：Dual Graph Attention Networks for Deep Latent Representation of Multifaceted Social Effects in Recommender Systems">
@@ -398,7 +398,7 @@
 <p>该计算式中：</p>
 <ul>
 <li>$\sigma$、$W_p$、$b_p$ 是 激活函数；</li>
-<li>$A_p(G_u) = {a^{P}<em>{uv}}</em>{M*M}$ 是 注意力权重</li>
+<li>$A<em>p(G_u) = {a^{P}</em>{uv}}_{M*M}$ 是 注意力权重</li>
 </ul>
 <p>其中，$a^{P}_{uv}$ 计算方式如下：</p>
 <p><img src="/2020/02/22/DANSER/3.jpg" alt="3"></p>
@@ -408,8 +408,10 @@
 <li>$attnU(x,y,z)=LeakyReLu(W^{T}_{U}z \bigotimes(x||y))$</li>
 </ul>
 <p>通过上述计算可以发现，$P^{*}$ 针对具体用户来说是静态的，也即 social homophily 为用户的偏好性贡献了静态的影响；</p>
-<h3 id="3-2-GAT-to-capture-social-influence"><a href="#3-2-GAT-to-capture-social-influence" class="headerlink" title="3.2 GAT to capture social influence"></a>3.2 GAT to capture social influence</h3><p>首先，在embedding层之后，得到被用户 $u$ 点击的产品的 embedding $y_u$，随后让用户点击的每个项目与候选项目 $i^{+}$ 交互，计算式为：<br>$$<br>\mathcal{Y}<em>{u}^{i^{+}}=\left{\mathbf{y}</em>{j} \otimes \mathbf{y}<em>{i^{+}} | j \in R</em>{I}(u)\right}<br>$$<br>该表达式能够集中于候选产品同时为给予特殊环境下的社会影响建模；</p>
-<p>随后，定义 item-based user embedding，其依赖于候选项目 $i^+$，$M_{i^+} = {m_u^{i^+}}_{D*M}$, 其计算式为：</p>
+<h3 id="3-2-GAT-to-capture-social-influence"><a href="#3-2-GAT-to-capture-social-influence" class="headerlink" title="3.2 GAT to capture social influence"></a>3.2 GAT to capture social influence</h3><p>首先，在embedding层之后，得到被用户 $u$ 点击的产品的 embedding $y_u$，随后让用户点击的每个项目与候选项目 $i^{+}$ 交互，计算式为：</p>
+<script type="math/tex; mode=display">
+\mathcal{Y}_{u}^{i^{+}}=\left\{\mathbf{y}_{j} \otimes \mathbf{y}_{i^{+}} | j \in R_{I}(u)\right\}</script><p>该表达式能够集中于候选产品同时为给予特殊环境下的社会影响建模；</p>
+<p>随后，定义 item-based user embedding，其依赖于候选项目 $i^+$，$M<em>{i^+} = {m_u^{i^+}}</em>{D*M}$, 其计算式为：</p>
 <p><img src="/2020/02/22/DANSER/4.jpg" alt="4"></p>
 <p>计算式中的 $d$ 代表 d-th feature，$m_u^{i^+}$ 包含两部分信息：</p>
 <ul>
@@ -418,7 +420,7 @@
 </ul>
 <p>最后，为了定义用户动态偏好性因子 $M^{*}_{i^+}$, 论文提出利用来自用户的社交信息，其计算式为：</p>
 <p><img src="/2020/02/22/DANSER/5.jpg" alt="5"></p>
-<p>在上述表达式中，$\alpha_{uv,i^+}^{M}$ 依赖于用户的评分历史以及特定的候选项目 $i^+$ ，这就说明了 $M_{i^+}^{*}$ 是一个动态的因子；</p>
+<p>在上述表达式中，$\alpha<em>{uv,i^+}^{M}$ 依赖于用户的评分历史以及特定的候选项目 $i^+$ ，这就说明了 $M</em>{i^+}^{*}$ 是一个动态的因子；</p>
 <hr>
 <h3 id="3-3-GAT-to-capture-item-to-item-homophily"><a href="#3-3-GAT-to-capture-item-to-item-homophily" class="headerlink" title="3.3 GAT to capture item-to-item homophily"></a>3.3 GAT to capture item-to-item homophily</h3><p>首先，作者团队利用 embedding Q 作为项目固有的属性因子，随后利用 GAT 去接受社交信息，其计算式为：</p>
 <p><img src="/2020/02/22/DANSER/6.jpg" alt="6"></p>
@@ -428,7 +430,7 @@
 <li>$w_I$ 是权重向量；</li>
 </ul>
 <p>在上面的表达式中，GAT 权重 $\alpha_{ij}^{Q}$ 在给定 $i,j$ 后保持不变，也即 item-to-item homophily  为产品的属性贡献了静态的影响，这也可以被称为静态属性因子；</p>
-<h3 id="3-4-GAT-to-capture-item-to-item-influence"><a href="#3-4-GAT-to-capture-item-to-item-influence" class="headerlink" title="3.4 GAT to capture item-to-item influence"></a>3.4 GAT to capture item-to-item influence</h3><p>类似于 social influence，对于一个给定的目标用户$u^+$, 其 user-based item $N_{u^+} = (n_i^{u^+})_(D*N)$ 被定义为： <img src="/2020/02/22/DANSER/7.jpg" alt="7"></p>
+<h3 id="3-4-GAT-to-capture-item-to-item-influence"><a href="#3-4-GAT-to-capture-item-to-item-influence" class="headerlink" title="3.4 GAT to capture item-to-item influence"></a>3.4 GAT to capture item-to-item influence</h3><p>类似于 social influence，对于一个给定的目标用户$u^+$, 其 user-based item $N<em>{u^+} = (n_i^{u^+})</em>(D*N)$ 被定义为： <img src="/2020/02/22/DANSER/7.jpg" alt="7"></p>
 <p>计算式中的 $d$ 代表 d-th feature；</p>
 <p>随后，动态项目属性 $N^{*}_{u^+}$ 可以被计算为：</p>
 <p><img src="/2020/02/22/DANSER/8.jpg" alt="8"></p>
@@ -832,6 +834,28 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
 
   
 
