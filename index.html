@@ -254,6 +254,293 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://wyxwyx46941930.github.io/2020/10/05/高级软件工程HW2/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Wangyx">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/test.JPG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="人间有味是清欢">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/10/05/高级软件工程HW2/" itemprop="url">高级软件工程HW2</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-10-05T20:07:13+08:00">
+                2020-10-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/高级软件工程/" itemprop="url" rel="index">
+                    <span itemprop="name">高级软件工程</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="高级软件工程HW2-个人实验报告"><a href="#高级软件工程HW2-个人实验报告" class="headerlink" title="高级软件工程HW2-个人实验报告"></a>高级软件工程HW2-个人实验报告</h1><p>报告人：王迎旭</p>
+<p>学号：20212010106</p>
+<p>专业：2020级软件工程专硕</p>
+<hr>
+<h2 id="1-单服务应用"><a href="#1-单服务应用" class="headerlink" title="1. 单服务应用"></a>1. 单服务应用</h2><h3 id="1-1-任务目标"><a href="#1-1-任务目标" class="headerlink" title="1.1 任务目标"></a>1.1 任务目标</h3><ul>
+<li>选择合适的编程语言/框架，实现一个简单的REST风格单体Web应用：<ul>
+<li>功能需求：<ul>
+<li>学生信息管理，需要含有以下信息片段：<ul>
+<li>学号；</li>
+<li>姓名；</li>
+<li>院系；</li>
+<li>专业；</li>
+</ul>
+</li>
+<li>实现 4 个API：<ul>
+<li>添加学生：<ul>
+<li>URL Path：/api/v1/student</li>
+<li>http method：POST</li>
+<li>功能描述：在 RequestBody 中以 json 格式发送学生的具体信息，以向系统中添加学生；</li>
+</ul>
+</li>
+<li>查看学生：<ul>
+<li>URL Path：/api/v1/student</li>
+<li>http method：GET</li>
+<li>功能描述：用 json 格式，返回当前系统中的所有学生信息；</li>
+</ul>
+</li>
+<li>修改学生信息：<ul>
+<li>URL Path：/api/v1/student</li>
+<li>http method：PUT</li>
+<li>功能描述：用 json 格式，修改系统中某位学生的具体信息；</li>
+</ul>
+</li>
+<li>删除学生：<ul>
+<li>URL Path：/api/v1/student</li>
+<li>http method：DELETE</li>
+<li>功能描述：用 json 格式，修删除系统中某位学生；</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-2-功能实现"><a href="#1-2-功能实现" class="headerlink" title="1.2 功能实现"></a>1.2 功能实现</h3><p>编程语言：Python</p>
+<p>框架选择：Flask</p>
+<p>测试工具：Apipost</p>
+<h4 id="1-2-1-资料参考"><a href="#1-2-1-资料参考" class="headerlink" title="1.2.1 资料参考"></a>1.2.1 资料参考</h4><h5 id="1-2-1-1-python-函数修饰器"><a href="#1-2-1-1-python-函数修饰器" class="headerlink" title="1.2.1.1 python 函数修饰器"></a>1.2.1.1 python 函数修饰器</h5><p><a href="https://www.cnblogs.com/kidsitcn/p/9413273.html" target="_blank" rel="noopener">参考链接</a></p>
+<h5 id="1-2-1-2-flask-框架"><a href="#1-2-1-2-flask-框架" class="headerlink" title="1.2.1.2 flask 框架"></a>1.2.1.2 flask 框架</h5><p><a href="https://flask.palletsprojects.com/en/1.1.x/" target="_blank" rel="noopener">参考链接</a></p>
+<h5 id="1-2-1-3-apipost"><a href="#1-2-1-3-apipost" class="headerlink" title="1.2.1.3 apipost"></a>1.2.1.3 apipost</h5><p><a href="https://doc.apipost.cn/" target="_blank" rel="noopener">参考链接</a></p>
+<h4 id="1-2-2-具体实现"><a href="#1-2-2-具体实现" class="headerlink" title="1.2.2 具体实现"></a>1.2.2 具体实现</h4><ul>
+<li>构建 json 类型的数据供以测试：</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">students = [</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="string">'id'</span> : <span class="number">20212010106</span>,</span><br><span class="line">        <span class="string">'name'</span> : <span class="string">'WangYingxv'</span>,</span><br><span class="line">        <span class="string">'department'</span> : <span class="string">'SCSF'</span>,</span><br><span class="line">        <span class="string">'major'</span> : <span class="string">'SF'</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="string">'id'</span> : <span class="number">20212010107</span>,</span><br><span class="line">        <span class="string">'name'</span> : <span class="string">'4396'</span>,</span><br><span class="line">        <span class="string">'department'</span> : <span class="string">'SCSF'</span>,</span><br><span class="line">        <span class="string">'major'</span> : <span class="string">'CS'</span></span><br><span class="line">    &#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<p>注：其中 <code>students</code> 的数据类型为：<code>id:int</code> 、<code>name:string</code>、<code>department:string</code>、<code>major:string</code>;</p>
+<ul>
+<li>引入 flask 框架：</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask, jsonify, abort, request</span><br><span class="line">app = Flask(__name__)</span><br></pre></td></tr></table></figure>
+<p>注：这里是实例化一个 Flask 类型的对象，这里的 <code>__name__</code>“ 确保服务器只会在该脚本被 Python 解释器直接执行的时候才会运行；</p>
+<ul>
+<li><code>GET</code> 查看学生：</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@app.route('/api/v1/student',methods=['GET'])</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">show_information</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">return</span> jsonify(&#123;<span class="string">'students'</span>:students&#125;)</span><br></pre></td></tr></table></figure>
+<p>注：这里的修饰器 <code>route()</code> 告诉 Flask 什么类型的 URL 能够触发对应的 <code>show_information()</code> 函数，其余的操作就比较简单了，得到请求之后直接使用 <code>jsonify</code> 函数返回一个 <code>json</code> 类型的数据就可以了，测试图示如下：</p>
+<p><img src="\高级软件工程HW2\1.jpg" alt="GET"></p>
+<ul>
+<li><code>POST</code> 添加学生：</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@app.route('/api/v1/student/',methods=['POST'])</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add_students</span><span class="params">()</span>:</span></span><br><span class="line">    information = request.get_json()</span><br><span class="line">    print(information)</span><br><span class="line">    student = &#123;</span><br><span class="line">        <span class="string">'id'</span>:request.json[<span class="string">'id'</span>],</span><br><span class="line">        <span class="string">'name'</span>:request.json[<span class="string">'name'</span>],</span><br><span class="line">        <span class="string">'department'</span>:request.json[<span class="string">'department'</span>],</span><br><span class="line">        <span class="string">'major'</span>:request.json[<span class="string">'major'</span>]</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> member <span class="keyword">in</span> students:</span><br><span class="line">        <span class="keyword">if</span> member[<span class="string">'id'</span>] == student[<span class="string">'id'</span>]:</span><br><span class="line">            abort(<span class="number">400</span>)</span><br><span class="line">    students.append(student)</span><br><span class="line">    <span class="keyword">return</span> jsonify(&#123;<span class="string">'students'</span>:students&#125;), <span class="number">201</span></span><br></pre></td></tr></table></figure>
+<p>注：使用 <code>POST</code> 请求时候需要在 Apipost 中传入 <code>json</code> 格式对应的数据，在修饰器被触发之后，需要使用 request 拿到传过来的数据，另外，为了保证每个 student 的学号成为主键，我在函数里面加了一行判断，也即保证学号唯一，如果添加不成功直接抛出 <code>400</code> 错误码，如果添加成功返回数据即可，这里 <code>201</code> 代表状态码，测试图示如下（添加成功图示1，添加失败抛出错误码图示2）：</p>
+<p>图示1：</p>
+<p><img src="\高级软件工程HW2\2.jpg" alt="POST"></p>
+<p>图示2：</p>
+<p><img src="\高级软件工程HW2\3.jpg" alt="image-20200928171724079"></p>
+<ul>
+<li><code>PUT</code> 修改学生信息：</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@app.route('/api/v1/student/',methods=['PUT'])</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">change_information</span><span class="params">()</span>:</span></span><br><span class="line">    information = request.get_json()</span><br><span class="line">    print(information)</span><br><span class="line">    student = &#123;</span><br><span class="line">        <span class="string">'id'</span>:request.json[<span class="string">'id'</span>],</span><br><span class="line">        <span class="string">'name'</span>:request.json[<span class="string">'name'</span>],</span><br><span class="line">        <span class="string">'department'</span>:request.json[<span class="string">'department'</span>],</span><br><span class="line">        <span class="string">'major'</span>:request.json[<span class="string">'major'</span>]</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> member <span class="keyword">in</span> students:</span><br><span class="line">        <span class="keyword">if</span> member[<span class="string">'id'</span>] == student[<span class="string">'id'</span>]:</span><br><span class="line">            member[<span class="string">'name'</span>] = student[<span class="string">'name'</span>] </span><br><span class="line">            member[<span class="string">'department'</span>] = student[<span class="string">'department'</span>]</span><br><span class="line">            member[<span class="string">'major'</span>] = student[<span class="string">'major'</span>]</span><br><span class="line">    <span class="keyword">return</span> jsonify(&#123;<span class="string">'students'</span>:student&#125;)</span><br></pre></td></tr></table></figure>
+<p>注：使用 <code>PUT</code> 请求时候需要在 Apipost 中传入 <code>json</code> 格式对应的数据，在修饰器被触发之后，需要使用 request 拿到传过来的数据，这些操作与<code>POTS</code> 方法基本一致，随后，直接遍历已经存储的学生信息即可，使用主键 <code>id</code> 找到对应信息并更改即可，如果没有找到对应的学生，不做改动，测试图示如下（图示1为修改<code>20212010106 的 major</code>前，图示2为修改<code>20212010106 的 major</code>后）：</p>
+<p>图示1：</p>
+<p><img src="\高级软件工程HW2\4.jpg" alt="PUT"></p>
+<p>图示2：</p>
+<p><img src="\高级软件工程HW2\5.jpg" alt="PUT"></p>
+<ul>
+<li><code>DELETE</code> 删除学生信息：</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@app.route('/api/v1/student/',methods=['DELETE'])</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">delete_student</span><span class="params">()</span>:</span></span><br><span class="line">    information = request.get_json()</span><br><span class="line">    print(information)</span><br><span class="line">    student = &#123;</span><br><span class="line">        <span class="string">'id'</span>:request.json[<span class="string">'id'</span>],</span><br><span class="line">        <span class="string">'name'</span>:request.json[<span class="string">'name'</span>],</span><br><span class="line">        <span class="string">'department'</span>:request.json[<span class="string">'department'</span>],</span><br><span class="line">        <span class="string">'major'</span>:request.json[<span class="string">'major'</span>]</span><br><span class="line">    &#125;</span><br><span class="line">    i = <span class="number">0</span> </span><br><span class="line">    <span class="keyword">for</span> member <span class="keyword">in</span> students:</span><br><span class="line">        <span class="keyword">if</span> member[<span class="string">'id'</span>] == student[<span class="string">'id'</span>]:</span><br><span class="line">            students.remove(member[i])</span><br><span class="line">            <span class="keyword">return</span> jsonify(&#123;<span class="string">'students'</span>:students&#125;)</span><br><span class="line">        i = i + <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> jsonify(&#123;<span class="string">'students'</span>:students&#125;)</span><br></pre></td></tr></table></figure>
+<p>注：使用 <code>DELETE</code> 请求时候需要在 Apipost 中传入 <code>json</code> 格式对应的数据，在修饰器被触发之后，需要使用 request 拿到传过来的数据，这些操作与<code>POTS</code> 方法基本一致，随后，直接遍历已经存储的学生信息即可，使用主键 <code>id</code> 找到对应信息并删除即可，如果没有找到对应的学生，不做改动，测试图示如下（图示1为删除信息前，图示2为删除信息后）：</p>
+<p>图示1：</p>
+<p><img src="\高级软件工程HW2\6.jpg" alt="DELETE"></p>
+<p>图示2：</p>
+<p><img src="\高级软件工程HW2\7.jpg" alt="DELETE"></p>
+<ul>
+<li><code>GET</code> 查看具体 <code>id</code> 的学生：</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@app.route('/api/v1/student/&lt;int:student_id&gt;',methods=['GET'])</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">show_id_information</span><span class="params">(student_id)</span>:</span></span><br><span class="line">    student = []</span><br><span class="line">    <span class="keyword">for</span> member <span class="keyword">in</span> students:</span><br><span class="line">        <span class="keyword">if</span> member[<span class="string">'id'</span>] == student_id:</span><br><span class="line">            student.append(member)</span><br><span class="line">    <span class="keyword">if</span> len(student) == <span class="number">0</span>:</span><br><span class="line">        abort(<span class="number">400</span>)</span><br><span class="line">    <span class="keyword">return</span> jsonify(&#123;<span class="string">'students'</span>:student&#125;)</span><br></pre></td></tr></table></figure>
+<p>注：这里额外实现一个针对具体 <code>id</code> 来查找学生信息并显示的 <code>GET</code> 功能，如果没有找到对应学生，抛出错误码 <code>400</code> ，测试图示如下（图示1为查找成功，图示2为查找失败）：</p>
+<p>图示1：</p>
+<p><img src="\高级软件工程HW2\8.jpg" alt="GET"></p>
+<p>图示2：</p>
+<p><img src="\高级软件工程HW2\9.jpg" alt="GET"></p>
+<hr>
+<ul>
+<li>小技巧：</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    app.run(debug=<span class="keyword">True</span>)</span><br></pre></td></tr></table></figure>
+<p>注：在 <code>run</code> 函数中加入 <code>(debug=True)</code>，可以在编辑器改动代码保存后时候直接让代码执行程序自动重启后端服务而不用人工手动停止原任务并重新启动；</p>
+<h2 id="2-Docker-封装"><a href="#2-Docker-封装" class="headerlink" title="2. Docker 封装"></a>2. Docker 封装</h2><h3 id="2-1-任务目标"><a href="#2-1-任务目标" class="headerlink" title="2.1 任务目标"></a>2.1 任务目标</h3><ul>
+<li>编写 dockerfile</li>
+<li>挂载镜像</li>
+<li>将单体 web 应用在镜像上运行并完成测试</li>
+</ul>
+<h3 id="2-2-任务实现"><a href="#2-2-任务实现" class="headerlink" title="2.2 任务实现"></a>2.2 任务实现</h3><h4 id="2-2-1-资料参考"><a href="#2-2-1-资料参考" class="headerlink" title="2.2.1 资料参考"></a>2.2.1 资料参考</h4><ul>
+<li><a href="https://alphafan.github.io/posts/flask_docker.html" target="_blank" rel="noopener">在 Docker 上快速部署 Flask App</a></li>
+<li><a href="https://www.runoob.com/docker/docker-command-manual.html" target="_blank" rel="noopener">Docker 指令大全</a></li>
+</ul>
+<h4 id="2-2-2-具体实现"><a href="#2-2-2-具体实现" class="headerlink" title="2.2.2 具体实现"></a>2.2.2 具体实现</h4><ul>
+<li>编写 <code>Dockerfile</code>:</li>
+</ul>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># this is an official Python runtime, used as the parent image</span></span><br><span class="line"><span class="keyword">FROM</span> python:<span class="number">3.7</span></span><br><span class="line"><span class="comment"># set the working directory in the container to /docker</span></span><br><span class="line"><span class="keyword">WORKDIR</span><span class="bash"> /docker</span></span><br><span class="line"><span class="bash"></span></span><br><span class="line"><span class="bash"><span class="comment"># add the current directory to the container as /app</span></span></span><br><span class="line"><span class="bash">ADD . /docker</span></span><br><span class="line"><span class="bash"></span></span><br><span class="line"><span class="bash"><span class="comment"># set environment variables</span></span></span><br><span class="line"><span class="bash">ENV PYTHONDONTWRITEBYTECODE 1</span></span><br><span class="line"><span class="bash">ENV PYTHONUNBUFFERED 1</span></span><br><span class="line"><span class="bash"></span></span><br><span class="line"><span class="bash"><span class="comment"># execute everyone's favorite pip command, pip install -r</span></span></span><br><span class="line"><span class="bash">RUN pip install --upgrade pip</span></span><br><span class="line"><span class="bash">COPY ./requirements.txt .</span></span><br><span class="line"><span class="bash">RUN pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt</span></span><br><span class="line"><span class="bash"></span></span><br><span class="line"><span class="bash"><span class="comment"># copy project</span></span></span><br><span class="line"><span class="bash">COPY . .</span></span><br><span class="line"><span class="bash"></span></span><br><span class="line"><span class="bash"><span class="comment"># execute the Flask app</span></span></span><br><span class="line"><span class="bash">CMD [ <span class="string">"python"</span>, <span class="string">"web.py"</span>]</span></span><br></pre></td></tr></table></figure>
+<p>编写 <code>dockerfile</code> 有许多教程可以参考，不算是太困难，主要更改其中相关文件名与配置要求即可；</p>
+<ul>
+<li>构建 <code>docker</code> 镜像：</li>
+</ul>
+<p><img src="\高级软件工程HW2\10.jpg" alt="image-20201005165629621"></p>
+<p>在 <code>dockerfile</code> 所在的文件夹下成功构建镜像之后，使用 <code>docker ps</code> 指令可以查看已经构建成功的镜像：</p>
+<p><img src="\高级软件工程HW2\11.jpg" alt="image-20201005165727306"></p>
+<ul>
+<li>运行镜像并完成测试：</li>
+</ul>
+<p><img src="\高级软件工程HW2\12.jpg" alt="image-20201005170232813"></p>
+<p>这里需要注意一点，<strong>由于运行指令中进行了端口的映射</strong>，也即将 80 映射到了 5000，所以在使用 apipost 进行测试时候也需要对相应的端口进行更改，测试图示如下：</p>
+<p>1）<code>GET</code> 方法：</p>
+<p><img src="\高级软件工程HW2\13.jpg" alt="image-20201005170418818"></p>
+<p>2） <code>POST</code> 方法：</p>
+<p><img src="\高级软件工程HW2\14.jpg" alt="image-20201005170822578"></p>
+<p><img src="\高级软件工程HW2\15.jpg" alt="image-20201005170924614"></p>
+<p>3）<code>PUT</code> 方法：</p>
+<p><img src="\高级软件工程HW2\16.jpg" alt="image-20201005171116128"></p>
+<p><img src="\高级软件工程HW2\17.jpg" alt="image-20201005171139739"></p>
+<p>4）<code>DELETE</code> 方法</p>
+<p><img src="\高级软件工程HW2\18.jpg" alt="image-20201005171314579"></p>
+<p><img src="\高级软件工程HW2\19.jpg" alt="image-20201005171359473"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://wyxwyx46941930.github.io/2020/02/22/DANSER/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1555,157 +1842,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://wyxwyx46941930.github.io/2019/05/11/147-Insertion-Sort-List/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Wangyx">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/test.JPG">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="人间有味是清欢">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/05/11/147-Insertion-Sort-List/" itemprop="url">147. Insertion Sort List</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-11T01:28:59+08:00">
-                2019-05-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/leetcode/" itemprop="url" rel="index">
-                    <span itemprop="name">leetcode</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>每日一题 2019 - 05 - 11</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/05/11/147-Insertion-Sort-List/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1753,7 +1894,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">90</span>
+                  <span class="site-state-item-count">91</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1764,7 +1905,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -1775,7 +1916,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
