@@ -105,7 +105,7 @@
 <meta property="og:image" content="http://wyxwyx46941930.github.io/2020/10/26/周报2020-09-20/12.png">
 <meta property="og:image" content="http://wyxwyx46941930.github.io/2020/10/26/周报2020-09-20/13.png">
 <meta property="og:image" content="http://wyxwyx46941930.github.io/2020/10/26/周报2020-09-20/14.png">
-<meta property="og:updated_time" content="2020-10-26T11:20:25.073Z">
+<meta property="og:updated_time" content="2020-10-26T11:22:55.441Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="周报2020-09-20">
 <meta name="twitter:description" content="2020-09-20 周报">
@@ -410,7 +410,7 @@ L=\sum_{(h, l, t) \in S} \sum_{\left(l^{\prime}, l, t^{\prime}\right) \in S_{(h,
 <li>来自于对论文 《Translating embeddings for modeling multi-relational data》方法的引荐，将三元组关系建模方式引入推荐系统中；</li>
 <li>在欧几里得空间中利用三角不等式的关系进行向量的规范性限制；</li>
 </ul>
-<h4 id="2-2-2-具体算法"><a href="#2-2-2-具体算法" class="headerlink" title="2.2.2 具体算法"></a>2.2.2 具体算法</h4><p>在一个合适的空间里，我们假设对于每一个用户 user 有一个 translation vector  $t<em>u$ ，每个物品 item 对应着该空间的一个点 $\gamma</em>{i}$ , 假设 $ \gamma<em>{i+1}=t_u+\gamma</em>{i}$， 为了增加泛化能力，考虑一个针对所有用户的翻译向量 $T$ ，因此修正过的用户u的翻译向量为 $T_u=T+t_u$  。接下来，考虑对于用户 $u$ ，在上一个购买了 $i$ 的情况下，下一次购买  $j$  的概率 $Prob(j|u,i) \propto \beta_j - d(\gamma_i+T_u,\gamma_j)$  。有了概率之后，损失函数可以采用 pairwise ranking loss，对于训练好的模型，使用最邻近搜索算法就可以进行预测；</p>
+<h4 id="2-2-2-具体算法"><a href="#2-2-2-具体算法" class="headerlink" title="2.2.2 具体算法"></a>2.2.2 具体算法</h4><p>在一个合适的空间里，我们假设对于每一个用户 user 有一个 translation vector  <script type="math/tex">t_u</script> ，每个物品 item 对应着该空间的一个点 $\gamma<em>{i}$​， 假设 $$\gamma</em>{i+1}=t<em>u+\gamma</em>{i}<script type="math/tex">， 为了增加泛化能力，考虑一个针对所有用户的翻译向量</script>T<script type="math/tex">，因此修正过的用户</script>u<script type="math/tex">的翻译向量为</script>T_u=T+t_u<script type="math/tex">。接下来，考虑对于用户</script>u<script type="math/tex">，在上一个购买了</script>i<script type="math/tex">的情况下，下一次购买</script>j<script type="math/tex">的概率</script>Prob(j|u,i) \propto \beta_j - d(\gamma_i+T_u,\gamma_j)$$  。有了概率之后，损失函数可以采用 pairwise ranking loss，对于训练好的模型，使用最邻近搜索算法就可以进行预测；</p>
 <h4 id="2-2-3-实验"><a href="#2-2-3-实验" class="headerlink" title="2.2.3 实验"></a>2.2.3 实验</h4><p><img src="/2020/10/26/周报2020-09-20/3.png" alt="image-20200920145849209"></p>
 <h4 id="2-2-4-模型缺陷"><a href="#2-2-4-模型缺陷" class="headerlink" title="2.2.4 模型缺陷"></a>2.2.4 模型缺陷</h4><ul>
 <li>user与item的交互是向量级别的简单相加，可能不会捕获到更强的交互；</li>
