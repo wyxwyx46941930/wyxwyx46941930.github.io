@@ -373,43 +373,16 @@
 </ul>
 </li>
 </ul>
-<h2 id="2-论文介绍"><a href="#2-论文介绍" class="headerlink" title="2. 论文介绍"></a>2. 论文介绍</h2><h3 id="2-1-GRU4Rec-Session-based-recommendations-with-recurrent-neural-networks"><a href="#2-1-GRU4Rec-Session-based-recommendations-with-recurrent-neural-networks" class="headerlink" title="2.1 GRU4Rec: Session-based recommendations with recurrent neural networks"></a>2.1 GRU4Rec: Session-based recommendations with recurrent neural networks</h3><h4 id="2-1-1-Motivation"><a href="#2-1-1-Motivation" class="headerlink" title="2.1.1 Motivation"></a>2.1.1 Motivation</h4><p>第一篇提出将 RNN 应用到session-based recommendation 的论文；</p>
-<h4 id="2-1-2-算法"><a href="#2-1-2-算法" class="headerlink" title="2.1.2 算法"></a>2.1.2 算法</h4><ul>
-<li>GRU4Rec架构：</li>
-</ul>
-<p><strong>模型输入</strong>: session 中的点击序列, <strong>x</strong> = <img src="https://www.zhihu.com/equation?tex=%5Bx_%7B1%7D%2Cx_%7B2%7D...x_%7Br-1%7D%2Cx_%7Br%7D%5D" alt="[公式]"> , 1 ≤ r &lt; n，通过one hot encoding 编码，通过embedding层压缩为低维连续向量作为 GRU 的输入。</p>
-<p><strong>模型输出</strong>:每一个item 被点击的预测概率， y =M(<strong>x</strong>), where <strong>y</strong> = <img src="https://www.zhihu.com/equation?tex=%5By_%7B1%7D%2Cy_%7B2%7D...y_%7Bm%7D%5D" alt="[公式]"></p>
-<p>M: 模型函数. <img src="https://www.zhihu.com/equation?tex=y_%7Bi%7D" alt="[公式]"> 是item i 的预测点击概率。</p>
-<p><img src="/2020/10/26/周报2020-09-26/1.png" alt="img"></p>
-<ul>
-<li>训练策略</li>
-</ul>
-<p>为了提高训练的效率，文章采用两种策略来加快简化训练代价，分别为：</p>
-<p><strong>Training strategy:</strong> 为了更好的并行计算，论文采用了mini-batch的处理，即把不同的session拼接起来，同一个sequence遇到下一个Session时，要注意将GRU 中的一些向量重新初化。</p>
-<p><img src="/2020/10/26/周报2020-09-26/2.png" alt="image-20200927091311733"></p>
-<p><strong>Training</strong> <strong>data sample：</strong>因为item的维度非常高，item数量过大的概率会导致计算量庞大，所以只选取当前的正样本（即下一个点击的item）加上随机抽取的负样本。论文采用了取巧的方法来减少采样需要的计算量，即选取了同一个mini-batch 中其他sequence下一个点击的item作为负样本，用这些正负样本来训练整个神经网络。</p>
+<p><img src="/2020/10/26/周报2020-09-26/13.png" alt="image-20200927091558661"></p>
+<p><img src="/2020/10/26/周报2020-09-26/14.png" alt="image-20200927091558661"></p>
 <h4 id="2-1-3-实验结果"><a href="#2-1-3-实验结果" class="headerlink" title="2.1.3 实验结果"></a>2.1.3 实验结果</h4><p><img src="/2020/10/26/周报2020-09-26/3.png" alt="image-20200927091324937"></p>
 <h4 id="2-1-4-模型分析"><a href="#2-1-4-模型分析" class="headerlink" title="2.1.4 模型分析"></a>2.1.4 模型分析</h4><ul>
 <li>本文提出的模型是第一个将 RNN 引入序列推荐的模型，并没有太复杂的结构；</li>
 </ul>
 <hr>
-<h3 id="2-2-Neural-Attentive-Session-based-Recommendation"><a href="#2-2-Neural-Attentive-Session-based-Recommendation" class="headerlink" title="2.2  Neural Attentive Session-based Recommendation"></a>2.2  Neural Attentive Session-based Recommendation</h3><h4 id="2-2-1-Motivation"><a href="#2-2-1-Motivation" class="headerlink" title="2.2.1 Motivation"></a>2.2.1 Motivation</h4><p><img src="/2020/10/26/周报2020-09-26/4.png" alt="image-20200927091337936"></p>
-<p>由于用户在购买物品时候在当前 session 中有不同的目标集中性，所以模型将用户的主要购买目标和用户的购买行为同时进行建模；</p>
-<p> $Encoder$ 将输入商品序列：$[x<em>1, x_2, …, x</em>{t−1}, x<em>t]$，转化成一系列高维的隐层表示 $h = [h_1, h_2, …, h</em>{t−1}, h<em>t]$，利用隐层表示得到 $t$ 时刻的注意力权值 $α_t$ ，将其送入 session feature generator 来构建当前 session 的表示，随后对 $t$ 时刻进行 $Decoder$ 得到 $c_t$ ，$c_t$ 在通过矩阵 $U$ 进行转换，通过激活函数得到排序序列 $y = [y_1,y_2, …,y</em>{m−1},y_m]$；</p>
-<h4 id="2-2-2-算法"><a href="#2-2-2-算法" class="headerlink" title="2.2.2 算法"></a>2.2.2 算法</h4><p>最基本的想法是对当前的session构建一个隐层表示，通过其来生成未来用户可能点击的商品序列，通过下面的图，可以看出 $encoder$ 将输入商品序列：$[x<em>1, x_2, …, x</em>{t−1}, x<em>t]$，转化成一系列高维的隐层表示 $h = [h_1, h_2, …, h</em>{t−1}, h_t]$；</p>
-<p><img src="/2020/10/26/周报2020-09-26/5.png" alt="image-20200927091525934"></p>
-<p>其中 $α<em>t$ 指的是 $t$ 时刻的注意力权值，将其送入 session feature generator 来构建当前session的表示，来对 $t$ 时刻进行decoder，得到 $c_t$ ，$c_t$ 在通过矩阵 $U$ 进行转换，通过激活函数得到排序序列 $y = [y_1,y_2, …,y</em>{m−1},y_m]$；$α_t$ 是用来决定隐层状态的注意力权值，$α_t$ 是可以动态设定的；</p>
-<p>另:</p>
-<ul>
-<li><p>Global encoder用来建模用户序列行为：输入是之前的点击序列，输出是用户序列行为的特征；</p>
-</li>
-<li><p>Local encoder用来捕获用户的主要目的，输入是之前的点击序列，输出是用户的目的特征；</p>
-</li>
-</ul>
-<p><img src="/2020/10/26/周报2020-09-26/6.png" alt="image-20200927091538843"></p>
-<p>得到 Global encoder 与 Local encoder 的结构之后，就可以得到 NARM 模型了：</p>
-<p><img src="/2020/10/26/周报2020-09-26/7.png" alt="image-20200927091549199"></p>
-<p>Global encoder 是对于整个序列行为的汇总， Local encoder则是用来捕获session序列中对于捕获用户兴趣的比较重要的item，得到 Global 与 Local encoder的信息并完成向量拼接，随后将 item embeddings 与上层的拼接信息结合，经过 Similarity layer 计算之后，得到 Ranking Scores；</p>
+<p><img src="/2020/10/26/周报2020-09-26/15.png" alt="image-20200927091558661"></p>
+<p><img src="/2020/10/26/周报2020-09-26/16.png" alt="image-20200927091558661"></p>
+<p><img src="/2020/10/26/周报2020-09-26/17.png" alt="image-20200927091558661"></p>
 <p>本文在学习模型参数的时候没有并行处理每个session，而是分别处理每个session序列 $e[x<em>1, x_2, …, x</em>{t−1}, x_t]$ ，训练时采用小批量正则化梯度下降法，同时使用交叉熵损失：</p>
 <p><img src="/2020/10/26/周报2020-09-26/8.png" alt="image-20200927091558661"></p>
 <p>$q$ 是预测值，$p$ 是真实标签；</p>
