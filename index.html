@@ -346,55 +346,14 @@
 
       
         
-          
-            <h1 id="2020-09-26-周报"><a href="#2020-09-26-周报" class="headerlink" title="2020-09-26 周报"></a>2020-09-26 周报</h1><h2 id="1-本周主题"><a href="#1-本周主题" class="headerlink" title="1. 本周主题"></a>1. 本周主题</h2><p>主题：Sequential Recommendation</p>
-<p>论文：</p>
-<ul>
-<li>《GRU4Rec: Session-based recommendations with recurrent neural networks》：<ul>
-<li>出处：2016 NIPS</li>
-<li>引用次数：750</li>
-<li>作者：Alexandros Karatzoglou<ul>
-<li>Telefonica Research Barcelona, Spain</li>
-<li>论文基本都是推荐方向的，论文总引用次数7468</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>《NARM: Neural Attentive Session-based Recommendation》<ul>
-<li>出处：2017 CIKM</li>
-<li>引用次数：257</li>
-<li>作者：山东大学，Zhaochun Ren团队</li>
-</ul>
-</li>
-<li>《SasRec:Self-attentive sequential recommendation》<ul>
-<li>出处：2018 IEEE</li>
-<li>引用次数：157</li>
-<li>Julian McAuley团队，Computer Science Department UCSD</li>
-</ul>
-</li>
-</ul>
-<p><img src="/2020/10/26/周报2020-09-26/13.png" alt="image-20200927091558661"></p>
-<p><img src="/2020/10/26/周报2020-09-26/14.png" alt="image-20200927091558661"></p>
-<h4 id="2-1-3-实验结果"><a href="#2-1-3-实验结果" class="headerlink" title="2.1.3 实验结果"></a>2.1.3 实验结果</h4><p><img src="/2020/10/26/周报2020-09-26/3.png" alt="image-20200927091324937"></p>
-<h4 id="2-1-4-模型分析"><a href="#2-1-4-模型分析" class="headerlink" title="2.1.4 模型分析"></a>2.1.4 模型分析</h4><ul>
-<li>本文提出的模型是第一个将 RNN 引入序列推荐的模型，并没有太复杂的结构；</li>
-</ul>
-<hr>
-<p><img src="/2020/10/26/周报2020-09-26/15.png" alt="image-20200927091558661"></p>
-<p><img src="/2020/10/26/周报2020-09-26/16.png" alt="image-20200927091558661"></p>
-<p><img src="/2020/10/26/周报2020-09-26/17.png" alt="image-20200927091558661"></p>
-<p>本文在学习模型参数的时候没有并行处理每个session，而是分别处理每个session序列 $e[x<em>1, x_2, …, x</em>{t−1}, x_t]$ ，训练时采用小批量正则化梯度下降法，同时使用交叉熵损失：</p>
-<p><img src="/2020/10/26/周报2020-09-26/8.png" alt="image-20200927091558661"></p>
-<p>$q$ 是预测值，$p$ 是真实标签；</p>
-<h4 id="2-2-3-实验结果"><a href="#2-2-3-实验结果" class="headerlink" title="2.2.3 实验结果"></a>2.2.3 实验结果</h4><p><img src="/2020/10/26/周报2020-09-26/9.png" alt="image-20200927091558661"></p>
-<h4 id="2-2-4-模型分析"><a href="#2-2-4-模型分析" class="headerlink" title="2.2.4 模型分析"></a>2.2.4 模型分析</h4><p>本文对于序列的长度，在 4-17 个的时候最佳，会话长度特长的时候，效果会下降，本文认为原因是，当一个会话太长时，用户很可能会盲目地点击一些条目，这样NARM中的本地编码器就无法捕获当前会话中用户的主要目的。</p>
-<hr>
-<p><img src="/2020/10/26/周报2020-09-26/10.png" alt="image-20200927091558661"></p>
-<p><img src="/2020/10/26/周报2020-09-26/11.png" alt="image-20200927091558661"></p>
-<h4 id="2-3-3-实验结果"><a href="#2-3-3-实验结果" class="headerlink" title="2.3.3 实验结果"></a>2.3.3 实验结果</h4><p><img src="/2020/10/26/周报2020-09-26/12.png" alt="image-20200927091647435"></p>
-<h4 id="2-3-4-模型分析"><a href="#2-3-4-模型分析" class="headerlink" title="2.3.4 模型分析"></a>2.3.4 模型分析</h4><p>本文主要是利用 transformer 的思想完成对信息的处理与建模，是将 NLP 领域的方法引入到推荐领域的一个很好的方法，另外也利用了 position embedding 的方法，引入了额外信息；</p>
-
-          
+          <h1 id="2020-09-26-周报"><a href="#2020-09-26-周报" class="headerlink" title="2020-09-26 周报"></a>2020-09-26 周报</h1>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/10/26/周报2020-09-26/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
